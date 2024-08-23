@@ -48,9 +48,26 @@ def static_content_builder():
                 html_file.write(result)
 
 
-def preprocess():
-    shutil.rmtree(f'{target_dir}/')
-    os.makedirs(target_dir)
+def preprocess() -> None:
+    """Hot reloadable preprocess clean up event"""
+
+    def delete_all_in_directory(directory_path):
+        """Delete all the files/folders in a directory WITHOUT deleting the parent directory"""
+        if not os.path.isdir(directory_path):
+            raise NotADirectoryError(
+                f"{directory_path} is not a valid directory")
+
+        # Iterate over all items in the directory
+        for item in os.listdir(directory_path):
+            item_path = os.path.join(directory_path, item)
+            # Check if it's a file or directory and delete accordingly
+            if os.path.isfile(item_path):
+                os.remove(item_path)
+            elif os.path.isdir(item_path):
+                shutil.rmtree(item_path)
+
+    console.log(f'Clean up {target_dir}')
+    delete_all_in_directory(f'{target_dir}/')
 
 
 def copy_assets():
