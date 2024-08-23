@@ -1,9 +1,53 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Catering Service",
+  "name": "Catering by {{company}}",
+  "description": "Professional catering services for events, weddings, and corporate functions. We offer a variety of cuisines and customizable menus.",
+  "url": "{{url}}/catering",
+  "provider": {
+    "@type": "Organization",
+    "name": "{{company}}",
+    "url": "{{url}}",
+    "logo": "{{url}}/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "{{phone}}",
+      "contactType": "Catering Inquiries",
+      "email": "{{email}}",
+      "areaServed": ["{{city}}"],
+      "availableLanguage": ["English", "Spanish"]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{city}}",
+      "addressRegion": "{{state}}",
+      "postalCode": "{{zip}}",
+      "streetAddress": "{{address}}"
+    },
+  },
+  "areaServed": ["{{city}}"],
+  "availableLanguage": ["English", "Spanish"],
+  "menu": "{{menu}}",
+  "serviceOutput": "Event Catering",
+  "serviceAudience": {
+    "@type": "Audience",
+    "audienceType": ["Wedding", "Corporate", "Private Events"]
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "Varies",
+    "eligibleRegion": ["{{city}}"],
+  }
+}
+
+</script>
+
 <div class="jumbotron jumbotron-fluid jumbotron-beans-menu">
   <div class="container text-center">
-    <h1
-      class="display-2 text-center"
-      style="color: white; text-shadow: 2px 2px black;"
-    >{{Company}}'s CATERING</h1>
+    <h1 class="display-2 text-center" style="color: white; text-shadow: 2px 2px black;">{{Company}}'s CATERING</h1>
   </div>
 </div>
 

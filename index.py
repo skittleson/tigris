@@ -1,7 +1,6 @@
 from pybars import Compiler
 import os
 import shutil
-from distutils.dir_util import copy_tree
 from rich.console import Console
 from dotenv import dotenv_values
 import datetime
@@ -56,8 +55,8 @@ def preprocess():
 
 def copy_assets():
     console.log('Copy assets and images')
-    copy_tree(f'{source_dir}/assets', f'{target_dir}/assets')
-    copy_tree(f'{source_dir}/images', f'{target_dir}/images')
+    shutil.copytree(f'{source_dir}/assets', f'{target_dir}/assets')
+    shutil.copytree(f'{source_dir}/images', f'{target_dir}/images')
     files = [file for file in os.listdir(
         source_dir) if not file.endswith(".hbs")]
     for file in files:

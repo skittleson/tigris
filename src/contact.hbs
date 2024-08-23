@@ -1,0 +1,26 @@
+{{> header}}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Us",
+  "description": "Contact page for {{company}}",
+  "url": "{{url}}/contact",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "{{company}}",
+    "url": "{{url}}",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "{{phone}}",
+      "contactType": "Customer Service",
+      "email": "info@{{domain}}",
+      "areaServed": "US",
+      "availableLanguage": "English"
+    }
+  }
+}
+</script>
+
+{{> footer}}
