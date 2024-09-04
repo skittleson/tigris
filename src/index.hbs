@@ -36,14 +36,17 @@
   "sameAs": [
       "{{grubhub}}",
       "{{menu}}",
-      "{{facebook}}"
+      "{{facebook}}",
+      "{{yelp}}",
+      "{{ubereats}}",
+      "{{doordash}}"
     ],
      "orderAction": [
     {
       "@type": "OrderAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://www.doordash.com/store/tigris-mediterranean-grille-san-diego-62609?msockid=1d4214f681b96c8f3d2c0635803d6d08",
+        "urlTemplate": "{{doordash}}",
         "actionPlatform": [
           "http://schema.org/DesktopWebPlatform",
           "http://schema.org/MobileWebPlatform"
@@ -58,7 +61,7 @@
       "@type": "OrderAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://www.ubereats.com/store/tigris-mediterranean-grille/CLr6enSdQYq0Jzd8It7I-w?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjI4ODclMjBXJTIwQ2FueW9uJTIwQXZlJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyZGNlYmU2N2EtYzliYy05MDVhLTAxMzEtZTQ1MDQ1MzJkYTZlJTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0EzMi43OTg3NDclMkMlMjJsb25naXR1ZGUlMjIlM0EtMTE3LjExNjM2MiU3RA%3D%3D",
+        "urlTemplate": "{{ubereats}}",
         "actionPlatform": [
           "http://schema.org/DesktopWebPlatform",
           "http://schema.org/MobileWebPlatform"
@@ -88,7 +91,7 @@
       "@type": "OrderAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://www.grubhub.com/restaurant/tigris-mediterranean-grille-5285-overland-ave-102-san-diego/384747",
+        "urlTemplate": "{{grubhub}}",
         "actionPlatform": [
           "http://schema.org/DesktopWebPlatform",
           "http://schema.org/MobileWebPlatform"
@@ -253,7 +256,7 @@
         </svg>
         <h2 class="fw-normal">Stories of Delight</h2>
         <p>Uncover the charm that keeps our guests coming back for more unforgettable visits.</p>
-        <p><a class="btn btn-secondary" href="https://www.yelp.com/biz/tigris-mediterranean-grille-san-diego?sort_by=rating_desc&rr=5">View Yelp Reviews &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="{{yelp}}">View Yelp Reviews &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
