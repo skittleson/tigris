@@ -48,32 +48,87 @@
 
 <div class="jumbotron jumbotron-fluid jumbotron-beans-menu">
   <div class="container text-center">
-    <h1 class="display-2 text-center" style="color: white; text-shadow: 2px 2px black;">{{company}}'s CATERING</h1>
+    <h2 class="display-4 text-center">Parties & Catering</h2>
   </div>
 </div>
 
-<div class="container menu">
-  <div class="row">
-    <h2 class="display-3 text-center">Planning a family event, business
-      luncheon, party, or a wedding?
-    </h2>
-    <h3 class="display-4 text-center">Call us at: <a href="tel:{{phone}}">{{phone}}</a></h3>
+<div class="container menu text-center">
+   <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+    <h6 class="display-6">Off-site catering?</h6>
     <p>
-      {{company}}
-      is a full service catering provider in San Diego, CA. Our experienced and
-      professional catering services staff will take care of every detail to
-      ensure the best service and food.
+      Ready to elevate your next event? Let {{company}} bring the magic to you. From office luncheons to the most unforgettable celebrations, we craft culinary experiences that tantalize and delight. 
+      </p>
+      <p>Can’t make it to us? No problem—we’ll come to you, wherever your special moment awaits. Choose from personalized catering options or indulge in bulk orders of our signature dishes, tailored just for you.
     </p>
-    <p>
-    Please let us know the following after looking at the
-      <a class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank" href="/menu.pdf">menu</a></p>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Number of people</li>
-      <li class="list-group-item">Dishes</li>
-      <li class="list-group-item">Location</li>
-      <li class="list-group-item">Serving Date/Time</li>
-    </ul>
+    
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#inquireModal">
+      Inquire Now
+    </button>
+  </div>
+  </div>
+</div>
+
+<!-- Modal --> {{!--TODO: handle submission --}}
+<div class="modal fade" id="inquireModal" tabindex="-1" aria-labelledby="inquireModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="inquireModalLabel">CONTACT US ABOUT YOUR PRIVATE EVENT</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="cater-email" class="form-label">Email <span class="required-indicator">*</span></label>
+            <input type="email" class="form-control" id="cater-email" required placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <label for="cater-firstname" class="form-label">First Name <span class="required-indicator">*</span></label>
+            <input type="text" class="form-control" id="cater-firstname" required placeholder="First Name">
+          </div>
+          <div class="mb-3">
+            <label for="cater-lastname" class="form-label">Last Name <span class="required-indicator">*</span></label>
+            <input type="text" class="form-control" id="cater-lastname" required placeholder="Last Name">
+          </div>
+          <div class="mb-3">
+            <label for="cater-phone" class="form-label">Phone Number <span class="required-indicator">*</span></label>
+            <input type="tel" class="form-control" id="cater-phone" required placeholder="Phone Number">
+          </div>
+          <div class="mb-3">
+            <label for="cater-company" class="form-label">Company <span class="required-indicator">*</span></label>
+            <input type="text" class="form-control" id="cater-company" required placeholder="Company">
+          </div>
+          <div class="mb-3">
+            <label for="cater-date" class="form-label">Event Date <span class="required-indicator">*</span></label>
+            <input type="date" class="form-control" id="cater-date" required placeholder="Event Date">
+          </div>
+          <div class="mb-3">
+            <label for="cater-start-time" class="form-label">Start Time <span class="required-indicator">*</span></label>
+            <input type="time" class="form-control" id="cater-start-time" required placeholder="Start Time">
+          </div>
+          <div class="mb-3">
+            <label for="cater-end-time" class="form-label">End Time <span class="required-indicator">*</span></label>
+            <input type="time" class="form-control" id="cater-end-time" required placeholder="End Time">
+          </div>
+          <div class="mb-3">
+            <label for="cater-num-people" class="form-label">Number of People <span class="required-indicator">*</span></label>
+            <input type="number" class="form-control" id="cater-num-people" required placeholder="Number of People">
+          </div>
+          <div class="mb-3">
+            <label for="cater-message" class="form-label">Briefly describe your event <span class="required-indicator">*</span></label>
+            <textarea class="form-control" id="cater-message" rows="3" required placeholder="Briefly describe your event"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="cater-moreinfo" class="form-label">Additional Information</span></label>
+            <textarea class="form-control" id="cater-moreinfo" rows="3" placeholder="Additional Information"></textarea>
+          </div>
+          <button type="submit" class="btn d-flex mx-auto btn-outline-danger">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 
 {{> footer}}
+
