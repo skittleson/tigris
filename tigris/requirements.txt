@@ -1,4 +1,0 @@
-pybars3
-rich
-python-dotenv
-rich.console
