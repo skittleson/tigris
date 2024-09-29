@@ -48,6 +48,13 @@ a:hover {
   border-radius: 0;
   resize: none;
   text-align: left;
+  outline: none;
+}
+.custom-input:focus {
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  border-color: black;
 }
 .custom-input::placeholder {
   color: #aaa;

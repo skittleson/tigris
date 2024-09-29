@@ -46,12 +46,6 @@
 </script>
 {{> navbar}}
 
-{{!-- <div class="jumbotron jumbotron-fluid jumbotron-beans-menu">
-  <div class="container text-center">
-    <h2 class="display-4 text-center">Parties & Catering</h2>
-  </div>
-</div> --}}
-
 <div class="container">
   <center>
     <h1 class="featurette-heading my-5">Parties & Catering</h1>
@@ -84,51 +78,70 @@
       </div>
       <div class="modal-body">
         <form>
-          <div class="mb-3">
-            <label for="cater-email" class="form-label">Email <span class="required-indicator">*</span></label>
-            <input type="email" class="form-control" id="cater-email" required placeholder="Email">
+          <h5 class="mt-1 mb-3"><center>YOUR CONTACT INFORMATION</center></h5>
+          <div class="container">
+            <div class="row">
+              <div class="mb-2 col-md-6 d-flex flex-column">
+                <label for="cater-firstname" class="form-label">First Name <span class="required-indicator">*</span></label>
+                <input type="text" class="form-control custom-input" id="cater-firstname" required >
+              </div>
+              <div class="mb-2 col-md-6 d-flex flex-column">
+                <label for="cater-lastname" class="form-label">Last Name <span class="required-indicator">*</span></label>
+                <input type="text" class="form-control custom-input" id="cater-lastname" required >
+              </div>
+            </div>
+            <div class="mb-2">
+              <label for="cater-email" class="form-label">Email <span class="required-indicator">*</span></label>
+              <input type="email" class="form-control custom-input" id="cater-email" required>
+            </div>
+            <div class="mb-2">
+              <label for="cater-phone" class="form-label">Phone Number <span class="required-indicator">*</span></label>
+              <input type="tel" class="form-control custom-input" id="cater-phone" required >
+            </div>
+            <div class="mb-2">
+              <label for="cater-company" class="form-label">Company</label>
+              <input type="text" class="form-control custom-input" id="cater-company" >
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="cater-firstname" class="form-label">First Name <span class="required-indicator">*</span></label>
-            <input type="text" class="form-control" id="cater-firstname" required placeholder="First Name">
+
+          <h5 class="mt-4 mb-2"><center>EVENT DETAILS</center></h5>
+          <div class="container">
+              <div class="mb-3">
+                <label for="cater-type" class="form-label">Nature of Event <span style="font-style:italic">(e.g., Business Dinner or Birthday Party)</span></label>
+                <input type="text" class="form-control custom-input" id="cater-type"></input>
+              </div>
+
+            <div class="mb-3">
+              <label for="cater-date" class="form-label">Event Date <span class="required-indicator">*</span></label>
+              <input type="date" class="form-control custom-input" id="cater-date" required >
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6 d-flex flex-column">
+                  <label for="cater-start-time" class="form-label">Start Time</label>
+                  <input type="time" class="form-control custom-input" id="cater-start-time" >
+                </div>
+                <div class="col-md-6 d-flex flex-column">
+                  <label for="cater-end-time" class="form-label">End Time </label>
+                  <input type="time" class="form-control custom-input" id="cater-end-time">
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="cater-num-people" class="form-label">Number of People</label>
+                <input type="number" class="form-control custom-input" id="cater-num-people">
+              </div>
+              <div class="mb-2">
+                <label for="cater-moreinfo" class="form-label">Additional Information</span></label>
+                <textarea class="form-control custom-input" id="cater-moreinfo" rows="2" ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="cater-referral" class="form-label">How did you hear about us?</label>
+                <input type="text" class="form-control custom-input" id="cater-referral">
+              </div>
           </div>
-          <div class="mb-3">
-            <label for="cater-lastname" class="form-label">Last Name <span class="required-indicator">*</span></label>
-            <input type="text" class="form-control" id="cater-lastname" required placeholder="Last Name">
-          </div>
-          <div class="mb-3">
-            <label for="cater-phone" class="form-label">Phone Number <span class="required-indicator">*</span></label>
-            <input type="tel" class="form-control" id="cater-phone" required placeholder="Phone Number">
-          </div>
-          <div class="mb-3">
-            <label for="cater-company" class="form-label">Company <span class="required-indicator">*</span></label>
-            <input type="text" class="form-control" id="cater-company" required placeholder="Company">
-          </div>
-          <div class="mb-3">
-            <label for="cater-date" class="form-label">Event Date <span class="required-indicator">*</span></label>
-            <input type="date" class="form-control" id="cater-date" required placeholder="Event Date">
-          </div>
-          <div class="mb-3">
-            <label for="cater-start-time" class="form-label">Start Time <span class="required-indicator">*</span></label>
-            <input type="time" class="form-control" id="cater-start-time" required placeholder="Start Time">
-          </div>
-          <div class="mb-3">
-            <label for="cater-end-time" class="form-label">End Time <span class="required-indicator">*</span></label>
-            <input type="time" class="form-control" id="cater-end-time" required placeholder="End Time">
-          </div>
-          <div class="mb-3">
-            <label for="cater-num-people" class="form-label">Number of People <span class="required-indicator">*</span></label>
-            <input type="number" class="form-control" id="cater-num-people" required placeholder="Number of People">
-          </div>
-          <div class="mb-3">
-            <label for="cater-message" class="form-label">Briefly describe your event <span class="required-indicator">*</span></label>
-            <textarea class="form-control" id="cater-message" rows="3" required placeholder="Briefly describe your event"></textarea>
-          </div>
-          <div class="mb-3">
-            <label for="cater-moreinfo" class="form-label">Additional Information</span></label>
-            <textarea class="form-control" id="cater-moreinfo" rows="3" placeholder="Additional Information"></textarea>
-          </div>
-          <button type="submit" class="btn d-flex mx-auto btn-outline-danger">Send Inquiry</button>
+
+          <button type="submit" class="mt-4 btn d-flex mx-auto btn-outline-danger">Send Inquiry</button>
         </form>
       </div>
     </div>
