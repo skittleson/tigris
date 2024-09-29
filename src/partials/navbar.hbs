@@ -1,9 +1,13 @@
-<header class="pt-3">
-  {{! for white: bg-white navbar-white }}
-  <nav class="navbar navbar-expand-md bg-beige navbar-beige fixed-top">
+<header>
+  <nav class="navbar navbar-expand-md">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
-        <img src="/images/raw.jpg" alt="{{company}} Logo" width="60" />
+        <img
+          src="/images/raw.jpg"
+          alt="{{company}} Logo"
+          class="img-fluid"
+          style="max-width: 225px; border-radius:9px"
+        />
       </a>
       <button
         class="navbar-toggler"
@@ -17,32 +21,23 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mx-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#">HOME</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link btn-outline-success" href="{{menu}}">Menu</a>
+          <li class="nav-item px-3">
+            <a class="nav-link btn-outline-success" href="{{menu}}">MENU</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/catering">Catering</a>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="/catering">SPECIAL EVENTS</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/our-story">Our Story</a>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="/our-story">ABOUT</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Visit Us</a>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="/contact">CONTACT</a>
           </li>
         </ul>
-        <div class="d-flex" role="search">
-          <a
-            href="{{menu}}"
-            class="btn btn-danger"
-            tabindex="-1"
-            role="button"
-            aria-disabled="true"
-          >Order Online</a>
-        </div>
       </div>
     </div>
   </nav>

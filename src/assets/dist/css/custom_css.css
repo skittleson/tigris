@@ -8,14 +8,11 @@
 }
 
 .featurette-image {
-  border-radius: 10px; /* Optional for a softer look */
+  border-radius: 10px;
 }
 
 .btn-danger,
 .btn-outline-danger {
-  font-size: 1.2em;
-  padding: 10px 20px;
-  border-radius: 5px;
   transition: background-color 0.5s;
 }
 
@@ -25,6 +22,42 @@ a {
 }
 a:hover {
   color: #9b2222;
+}
+
+/* contact information */
+.hours-list p {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 5px 0;
+}
+.hours-list .day {
+  text-align: left;
+  white-space: nowrap;
+}
+.hours-list .time {
+  text-align: right;
+  margin-left: 10px;
+}
+/* contact form input */
+.custom-input {
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  color: black;
+  border-radius: 0;
+  resize: none;
+  text-align: left;
+}
+.custom-input::placeholder {
+  color: #aaa;
+}
+
+/* logo */
+@media (max-width: 992px) {
+  .navbar-brand img {
+    max-width: 140px !important;
+  }
 }
 
 /* Optional color scheme to replace white background */

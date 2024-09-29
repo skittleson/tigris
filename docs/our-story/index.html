@@ -136,11 +136,16 @@
 </head>
 
 <body>
-<header class="pt-3">
-  <nav class="navbar navbar-expand-md bg-beige navbar-beige fixed-top">
+<header>
+  <nav class="navbar navbar-expand-md">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
-        <img src="/images/raw.jpg" alt="Tigris Mediterranean Grille Logo" width="60" />
+        <img
+          src="/images/raw.jpg"
+          alt="Tigris Mediterranean Grille Logo"
+          class="img-fluid"
+          style="max-width: 225px; border-radius:9px"
+        />
       </a>
       <button
         class="navbar-toggler"
@@ -154,32 +159,23 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mx-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#">HOME</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link btn-outline-success" href="https://www.clover.com/online-ordering/tigris-mediterranean-gri-san-diego">Menu</a>
+          <li class="nav-item px-3">
+            <a class="nav-link btn-outline-success" href="https://www.clover.com/online-ordering/tigris-mediterranean-gri-san-diego">MENU</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/catering">Catering</a>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="/catering">SPECIAL EVENTS</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/our-story">Our Story</a>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="/our-story">ABOUT</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Visit Us</a>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="/contact">CONTACT</a>
           </li>
         </ul>
-        <div class="d-flex" role="search">
-          <a
-            href="https://www.clover.com/online-ordering/tigris-mediterranean-gri-san-diego"
-            class="btn btn-danger"
-            tabindex="-1"
-            role="button"
-            aria-disabled="true"
-          >Order Online</a>
-        </div>
       </div>
     </div>
   </nav>
@@ -244,31 +240,59 @@
   </div>
 </div>
  
+
+<hr class="featurette-divider mb-4" />
+
 <div class="container text-center">
-    <hr class="featurette-divider" />
+    <div class="row d-flex align-items-center justify-content-between">
 
-    <div>
-   <a
-        href="tel:(858) 576-9999"
-        class="btn btn-outline-danger"
-        tabindex="-1"
-        role="button"
-        aria-disabled="true"
-        > Contact Us</a>
+        <!-- Order Button -->
+        <div class="col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
+            <a
+                href="https://www.clover.com/online-ordering/tigris-mediterranean-gri-san-diego"
+                class="btn btn-danger p-2"
+                tabindex="-1"
+                role="button"
+                aria-disabled="true"
+                >ORDER NOW
+            </a>
+        </div>
+
+        <!-- Restaurant Info -->
+        <div class="col-md-3 d-flex flex-column align-items-center mb-md-0">
+            <p style="white-space: nowrap;margin-top:revert;"><a href="tel:(858) 576-9999">(858) 576-9999</a> | <a href="mailto:info@tigrisgrille.com" style="white-space: nowrap;text-transform:uppercase">info@tigrisgrille.com</a>
+            <br>
+            <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285 OVERLAND AVE #102, SAN DIEGO, CA 92123</a></p>
+        </div>
+
+        <!-- Social Media & Terms -->
+        <div class="col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
+            <!-- Social Media Logos -->
+            <div>
+                <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-2" href="https://www.yelp.com/biz/tigris-mediterranean-grille-san-diego?sort_by=rating_desc&amp;rr=5"><i class="bi bi-yelp"></i></a>
+                <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-2" href="https://www.facebook.com/tigrisgrille/"><i class="bi bi-facebook"></i></a>
+                <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-2" href="https://www.instagram.com/tigrismedgrille/"><i class="bi bi-instagram"></i></a>
+                <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="mailto:info@tigrisgrille.com"><i class="bi bi-envelope"></i></a>
+            </div>
+
+            <!-- Terms & Privacy Policy -->
+            <p style="white-space: nowrap;"><a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/privacy">PRIVACY</a> | 
+               <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/terms">TERMS</a>
+            <br>
+            <!-- Copyright -->
+            &copy; 2024 <a href="https://tigrisgrille.com">Tigris Mediterranean Grille.</a>
+            </p>
+        </div>
+
     </div>
 
-    <!-- Social Media Links -->
-    <div class="my-3">
-    <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-3" href="https://www.yelp.com/biz/tigris-mediterranean-grille-san-diego?sort_by=rating_desc&amp;rr=5"><i class="bi bi-yelp"></i></a>
-    <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-3" href="https://www.facebook.com/tigrisgrille/"><i class="bi bi-facebook"></i></a>
-    <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-3" href="https://www.instagram.com/tigrismedgrille/"><i class="bi bi-instagram"></i></a>
-    <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-3" href="mailto:info@tigrisgrille.com"><i class="bi bi-envelope"></i></a> 
-    </div>
+    <!-- Back to top link -->
+    <div class="float-end mb-4"><a href="#" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to top</a></div>
+</div>
 
-    <p class="fs-5 text-secondary">&copy; 2024 <a href="https://tigrisgrille.com">Tigris Mediterranean Grille.</a> &middot; <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/privacy">Privacy</a> &middot; <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/terms">Terms</a></p>
-    <div class="float-end"><a href="#" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to top</a></div>
 
 </footer>
+
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-1"></script>
 <script>

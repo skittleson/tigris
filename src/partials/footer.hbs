@@ -1,29 +1,57 @@
  
+
+<hr class="featurette-divider mb-4" />
+
 <div class="container text-center">
-    <hr class="featurette-divider" />
+    <div class="row d-flex align-items-center justify-content-between">
 
-    <div>
-   <a
-        href="tel:{{phone}}"
-        class="btn btn-outline-danger"
-        tabindex="-1"
-        role="button"
-        aria-disabled="true"
-        > Contact Us</a>
+        <!-- Order Button -->
+        <div class="col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
+            <a
+                href="{{menu}}"
+                class="btn btn-danger p-2"
+                tabindex="-1"
+                role="button"
+                aria-disabled="true"
+                >ORDER NOW
+            </a>
+        </div>
+
+        <!-- Restaurant Info -->
+        <div class="col-md-3 d-flex flex-column align-items-center mb-md-0">
+            <p style="white-space: nowrap;margin-top:revert;"><a href="tel:{{phone}}">{{phone}}</a> | <a href="mailto:{{email}}" style="white-space: nowrap;text-transform:uppercase">{{email}}</a>
+            <br>
+            <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285 OVERLAND AVE #102, SAN DIEGO, CA 92123</a></p>
+        </div>
+
+        <!-- Social Media & Terms -->
+        <div class="col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
+            <!-- Social Media Logos -->
+            <div>
+                <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-2" href="{{yelp}}"><i class="bi bi-yelp"></i></a>
+                <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-2" href="{{facebook}}"><i class="bi bi-facebook"></i></a>
+                <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-2" href="{{instagram}}"><i class="bi bi-instagram"></i></a>
+                <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="mailto:{{email}}"><i class="bi bi-envelope"></i></a>
+            </div>
+
+            <!-- Terms & Privacy Policy -->
+            <p style="white-space: nowrap;"><a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/privacy">PRIVACY</a> | 
+               <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/terms">TERMS</a>
+            <br>
+            <!-- Copyright -->
+            &copy; {{year}} <a href="{{url}}">{{company}}.</a>
+            </p>
+        </div>
+
     </div>
 
-    <!-- Social Media Links -->
-    <div class="my-3">
-    <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-3" href="{{yelp}}"><i class="bi bi-yelp"></i></a>
-    <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-3" href="{{facebook}}"><i class="bi bi-facebook"></i></a>
-    <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-3" href="{{instagram}}"><i class="bi bi-instagram"></i></a>
-    <a class="fs-2 link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover me-3" href="mailto:{{email}}"><i class="bi bi-envelope"></i></a> 
-    </div>
+    <!-- Back to top link -->
+    <div class="float-end mb-4"><a href="#" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to top</a></div>
+</div>
 
-    <p class="fs-5 text-secondary">&copy; {{year}} <a href="{{url}}">{{company}}.</a> &middot; <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/privacy">Privacy</a> &middot; <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/terms">Terms</a></p>
-    <div class="float-end"><a href="#" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to top</a></div>
 
 </footer>
+
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ga}}"></script>
 <script>

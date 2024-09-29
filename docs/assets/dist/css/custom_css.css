@@ -8,14 +8,11 @@
 }
 
 .featurette-image {
-  border-radius: 10px; /* Optional for a softer look */
+  border-radius: 10px;
 }
 
 .btn-danger,
 .btn-outline-danger {
-  font-size: 1.2em;
-  padding: 10px 20px;
-  border-radius: 5px;
   transition: background-color 0.5s;
 }
 
@@ -25,6 +22,41 @@ a {
 }
 a:hover {
   color: #9b2222;
+}
+
+/* contact */
+.hours-list p {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 5px 0;
+}
+.hours-list .day {
+  text-align: left;
+  white-space: nowrap;
+}
+.hours-list .time {
+  text-align: right;
+  margin-left: 10px;
+}
+
+.custom-input {
+  border: none; /* Remove all borders */
+  border-bottom: 1px solid black; /* Only keep the bottom border */
+  background: transparent; /* Transparent background */
+  color: black; /* Text color */
+  border-radius: 0; /* No border radius, if you want sharp edges */
+  resize: none; /* Prevent resizing for textarea */
+  text-align: left; /* Ensure placeholder text is left-aligned */
+}
+.custom-input::placeholder {
+  color: #aaa; /* Placeholder color */
+}
+
+@media (max-width: 992px) {
+  .navbar-brand img {
+    max-width: 140px !important;
+  }
 }
 
 /* Optional color scheme to replace white background */

@@ -283,29 +283,39 @@
 
     {{!-- Restaurant Info --}}
     <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-md-6 d-flex flex-column align-items-center">
-          <h5>About {{company}}</h5>
-        <div class="text-left">
-        <p>
-          <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06"><i class="bi bi-geo-alt-fill"></i> 5285 Overland Ave #102
-          <br>
-          San Diego, California 92123
-          </a>
-        </p>
-        <p>
-          <a href="tel:{{phone}}"><i class="bi bi-telephone-fill"></i> Phone: {{phone}}</a>
-        </p>
-        <p>
-          <a href="mailto:{{email}}"><i class="bi bi-envelope-fill"></i> Email: {{email}}</a>
-        </p>
+      <div class="row">
+
+        <div class="col-md-6 d-flex flex-column align-items-center mb-5 mb-md-0">
+          <h5>INFORMATION</h5>
+          <div class="text-left">
+          <p>
+            <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06"><i class="bi bi-geo-alt-fill"></i> 5285 Overland Ave #102
+            <br>
+            San Diego, California 92123
+            </a>
+          </p>
+          <p>
+            <a href="tel:{{phone}}"><i class="bi bi-telephone-fill"></i> Phone: {{phone}}</a>
+          </p>
+          <p>
+            <a href="mailto:{{email}}"><i class="bi bi-envelope-fill"></i> Email: {{email}}</a>
+          </p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-6 text-center">
-        <h5>Hours of Operation</h5>
-        <p>Mon-Sat: 10 AM - 7 PM</p>
-        <p>Sunday: Closed</p>
-      </div>
+
+        <div class="col-md-6 d-flex flex-column align-items-center">
+          <h5>HOURS OF OPERATION</h5>
+          <div class="hours-list">
+            <p><span class="day">Monday:</span> <span class="time ml-2">10 AM - 7 PM</span></p>
+            <p><span class="day">Tuesday:</span> <span class="time ml-2">10 AM - 7 PM</span></p>
+            <p><span class="day">Wednesday:</span> <span class="time ml-2">10 AM - 7 PM</span></p>
+            <p><span class="day">Thursday:</span> <span class="time ml-2">10 AM - 7 PM</span></p>
+            <p><span class="day">Friday:</span> <span class="time ml-2">10 AM - 7 PM</span></p>
+            <p><span class="day">Saturday:</span> <span class="time ml-2">10 AM - 7 PM</span></p>
+            <p><span class="day">Sunday:</span> <span class="time ml-2">Closed</span></p>
+          </div>
+        </div>
+
       </div>
     </div>
 
