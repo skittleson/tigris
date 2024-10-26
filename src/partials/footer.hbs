@@ -1,5 +1,3 @@
- 
-
 <hr class="featurette-divider mb-4" />
 
 <div class="container text-center">
@@ -7,25 +5,15 @@
 
         <!-- Order Button -->
         <div class="col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
-            <a
-                href="{{menu}}"
-                class="btn btn-danger p-2"
-                tabindex="-1"
-                role="button"
-                aria-disabled="true"
+            <button
+                onclick="window.location.href='{{menu}}'"
+                class="btn btn-danger p-3"
                 >ORDER NOW
-            </a>
+            </button>
         </div>
 
         <!-- Restaurant Info -->
         <div class="col-md-3 d-flex flex-column align-items-center mb-md-0">
-            <p style="white-space: nowrap;margin-top:revert;"><a href="tel:{{phone}}">{{phone}}</a> | <a href="mailto:{{email}}" style="white-space: nowrap;text-transform:uppercase">{{email}}</a>
-            <br>
-            <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285 OVERLAND AVE #102, SAN DIEGO, CA 92123</a></p>
-        </div>
-
-        <!-- Social Media & Terms -->
-        <div class="col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
             <!-- Social Media Logos -->
             <div class="d-flex justify-content-center">
                 <a class="fs-3 opacity-75 me-3" href="{{facebook}}"><i class="bi bi-facebook"></i></a>
@@ -34,12 +22,20 @@
                 <a class="fs-3 opacity-75" href="mailto:{{email}}"><i class="bi bi-envelope"></i></a>
             </div>
 
-            <!-- Terms & Privacy Policy -->
-            <p style="white-space: nowrap;"><a href="/privacy">PRIVACY</a> | 
-               <a href="/terms">TERMS</a>
+            <p style="white-space: nowrap;margin-top:revert;"><a href="tel:{{phone}}">{{phone}}</a> | <a href="mailto:{{email}}" style="white-space: nowrap;text-transform:uppercase">{{email}}</a>
             <br>
-            <!-- Copyright -->
-            &copy; {{year}} <a href="{{url}}">{{company}}.</a>
+            <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285 OVERLAND AVE #102, SAN DIEGO, CA 92123</a></p>
+        </div>
+
+        <!-- Terms -->
+        <div class="col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
+            <p class="pt-3">
+                <!-- Terms & Privacy Policy -->
+                <a href="/privacy">PRIVACY</a> | 
+                <a href="/terms">TERMS</a>
+            <br>
+                <!-- Copyright -->
+                &copy; {{year}} <a href="{{url}}">{{company}}.</a>
             </p>
         </div>
 

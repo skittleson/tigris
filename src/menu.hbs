@@ -1,0 +1,111 @@
+{{> header}}
+
+<script>
+const menuData = {
+    salads: {
+        header: "SALADS",
+        items: [
+            { name: "Avocado Salad", price: "$15.50", description: "Crisp romaine lettuce, spring mix, cucumbers, tomatoes, red onions, avocado and feta cheese" },
+            { name: "Tigris Salad", price: "$15.50", description: "Spring mix greens, dried cranberries, red onions, candied pecans, crumbled blue cheese with a raspberry vinaigrette dressing" },
+            { name: "Greek Salad", price: "$15.50", description: "Crisp romaine lettuce, cucumbers, onions, olives, tomatoes & feta cheese with a light lemon vinaigrette dressing" },
+        ]
+    },
+    flatbreads: {
+        header: "FLATBREADS",
+        items: [
+            { name: "Meat Flatbread", price: "$14.00", description: "Ground beef mixed with onions, parsley & specialty herbs." },
+            { name: "Cheese Flatbread ", price: "$13.00", description: "A mixture of cheeses; mozzarella, provolone, romano & parmesan" },
+            { name: "Chicken Shawerma Flatbread ", price: "$14.00", description: "Freshly cut marinated chicken" },
+
+        ]
+    },
+    sandwiches: {
+        header: "",
+        items: [
+            { name: "", price: "", description: "" }
+        ]
+    },
+    plates: {
+        header: "",
+        items: [
+            { name: "", price: "", description: "" }
+        ]
+    },
+    sides: {
+        header: "",
+        items: [
+            { name: "", price: "", description: "" }
+        ]
+    },
+    soup: {
+        header: "",
+        items: [
+            { name: "", price: "", description: "" }
+        ]
+    },
+    desserts: {
+        header: "",
+        items: [
+            { name: "", price: "", description: "" }
+        ]
+    },
+};
+
+function showItems(option) {
+    const displayHeader = document.getElementById("display-header");
+    const displayItems = document.getElementById("display-items");
+
+    // Set header
+    displayHeader.textContent = menuData[option].header;
+
+    // Clear old items and add new items
+    displayItems.innerHTML = "";
+    menuData[option].items.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <div class="card">
+                <h5 class="card-title">${item.name} | ${item.price}</h5>
+                <p class="card-text">${item.description}</p>
+            </div>
+        `;
+        displayItems.appendChild(li);
+    });
+}
+
+// Automatically show the first option when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+    showItems('salads');
+});
+</script>
+
+{{> navbar}}
+
+<div class="container my-5">
+  <div class="row">
+    <!-- Left Sidebar for Menu Options -->
+    <div class="col-md-3 d-flex flex-column align-items-center text-center py-5">
+      <h1 class="menu-header">MENU</h1>
+      <ul class="menu-options list-unstyled">
+        <li onclick="showItems('salads')">SALADS</li>
+        <li onclick="showItems('flatbreads')">FLATBREADS</li>
+        <li onclick="showItems('sandwiches')">SANDWICHES</li>
+        <li onclick="showItems('plates')">PLATES</li>
+        <li onclick="showItems('sides')">SIDES</li>
+        <li onclick="showItems('soup')">SOUP</li>
+        <li onclick="showItems('desserts')">DESSERTS</li>
+      </ul>
+    </div>
+
+    <!-- Right Side for Displaying Menu Items -->
+    <div class="col-md-9">
+      <div id="menu-display">
+        <h3 id="display-header"></h3>
+        <div id="display-items">
+          <!-- Items will display here based on selection -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{> footer}}

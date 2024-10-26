@@ -122,51 +122,85 @@
 </head>
 
 <body>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Catering Service",
-  "name": "Catering by Tigris Mediterranean Grille",
-  "description": "Professional catering services for events, weddings, and corporate functions. We offer a variety of cuisines and customizable menus.",
-  "url": "https://tigrisgrille.com/catering",
-  "provider": {
-    "@type": "Organization",
-    "name": "Tigris Mediterranean Grille",
-    "url": "https://tigrisgrille.com",
-    "logo": "https://tigrisgrille.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "(858) 576-9999",
-      "contactType": "Catering Inquiries",
-      "email": "info@tigrisgrille.com",
-      "areaServed": ["San Diego"],
-      "availableLanguage": ["English", "Spanish"]
+
+<script>
+const menuData = {
+    salads: {
+        header: "SALADS",
+        items: [
+            { name: "Avocado Salad", price: "$15.50", description: "Crisp romaine lettuce, spring mix, cucumbers, tomatoes, red onions, avocado and feta cheese" },
+            { name: "Tigris Salad", price: "$15.50", description: "Spring mix greens, dried cranberries, red onions, candied pecans, crumbled blue cheese with a raspberry vinaigrette dressing" },
+            { name: "Greek Salad", price: "$15.50", description: "Crisp romaine lettuce, cucumbers, onions, olives, tomatoes & feta cheese with a light lemon vinaigrette dressing" },
+        ]
     },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "San Diego",
-      "addressRegion": "CA",
-      "postalCode": "92123",
-      "streetAddress": "5285 Overland Ave"
+    flatbreads: {
+        header: "FLATBREADS",
+        items: [
+            { name: "Meat Flatbread", price: "$14.00", description: "Ground beef mixed with onions, parsley & specialty herbs." },
+            { name: "Cheese Flatbread ", price: "$13.00", description: "A mixture of cheeses; mozzarella, provolone, romano & parmesan" },
+            { name: "Chicken Shawerma Flatbread ", price: "$14.00", description: "Freshly cut marinated chicken" },
+
+        ]
     },
-  },
-  "areaServed": ["San Diego"],
-  "availableLanguage": ["English", "Spanish"],
-  "menu": "https://www.clover.com/online-ordering/tigris-mediterranean-gri-san-diego",
-  "serviceOutput": "Event Catering",
-  "serviceAudience": {
-    "@type": "Audience",
-    "audienceType": ["Wedding", "Corporate", "Private Events"]
-  },
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "USD",
-    "price": "Varies",
-    "eligibleRegion": ["San Diego"],
-  }
+    sandwiches: {
+        header: "",
+        items: [
+            { name: "", price: "", description: "" }
+        ]
+    },
+    plates: {
+        header: "",
+        items: [
+            { name: "", price: "", description: "" }
+        ]
+    },
+    sides: {
+        header: "",
+        items: [
+            { name: "", price: "", description: "" }
+        ]
+    },
+    soup: {
+        header: "",
+        items: [
+            { name: "", price: "", description: "" }
+        ]
+    },
+    desserts: {
+        header: "",
+        items: [
+            { name: "", price: "", description: "" }
+        ]
+    },
+};
+
+function showItems(option) {
+    const displayHeader = document.getElementById("display-header");
+    const displayItems = document.getElementById("display-items");
+
+    // Set header
+    displayHeader.textContent = menuData[option].header;
+
+    // Clear old items and add new items
+    displayItems.innerHTML = "";
+    menuData[option].items.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <div class="card">
+                <h5 class="card-title">${item.name} | ${item.price}</h5>
+                <p class="card-text">${item.description}</p>
+            </div>
+        `;
+        displayItems.appendChild(li);
+    });
 }
+
+// Automatically show the first option when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+    showItems('salads');
+});
 </script>
+
 <header>
   <nav class="navbar navbar-expand-md">
     <div class="container-fluid">
@@ -212,103 +246,29 @@
   </nav>
 </header>
 
-<div class="container">
-  <center>
-    <h1 class="featurette-heading my-5">Parties & Catering</h1>
-    <p class="lead">Transform your special occasions into extraordinary celebrations with our exquisite off-site catering. At Tigris Mediterranean Grille, we don't just serve food; we create unforgettable culinary journeys that enchant your guests and leave lasting memories. From intimate gatherings to grand galas, let us weave the flavors of the Middle East into every moment, ensuring your event is not just attended, but truly experienced.</p>
-  </center>
-  <hr class="featurette-divider" />
+<div class="container my-5">
+  <div class="row">
+    <!-- Left Sidebar for Menu Options -->
+    <div class="col-md-3 d-flex flex-column align-items-center text-center py-5">
+      <h1 class="menu-header">MENU</h1>
+      <ul class="menu-options list-unstyled">
+        <li onclick="showItems('salads')">SALADS</li>
+        <li onclick="showItems('flatbreads')">FLATBREADS</li>
+        <li onclick="showItems('sandwiches')">SANDWICHES</li>
+        <li onclick="showItems('plates')">PLATES</li>
+        <li onclick="showItems('sides')">SIDES</li>
+        <li onclick="showItems('soup')">SOUP</li>
+        <li onclick="showItems('desserts')">DESSERTS</li>
+      </ul>
+    </div>
 
-<div class="container catering menu text-center">
-    <h2 class="featurette-heading my-4">Unforgettable Celebrations Await</h2>
-
-    <p class="lead">
-      Ready to elevate your next event? Let us bring the magic to you. From office luncheons to the most unforgettable celebrations, we craft culinary experiences that tantalize and delight. 
-      </p>
-      <p class="lead">Can’t make it to us? No problem—we’ll come to you, wherever your special moment awaits. Choose from personalized catering options or indulge in bulk orders of our signature dishes, tailored just for you.
-    </p>
-    
-    <button type="button" class="btn btn-danger p-3" data-bs-toggle="modal" data-bs-target="#inquireModal">
-      PLAN YOUR FEAST - INQUIRE NOW!
-    </button>
-</div>
-</div>
-
-<!-- Modal --> 
-<div class="modal fade" id="inquireModal" tabindex="-1" aria-labelledby="inquireModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="inquireModalLabel">CONTACT US ABOUT YOUR PRIVATE EVENT</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <h5 class="mt-1 mb-3"><center>YOUR CONTACT INFORMATION</center></h5>
-          <div class="container">
-            <div class="row">
-              <div class="mb-2 col-md-6 d-flex flex-column">
-                <label for="cater-firstname" class="form-label">First Name <span class="required-indicator">*</span></label>
-                <input type="text" class="form-control custom-input" id="cater-firstname" required >
-              </div>
-              <div class="mb-2 col-md-6 d-flex flex-column">
-                <label for="cater-lastname" class="form-label">Last Name <span class="required-indicator">*</span></label>
-                <input type="text" class="form-control custom-input" id="cater-lastname" required >
-              </div>
-            </div>
-            <div class="mb-2">
-              <label for="cater-email" class="form-label">Email <span class="required-indicator">*</span></label>
-              <input type="email" class="form-control custom-input" id="cater-email" required>
-            </div>
-            <div class="mb-2">
-              <label for="cater-phone" class="form-label">Phone Number <span class="required-indicator">*</span></label>
-              <input type="tel" class="form-control custom-input" id="cater-phone" required >
-            </div>
-            <div class="mb-2">
-              <label for="cater-company" class="form-label">Company</label>
-              <input type="text" class="form-control custom-input" id="cater-company" >
-            </div>
-          </div>
-
-          <h5 class="mt-4 mb-2"><center>EVENT DETAILS</center></h5>
-          <div class="container">
-              <div class="mb-3">
-                <label for="cater-type" class="form-label">Nature of Event <span style="font-style:italic">(e.g., Business Dinner or Birthday Party)</span></label>
-                <input type="text" class="form-control custom-input" id="cater-type"></input>
-              </div>
-
-            <div class="mb-3">
-              <label for="cater-date" class="form-label">Event Date <span class="required-indicator">*</span></label>
-              <input type="date" class="form-control custom-input" id="cater-date" required >
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-md-6 d-flex flex-column">
-                  <label for="cater-start-time" class="form-label">Start Time</label>
-                  <input type="time" class="form-control custom-input" id="cater-start-time" >
-                </div>
-                <div class="col-md-6 d-flex flex-column">
-                  <label for="cater-end-time" class="form-label">End Time </label>
-                  <input type="time" class="form-control custom-input" id="cater-end-time">
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="cater-num-people" class="form-label">Number of People</label>
-                <input type="number" class="form-control custom-input" id="cater-num-people">
-              </div>
-              <div class="mb-2">
-                <label for="cater-moreinfo" class="form-label">Additional Information</span></label>
-                <textarea class="form-control custom-input" id="cater-moreinfo" rows="2" ></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="cater-referral" class="form-label">How did you hear about us?</label>
-                <input type="text" class="form-control custom-input" id="cater-referral">
-              </div>
-          </div>
-
-          <button type="submit" class="mt-4 btn d-flex mx-auto btn-outline-danger">Send Inquiry</button>
-        </form>
+    <!-- Right Side for Displaying Menu Items -->
+    <div class="col-md-9">
+      <div id="menu-display">
+        <h3 id="display-header"></h3>
+        <div id="display-items">
+          <!-- Items will display here based on selection -->
+        </div>
       </div>
     </div>
   </div>
@@ -375,4 +335,3 @@
 </body>
 
 </html>
-
