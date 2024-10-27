@@ -1,3 +1,14 @@
+* {
+  font-family: "Avenir LT Std";
+}
+
+/* Navbar Logo */
+@media (max-width: 992px) {
+  .navbar-brand img {
+    max-width: 140px !important;
+  }
+}
+
 .menu p {
   margin-bottom: 20px;
   padding: 0 15px;
@@ -24,7 +35,7 @@ a:hover {
   color: #9b2222;
 }
 
-/* contact information */
+/* Contact Page */
 .hours-list p {
   display: flex;
   justify-content: space-between;
@@ -39,7 +50,8 @@ a:hover {
   text-align: right;
   margin-left: 10px;
 }
-/* contact form input */
+
+/* Contact Form */
 .custom-input {
   border: none;
   border-bottom: 1px solid black;
@@ -60,18 +72,10 @@ a:hover {
   color: #aaa;
 }
 
-/* logo */
-@media (max-width: 992px) {
-  .navbar-brand img {
-    max-width: 140px !important;
-  }
-}
-
-/* Optional color scheme to replace white background */
+/* Replace white background */
 .navbar {
   background-color: #7a1a1a;
 }
-
 body {
   background-color: #f5e1d1;
   color: #3b2a2a;
@@ -108,7 +112,6 @@ p {
   background-color: #9b2222;
   color: white;
 }
-
 .navbar {
   background-color: #7a1a1a;
 }
@@ -126,14 +129,14 @@ p {
   color: #f5e1d1;
 }
 
-/* menu */
+/* Menu Page */
 .menu-header {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 30px;
   position: relative;
   text-align: center;
+  font-weight: 700;
+  line-height: 1;
 }
-
 .menu-header::after {
   content: "";
   display: block;
@@ -142,46 +145,20 @@ p {
   height: 2px;
   background-color: #8b0000;
 }
-
 .menu-options li {
   margin: 15px auto 15px;
-  font-size: 13px;
+  font-size: 17px;
   cursor: pointer;
   color: #8b0000;
 }
 .menu-options li:hover {
   text-decoration: underline;
 }
-
 #menu-display {
   margin-left: 20px;
 }
-#display-header {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-#display-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  list-style-type: none;
-  justify-content: center;
-}
 .card {
-  margin-bottom: 20px;
-  width: 300px;
-  height: 140px;
   border: none;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
   text-align: left;
-  background-color: #fffcfa;
-}
-.card-title {
-  font-size: 1.25rem;
-}
-.card-text {
-  font-size: 1rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  background-color: #f5e1d1;
 }
