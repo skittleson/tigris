@@ -123,7 +123,7 @@
 
 <body>
 <header>
-  <nav class="navbar navbar-expand-md">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
         <img
@@ -153,13 +153,16 @@
             <a class="nav-link btn-outline-success" href="/menu">MENU</a>
           </li>
           <li class="nav-item px-3">
+            <a class="nav-link btn-outline-success" href="/gallery">GALLERY</a>
+          </li>
+          <li class="nav-item px-3">
             <a class="nav-link" href="/catering">SPECIAL EVENTS</a>
           </li>
           <li class="nav-item px-3">
-            <a class="nav-link" href="/our-story">ABOUT TIGRIS GRILLE</a>
+            <a class="nav-link" href="/our-story">OUR STORY</a>
           </li>
           <li class="nav-item px-3">
-            <a class="nav-link" href="/contact">CONTACT US</a>
+            <a class="nav-link" href="/contact">CONTACT</a>
           </li>
         </ul>
       </div>
@@ -189,14 +192,17 @@
 }
 </script>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13410.210757627956!2d-117.1304295!3d32.8306151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x39c5d62b7baaf06!2sTigris%20Mediterranean%20Grille!5e0!3m2!1sen!2sus!4v1616021732440!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<div class="text-center pt-5">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13410.210757627956!2d-117.1304295!3d32.8306151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x39c5d62b7baaf06!2sTigris%20Mediterranean%20Grille!5e0!3m2!1sen!2sus!4v1616021732440!5m2!1sen!2sus" width="95%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
 
 <hr class="featurette-divider">
 
 <div class="container" style="max-width: 100%;">
   <div class="row">
     <div class="col-md-4 d-flex flex-column align-items-center mb-4 mb-md-0">
-      <h3 class="mb-3" style="white-space: nowrap;">HOURS OF OPERATION</h3>
+      <h3 class="mb-3" style="white-space: nowrap;">HOURS</h3>
+      <p>Our Door is Open!</p>
       <div class="hours-list">
         <p><span class="day">Monday:</span> <span class="time ml-2">10 AM - 7 PM</span></p>
         <p><span class="day">Tuesday:</span> <span class="time ml-2">10 AM - 7 PM</span></p>
@@ -211,31 +217,36 @@
 
     <div class="col-md-4 d-flex flex-column align-items-center mb-4 mb-md-0">
       <h3 class="mb-3">INFORMATION</h3>
-      <div class="text-left">
+      <p>Reach out – we're here to help!</p>
+      <div class="text-center contact-info">
+        <i class="fs-4 bi bi-telephone-fill"></i>
         <p>
-          <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06"><i class="bi bi-geo-alt-fill"></i> 5285 Overland Ave #102
+          <a href="tel:(858) 576-9999">(858) 576-9999</a>
+        </p>
+        <i class="fs-4 bi bi-envelope-fill"></i> 
+        <p>
+          <a href="mailto:info@tigrisgrille.com" style="white-space: nowrap;">info@tigrisgrille.com</a>
+        </p>
+        <i class="fs-4 bi bi-geo-alt-fill"></i>
+        <p>
+          <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285 Overland Ave #102
           <br>
           San Diego, California 92123
           </a>
-        </p>
-        <p>
-          <a href="tel:(858) 576-9999"><i class="bi bi-telephone-fill"></i> Phone: (858) 576-9999</a>
-        </p>
-        <p>
-          <a href="mailto:info@tigrisgrille.com" style="white-space: nowrap;"><i class="bi bi-envelope-fill"></i> Email: info@tigrisgrille.com</a>
         </p>
       </div>
     </div>
 
 
-    <div class="col-md-4 d-flex flex-column align-items-center">
+    <div class="col-md-4 d-flex flex-column align-items-center mb-4 mb-md-0">
       <h3 class="mb-3">CONTACT</h3>
-      <form style="width:90%" id="contactForm" method="POST" action="/submit-form">
-          <input type="text" class="mb-3 form-control custom-input" id="contact-first-name" name="contact-first-name" placeholder="First Name" required>
-          <input type="text" class="mb-3 form-control custom-input" id="contact-last-name" name="contact-last-name" placeholder="Last Name" required>
-          <input type="email" class="mb-3 form-control custom-input" id="contact-email" name="contact-email" placeholder="Email Address" required>
-          <input type="tel" class="mb-3 form-control custom-input" id="contact-number" name="contact-number" placeholder="Phone Number" required>
-          <textarea class="mb-4 form-control custom-input" id="message" rows="3" name="message" placeholder="Message" required></textarea>
+      <p>We'd love to hear from you!</p>
+      <form style="width:93%" id="contactForm" method="POST" action="/submit-form">
+          <input type="text" class="mb-3 form-control custom-input" id="contact-first-name" name="contact-first-name" placeholder="First Name *" required>
+          <input type="text" class="mb-3 form-control custom-input" id="contact-last-name" name="contact-last-name" placeholder="Last Name *" required>
+          <input type="email" class="mb-3 form-control custom-input" id="contact-email" name="contact-email" placeholder="Email Address *" required>
+          <input type="tel" class="mb-3 form-control custom-input" id="contact-number" name="contact-number" placeholder="Phone Number *" required>
+          <textarea class="mb-4 form-control custom-input" id="message" rows="3" name="message" placeholder="Message *" required></textarea>
         <center><button type="submit" class="btn btn-danger p-3">SUBMIT</button></center>
       </form>
     </div>
@@ -246,11 +257,11 @@
 
 <hr class="featurette-divider mb-4" />
 
-<div class="container text-center">
-    <div class="row d-flex align-items-center justify-content-between">
+<div class="container text-center" style="max-width:100%">
+    <div class="row align-items-center">
 
         <!-- Order Button -->
-        <div class="col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
+        <div class="col-md-4 d-flex flex-column align-items-center mb-4 mb-md-0">
             <button
                 onclick="window.location.href='https://www.clover.com/online-ordering/tigris-mediterranean-gri-san-diego'"
                 class="btn btn-danger p-3"
@@ -259,7 +270,7 @@
         </div>
 
         <!-- Restaurant Info -->
-        <div class="col-md-3 d-flex flex-column align-items-center mb-md-0">
+        <div class="col-md-4 d-flex flex-column align-items-center mb-md-0">
             <!-- Social Media Logos -->
             <div class="d-flex justify-content-center">
                 <a class="fs-3 opacity-75 me-3" href="https://www.facebook.com/tigrisgrille/"><i class="bi bi-facebook"></i></a>
@@ -268,13 +279,17 @@
                 <a class="fs-3 opacity-75" href="mailto:info@tigrisgrille.com"><i class="bi bi-envelope"></i></a>
             </div>
 
-            <p style="white-space: nowrap;margin-top:revert;"><a href="tel:(858) 576-9999">(858) 576-9999</a> | <a href="mailto:info@tigrisgrille.com" style="white-space: nowrap;text-transform:uppercase">info@tigrisgrille.com</a>
-            <br>
-            <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285 OVERLAND AVE #102, SAN DIEGO, CA 92123</a></p>
+            <p>
+                <a href="tel:(858) 576-9999">(858) 576-9999</a>
+                <br>
+                <a class="py-2" href="mailto:info@tigrisgrille.com" style="white-space: nowrap;text-transform:uppercase">info@tigrisgrille.com</a>
+                <br>
+                <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285 OVERLAND AVE #102, SAN DIEGO, CA 92123</a>
+            </p>
         </div>
 
         <!-- Terms -->
-        <div class="col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
+        <div class="col-md-4 d-flex flex-column align-items-center mb-md-0">
             <p class="pt-3">
                 <!-- Terms & Privacy Policy -->
                 <a href="/privacy">PRIVACY</a> | 

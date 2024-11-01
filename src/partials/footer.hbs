@@ -1,10 +1,10 @@
 <hr class="featurette-divider mb-4" />
 
-<div class="container text-center">
-    <div class="row d-flex align-items-center justify-content-between">
+<div class="container text-center" style="max-width:100%">
+    <div class="row align-items-center">
 
         <!-- Order Button -->
-        <div class="col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
+        <div class="col-md-4 d-flex flex-column align-items-center mb-4 mb-md-0">
             <button
                 onclick="window.location.href='{{menu}}'"
                 class="btn btn-danger p-3"
@@ -13,7 +13,7 @@
         </div>
 
         <!-- Restaurant Info -->
-        <div class="col-md-3 d-flex flex-column align-items-center mb-md-0">
+        <div class="col-md-4 d-flex flex-column align-items-center mb-md-0">
             <!-- Social Media Logos -->
             <div class="d-flex justify-content-center">
                 <a class="fs-3 opacity-75 me-3" href="{{facebook}}"><i class="bi bi-facebook"></i></a>
@@ -22,13 +22,17 @@
                 <a class="fs-3 opacity-75" href="mailto:{{email}}"><i class="bi bi-envelope"></i></a>
             </div>
 
-            <p style="white-space: nowrap;margin-top:revert;"><a href="tel:{{phone}}">{{phone}}</a> | <a href="mailto:{{email}}" style="white-space: nowrap;text-transform:uppercase">{{email}}</a>
-            <br>
-            <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285 OVERLAND AVE #102, SAN DIEGO, CA 92123</a></p>
+            <p>
+                <a href="tel:{{phone}}">{{phone}}</a>
+                <br>
+                <a class="py-2" href="mailto:{{email}}" style="white-space: nowrap;text-transform:uppercase">{{email}}</a>
+                <br>
+                <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285 OVERLAND AVE #102, SAN DIEGO, CA 92123</a>
+            </p>
         </div>
 
         <!-- Terms -->
-        <div class="col-md-3 d-flex flex-column align-items-center mb-4 mb-md-0">
+        <div class="col-md-4 d-flex flex-column align-items-center mb-md-0">
             <p class="pt-3">
                 <!-- Terms & Privacy Policy -->
                 <a href="/privacy">PRIVACY</a> | 

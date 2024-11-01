@@ -1,5 +1,11 @@
 * {
   font-family: "Avenir LT Std";
+  letter-spacing: 1px;
+}
+
+iframe {
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
 
 /* Navbar Logo */
@@ -45,6 +51,7 @@ a:hover {
   justify-content: space-between;
   width: 100%;
   margin: 5px 0;
+  font-size: 1.1rem;
 }
 .hours-list .day {
   text-align: left;
@@ -54,7 +61,6 @@ a:hover {
   text-align: right;
   margin-left: 10px;
 }
-
 /* Contact Form */
 .custom-input {
   border: none;
@@ -65,6 +71,7 @@ a:hover {
   resize: none;
   text-align: left;
   outline: none;
+  font-size: 1.1rem;
 }
 .custom-input:focus {
   outline: none;
@@ -74,6 +81,12 @@ a:hover {
 }
 .custom-input::placeholder {
   color: #aaa;
+}
+.contact-info {
+  font-size: 1.1rem;
+}
+.form-control {
+  font-size: 1.1rem;
 }
 
 /* Replace white background */
