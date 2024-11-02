@@ -23,6 +23,11 @@ iframe {
   text-transform: uppercase;
   min-width: 150px !important;
   border: 2px solid black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s;
+}
+.btn:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .menu p {
@@ -36,11 +41,6 @@ iframe {
 
 .featurette-image {
   border-radius: 10px;
-}
-
-.btn-danger,
-.btn-outline-danger {
-  transition: background-color 0.5s;
 }
 
 a {
@@ -186,4 +186,8 @@ p {
   border: none;
   text-align: left;
   background-color: #f5e1d1;
+}
+.card-img-top {
+  max-height: 200px;
+  object-fit: cover;
 }
