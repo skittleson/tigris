@@ -21,6 +21,8 @@ iframe {
 
 .btn {
   text-transform: uppercase;
+  min-width: 150px !important;
+  border: 2px solid black;
 }
 
 .menu p {
