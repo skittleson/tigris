@@ -141,31 +141,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 <div class="container my-5">
-  <div class="row">
-    <!-- Left Sidebar for Menu Options -->
-    <div class="col-md-2 d-flex flex-column align-items-center text-center py-5">
-      <h1 class="menu-header">MENU</h1>
-      <ul class="menu-options list-unstyled">
-        <li onclick="showItems('salads')">SALADS</li>
-        <li onclick="showItems('flatbreads')">FLATBREADS</li>
-        <li onclick="showItems('sandwiches')">SANDWICHES</li>
-        <li onclick="showItems('plates')">PLATES</li>
-        <li onclick="showItems('sides')">SIDES</li>
-        <li onclick="showItems('soup')">SOUP</li>
-        <li onclick="showItems('desserts')">DESSERTS</li>
-      </ul>
-    </div>
-
-    <!-- Right Side for Displaying Menu Items -->
-    <div class="col-md-10">
-      <div id="menu-display">
-        <h3 id="display-header"></h3>
-        <div id="display-items" class="row">
-          <!-- Items will display here based on selection -->
+    <div class="row">
+        <!-- Left Sidebar for Menu Options -->
+        <div class="col-md-2 d-flex flex-column align-items-center text-center py-5">
+        <h1 class="menu-header">MENU</h1>
+        <ul class="menu-options list-unstyled">
+            <li onclick="showItems('salads')">SALADS</li>
+            <li onclick="showItems('flatbreads')">FLATBREADS</li>
+            <li onclick="showItems('sandwiches')">SANDWICHES</li>
+            <li onclick="showItems('plates')">PLATES</li>
+            <li onclick="showItems('sides')">SIDES</li>
+            <li onclick="showItems('soup')">SOUP</li>
+            <li onclick="showItems('desserts')">DESSERTS</li>
+        </ul>
         </div>
-      </div>
-    </div>
 
+        <!-- Right Side for Displaying Menu Items -->
+        <div class="col-md-10">
+        <div id="menu-display">
+            <h3 id="display-header"></h3>
+            <div id="display-items" class="row">
+            <!-- Items will display here based on selection -->
+            </div>
+        </div>
+        </div>
+    </div>
 </div>
 
 {{> footer}}

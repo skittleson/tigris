@@ -44,28 +44,181 @@
   }
 }
 </script>
+<script>
+const menuData = {
+    salads: {
+        header: "SALADS",
+        items: [
+            { name: "Avocado Salad", small_price: "$70", large_price: "$80", description: "Dive into crisp romaine and spring mix, topped with juicy tomatoes, cool cucumbers, and creamy avocado, balanced with red onions and feta", image:"" },
+            { name: "Tigris Salad", small_price: "$70", large_price: "$80", description: "A vibrant blend of spring greens, sweet cranberries, candied pecans, and bold blue cheese, drizzled with our irresistible raspberry vinaigrette", image:"" },
+            { name: "Greek Salad", small_price: "$70", large_price: "$80", description: "Crisp romaine meets ripe tomatoes, zesty onions, and briny olives, finished with feta and a fresh lemon vinaigrette for a classic taste of the Mediterranean", image:"" },
+            { name: "Mediterranean Salad", small_price: "$70", large_price: "$80", description: "Romaine, juicy tomatoes, red onions, and cucumber tossed in a light lemon vinaigrette to bring a refreshing crunch to every bite", image:"" },
+            { name: "Apple Walnut Salad", small_price: "$70", large_price: "$80", description: "Fresh spring mix with crisp apple slices, toasted walnuts, and red onions, balanced by a sweet balsamic vinaigrette", image:"" },
+            { name: "Fattoush Salad", small_price: "$70", large_price: "$80", description: "A delicious mix of romaine, ripe tomatoes, cool cucumbers, radish, and fresh mint with toasted pita chips, finished with a tangy herb-infused dressing", image:"" }
+        ]
+    },
+    flatbreads: {
+        header: "FLATBREADS",
+        items: [
+            { name: "Cheese Flatbread", per_flatbread_price: "13", description: "Melted layers of mozzarella, provolone, romano, and parmesan create a gooey and satisfying flatbread", image:"" },
+            { name: "Zaatar Flatbread", per_flatbread_price: "$13" , description: "Bold zaatar spices and olive oil on a toasty flatbread bring Mediterranean warmth and depth with every slice", image:"" },
+            { name: "Vegetable Flatbread", per_flatbread_price: "$14", description: "Fresh peppers, onions, and melty cheese come together on a delicious flatbread for a vegetable lover's delight", image:"" },
+            { name: "Meat Flatbread", per_flatbread_price: "$14", description: "A savory blend of ground beef with onions, parsley, and aromatic herbs, all baked to perfection on our warm, crispy flatbread", image:"" },
+            { name: "Chicken Shawerma Flatbread ", per_flatbread_price: "$14", description: "Tender, marinated chicken atop a perfectly baked flatbread for a savory, flavorful bite", image:"" }
+
+        ]
+    },
+    entrees: {
+        header: "ENTREES",
+        items: [
+            { name: "Chicken Shawerma", small_price: "80", large_price: "$105", description: "Marinated chicken, thinly sliced for a classic, satisfying shawerma experience", image:"" },
+            { name: "Gyro", small_price: "$80", large_price: "$105", description: "Roasted, spiced meat creates the ideal comfort plate, a favorite of any gyro lover", image:"" },
+            { name: "Falafel", per_piece_price: "$1.50", description: "Crispy, golden falafel patties with our special sauce for a delightful plant-based option", image:"" },
+            { name: "Chicken Cream Chop", per_piece_price: "$8.50", description: "Breaded and golden-fried chicken breast slices make this a crunchy, delicious treat", image:"" },
+            { name: "Chicken Kabab", per_skewer_price: "$8.50", description: "Ground, marinated chicken skewers grilled to juicy perfection and served fresh", image:"" },
+            { name: "Chicken Tikka", per_skewer_price: "$8.50", description: "Succulent, grilled chicken chunks with bold spices in every skewer", image:"" },
+            { name: "Beef Kabob", per_skewer_price: "$8.50", description: "Ground beef, onions, and parsley combine for a flavorful grilled skewer, fresh off the grill", image:"" },
+            { name: "Beef Tikka", per_skewer_price: "$8.50", description: "Seasoned, juicy beef chunks grilled on skewers for a classic Mediterranean flavor", image:"" },
+            { name: "Salmon Tikka ", per_skewer_price: "$15", description: "Grilled salmon marinated with our special spice blend for a unique, mouth-watering experience", image:"" }
+        ]
+    },
+    sides: {
+        header: "SIDES",
+        items: [
+            { name: "Tabouleh Salad", small_price: "$70", large_price: "$80", description: "Fresh parsley, tomatoes, and onions finely chopped and dressed with lemon and olive oil for a refreshing, zesty taste", image:"" },
+            { name: "Beet Salad", small_price: "$70", large_price: "$80", description: "Red beets with parsley, cranberries, feta, and walnuts bring a sweet, earthy, and tangy mix", image:"" },
+            { name: "Hummus", small_price: "$70", large_price: "$80", description: "Smooth and creamy chickpea dip with lemon, garlic, and olive oil for a timeless Mediterranean side", image:"" },
+            { name: "Baba Ghanoug", small_price: "$70", large_price: "$80", description: "Smoky eggplant blended with garlic and olive oil creates a rich, irresistible dip", image:"" },
+            { name: "Rice", small_price: "$55", large_price: "$65", description: "A fluffy bowl of perfectly seasoned yellow rice to complete any dish", image:"" },
+            { name: "French Fries", small_price: "$30", large_price: "$40", description: "Crispy golden fries, ideal for a classic snack or side", image:"" }
+        ]
+    },
+    extras: {
+        header: "EXTRAS",
+        items: [
+            { name: "Utensils", per_piece_price: "$2", description: "Warm and comforting lentil and onion soup seasoned with exotic curry spices, salt, and pepper", image:"" },
+            { name: "Pita Bread", per_piece_price: "$1.25", description: "Warm and comforting lentil and onion soup seasoned with exotic curry spices, salt, and pepper", image:"" }
+        ]
+    },
+    desserts: {
+        header: "DESSERTS",
+        items: [
+            { name: "Baklava", small_price: "$65", large_price: "$75", description: "Flaky layers of phyllo pastry with sweet honey and nuts, offering a rich and traditional Mediterranean sweetness", image:"" }
+        ]
+    },
+};
+
+function showItems(option) {
+    const displayHeader = document.getElementById("display-header");
+    const displayItems = document.getElementById("display-items");
+
+    displayHeader.textContent = menuData[option].header;
+
+    // Clear old items and add new items
+    displayItems.innerHTML = "";
+    menuData[option].items.forEach(item => {
+        const div = document.createElement("div");
+        div.classList.add("col-md-6", "my-2");
+
+        // pricing based on item
+        let priceInfo = "";
+        if (item.per_piece_price) {
+            priceInfo = `Per piece: ${item.per_piece_price}`;
+        } else if (item.per_flatbread_price) {
+            priceInfo = `Per flatbread: ${item.per_flatbread_price}`;
+        } else if (item.per_skewer_price) {
+            priceInfo = `Per skewer: ${item.per_skewer_price}`;
+        } else if (item.small_price && item.large_price) {
+            priceInfo = `Small ${item.small_price} | Large ${item.large_price}`;
+        }
+
+        div.innerHTML = `
+            <div class="card h-100">
+                {{!-- <img src="${item.image}" class="card-img-top img-fluid" alt="${item.name}" /> --}}
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="200"
+          height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 200x200"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                    <h5 class="card-title">${item.name}</h5>
+                    <h6>${priceInfo}</h6>
+                    <p class="card-text">${item.description}</p>
+                </div>
+            </div>
+        `;
+        displayItems.appendChild(div);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    showItems('salads');
+});
+</script>
+
 {{> navbar}}
 
 <div class="container">
-  <center>
-    <h1 class="featurette-heading my-5">Parties & Catering</h1>
-    <p class="lead">Transform your special occasions into extraordinary celebrations with our exquisite off-site catering. At {{company}}, we don't just serve food; we create unforgettable culinary journeys that enchant your guests and leave lasting memories. From intimate gatherings to grand galas, let us weave the flavors of the Middle East into every moment, ensuring your event is not just attended, but truly experienced.</p>
-  </center>
-  <hr class="featurette-divider" />
-
-<div class="container catering menu text-center">
-    <h2 class="featurette-heading my-4">Unforgettable Celebrations Await</h2>
-
-    <p class="lead">
-      Ready to elevate your next event? Let us bring the magic to you. From office luncheons to the most unforgettable celebrations, we craft culinary experiences that tantalize and delight. 
-      </p>
-      <p class="lead">Can’t make it to us? No problem—we’ll come to you, wherever your special moment awaits. Choose from personalized catering options or indulge in bulk orders of our signature dishes, tailored just for you.
+  <div class="text-center">
+    <h1 class="featurette-heading my-5">Parties & Catering: Unforgettable Celebrations Await</h1>
+    <p class="lead mb-4">
+      Ready to elevate your next event? Transform your special occasions into extraordinary celebrations with our exquisite off-site catering.
     </p>
-    
-    <button type="button" class="btn btn-danger p-3" data-bs-toggle="modal" data-bs-target="#inquireModal">
+
+    <p class="lead mb-4">
+      At {{company}}, we don’t just serve food; we create culinary journeys that enchant your guests and leave lasting memories.
+    </p>
+
+    <p class="lead mb-4">
+      From intimate gatherings to grand galas, let us weave the magic of Middle Eastern flavors into every moment, ensuring your event is not just attended, but truly experienced. Whether it’s an office luncheon or a grand celebration, we craft culinary experiences that tantalize and delight.
+    </p>
+
+    <p class="lead mb-4">
+      Can’t make it to us? No problem—we’ll come to you, wherever your special moment awaits.
+    </p>
+
+    <p class="lead mb-5">
+      Choose from personalized catering options or indulge in bulk orders of our signature dishes, tailored just for you.
+    </p>
+
+    <button type="button" class="btn btn-danger fs-5" data-bs-toggle="modal" data-bs-target="#inquireModal">
       PLAN YOUR FEAST - INQUIRE NOW!
     </button>
-</div>
+  </div>
+
+  <hr class="featurette-divider" />
+
+  <div class="container text-center fs-5 pb-1">
+    <p>All entrées are served with their respective sauces.</p>
+    <p>Small trays serve 10–15 people.</p>
+    <p>Large trays serve 20–25 people.</p>
+  </div>
+
+  <div class="container my-5">
+    <div class="row">
+      <!-- Left Sidebar for Menu Options -->
+      <div class="col-md-2 d-flex flex-column align-items-center text-center py-5">
+        <h1 class="menu-header">MENU</h1>
+        <ul class="menu-options list-unstyled">
+          <li onclick="showItems('salads')">SALADS</li>
+          <li onclick="showItems('flatbreads')">FLATBREADS</li>
+          <li onclick="showItems('entrees')">ENTREES</li>
+          <li onclick="showItems('sides')">SIDES</li>
+          <li onclick="showItems('desserts')">DESSERTS</li>
+          <li onclick="showItems('extras')">EXTRAS</li>
+        </ul>
+      </div>
+
+      <!-- Right Side for Displaying Menu Items -->
+      <div class="col-md-10">
+        <div id="menu-display">
+          <h3 id="display-header"></h3>
+          <div id="display-items" class="row">
+            <!-- Items will display here based on selection -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- Modal --> {{!--TODO: handle submission --}}
