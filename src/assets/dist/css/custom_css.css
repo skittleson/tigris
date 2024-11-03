@@ -5,7 +5,7 @@
 
 iframe {
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: 3px solid #9b2222;
 }
 
 .text-shadow {
@@ -194,16 +194,19 @@ p {
 
 /* Home page */
 /* Parallax Background Styling */
+.carousel-inner {
+  height: 550px;
+}
 .parallax {
-  background-image: url("/images/raw.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
-  position: relative; /* Remove with ::before if not adding text */
+  height: 550px;
+  position: relative;
 }
-.parallax::before {
+/* Shading for text */
+.parallax-text::before {
   content: "";
   position: absolute;
   top: 0;

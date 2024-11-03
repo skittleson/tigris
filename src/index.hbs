@@ -112,7 +112,7 @@
 
 <main>
 
-  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
         aria-label="Slide 1"></button>
@@ -121,11 +121,12 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        {{!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
           preserveAspectRatio="xMidYMid slice" focusable="false">
           <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-        </svg>
+        </svg> --}}
         {{!-- For the image: warm tones and vibrant ingredients with slight dark overlay to the images so the text and buttons are easy to read --}}
+        <div class="parallax parallax-text" style="background-image: url('/images/raw.jpg');"></div>
         <div class="container">
           <div class="carousel-caption text-start">
             <h1>A Taste of Mesopotamia: Savor the Flavors of Ancient Traditions</h1>
@@ -135,11 +136,12 @@
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        {{!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
           preserveAspectRatio="xMidYMid slice" focusable="false">
           <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-        </svg>
+        </svg> --}}
         {{!-- For the image: kabob plate (hummus + tabouleh) with a focus on color and variety --}}
+        <div class="parallax parallax-text" style="background-image: url('/images/raw.jpg');"></div>
         <div class="container">
           <div class="carousel-caption">
             <h1>Journey Across the Mediterranean: Where East Meets West</h1>
@@ -149,11 +151,12 @@
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        {{!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
           preserveAspectRatio="xMidYMid slice" focusable="false">
           <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-        </svg>
+        </svg> --}}
         {{!-- For the image: table with a mix of dishes --}}
+        <div class="parallax parallax-text" style="background-image: url('/images/raw.jpg');"></div>
         <div class="container">
           <div class="carousel-caption text-end">
             <h1>From Baghdad to San Diego: A Culinary Odyssey</h1>
@@ -217,7 +220,7 @@
 
     </div>
 
-    <div class="parallax my-5"></div>
+    <div class="parallax my-5" style="background-image: url('/images/raw.jpg');"></div>
 
     <div class="container marketing">
 
@@ -278,11 +281,11 @@
       <!-- /END THE FEATURETTES -->
     </div>
 
-  <div class="parallax my-5"></div>
+  <div class="parallax my-5" style="background-image: url('/images/raw.jpg');"></div>
 
   <div class="container marketing">
     {{!-- Map --}}
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13410.210757627956!2d-117.1304295!3d32.8306151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x39c5d62b7baaf06!2sTigris%20Mediterranean%20Grille!5e0!3m2!1sen!2sus!4v1616021732440!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13410.210757627956!2d-117.1304295!3d32.8306151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x39c5d62b7baaf06!2sTigris%20Mediterranean%20Grille!5e0!3m2!1sen!2sus!4v1616021732440!5m2!1sen!2sus" width="100%" height="450" allowfullscreen="" loading="lazy"></iframe>
 
     {{!-- Restaurant Info --}}
       <div class="row mt-5">
