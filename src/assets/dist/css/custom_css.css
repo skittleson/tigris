@@ -195,7 +195,7 @@ p {
 /* Home page */
 /* Parallax Background Styling */
 .carousel-inner {
-  height: 550px;
+  /* height: 550px; */
 }
 .parallax {
   background-attachment: fixed;
