@@ -24,7 +24,9 @@
 </script>
 
 <div class="text-center pt-5">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13410.210757627956!2d-117.1304295!3d32.8306151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x39c5d62b7baaf06!2sTigris%20Mediterranean%20Grille!5e0!3m2!1sen!2sus!4v1616021732440!5m2!1sen!2sus" width="95%" height="450" allowfullscreen="" loading="lazy"></iframe>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13410.210757627956!2d-117.1304295!3d32.8306151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x39c5d62b7baaf06!2sTigris%20Mediterranean%20Grille!5e0!3m2!1sen!2sus!4v1616021732440!5m2!1sen!2sus"
+    width="95%" height="450" allowfullscreen="" loading="lazy"></iframe>
 </div>
 
 <hr class="featurette-divider">
@@ -33,7 +35,7 @@
 <div class="container" style="max-width: 100%;">
   <div class="row">
     <div class="col-md-4 d-flex flex-column align-items-center mb-4 mb-md-0">
-      <h3 class="mb-3" >HOURS</h3>
+      <h3 class="mb-3">HOURS</h3>
       <p>Our Door is Open!</p>
       <div class="hours-list">
         <p><span class="day">Monday:</span> <span class="time ml-2">10 AM - 7 PM</span></p>
@@ -55,15 +57,17 @@
         <p>
           <a href="tel:{{phone}}">{{phone}}</a>
         </p>
-        <i class="fs-4 bi bi-envelope-fill"></i> 
+        <i class="fs-4 bi bi-envelope-fill"></i>
         <p>
           <a href="mailto:{{email}}" style="white-space: nowrap;">{{email}}</a>
         </p>
         <i class="fs-4 bi bi-geo-alt-fill"></i>
         <p>
-          <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285 Overland Ave #102
-          <br>
-          San Diego, California 92123
+          <a
+            href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285
+            Overland Ave #102
+            <br>
+            San Diego, California 92123
           </a>
         </p>
       </div>
@@ -74,11 +78,16 @@
       <h3 class="mb-3">CONTACT</h3>
       <p>We'd love to hear from you!</p>
       <form style="width:93%" id="contactForm" method="POST" action="/submit-form">
-          <input type="text" class="mb-3 form-control custom-input" id="contact-first-name" name="contact-first-name" placeholder="First Name *" required>
-          <input type="text" class="mb-3 form-control custom-input" id="contact-last-name" name="contact-last-name" placeholder="Last Name *" required>
-          <input type="email" class="mb-3 form-control custom-input" id="contact-email" name="contact-email" placeholder="Email Address *" required>
-          <input type="tel" class="mb-3 form-control custom-input" id="contact-number" name="contact-number" placeholder="Phone Number *" required>
-          <textarea class="mb-4 form-control custom-input" id="message" rows="3" name="message" placeholder="Message *" required></textarea>
+        <input type="text" class="mb-3 form-control custom-input" id="contact-first-name" name="contact-first-name"
+          placeholder="First Name *" required>
+        <input type="text" class="mb-3 form-control custom-input" id="contact-last-name" name="contact-last-name"
+          placeholder="Last Name *" required>
+        <input type="email" class="mb-3 form-control custom-input" id="contact-email" name="contact-email"
+          placeholder="Email Address *" required>
+        <input type="tel" class="mb-3 form-control custom-input" id="contact-number" name="contact-number"
+          placeholder="Phone Number *" required>
+        <textarea class="mb-4 form-control custom-input" id="message" rows="3" name="message" placeholder="Message *"
+          required></textarea>
         <center><button type="submit" class="btn btn-danger fs-5">SUBMIT</button></center>
       </form>
     </div>

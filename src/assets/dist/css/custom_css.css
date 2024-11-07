@@ -1,15 +1,14 @@
 * {
-  font-family: "Avenir LT Std";
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
 }
 
 iframe {
   border-radius: 10px;
-  border: 3px solid #9b2222;
+  border: 3px solid #780000;
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 /* Navbar Logo */
@@ -23,11 +22,12 @@ iframe {
   text-transform: uppercase;
   min-width: 150px !important;
   border: 2px solid black;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.5s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.3s;
 }
 .btn:hover {
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
 .menu p {
@@ -48,7 +48,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #9b2222;
+  color: #780000;
 }
 
 /* Contact Page */
@@ -85,6 +85,7 @@ a:hover {
   background: transparent;
   border-color: black;
 }
+
 .custom-input::placeholder {
   color: #aaa;
 }
@@ -97,61 +98,54 @@ a:hover {
 
 /* Replace white background */
 .navbar {
-  background-color: #7a1a1a;
+  background-color: #780000;
+  color: #fdf0d5;
 }
 body {
-  background-color: #f5e1d1;
-  color: #3b2a2a;
+  background-color: #fdf0d5;
+  font-family: "Avenir LT Std", sans-serif;
 }
-h1 {
-  color: #8b0000;
-}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #9b2222;
+  color: #780000;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  letter-spacing: 1.2px;
 }
 p {
-  color: #6a6a6a;
+  color: #003049;
 }
 .btn-danger {
-  background-color: #9b2222;
+  background-color: #c1121f;
   color: white;
-  border-color: #8b0000;
+  border-color: #c1121f;
+  padding: 1rem;
 }
 .btn-danger:hover {
-  background-color: #8b0000;
+  background-color: #780000;
+  border-color: #780000;
   color: white;
-  border-color: #9b2222;
 }
 .btn-outline-danger {
-  color: #9b2222;
-  border-color: #9b2222;
+  color: #780000;
+  border-color: #780000;
+  padding: 1rem;
 }
 .btn-outline-danger:hover {
-  background-color: #9b2222;
-  color: white;
-}
-.navbar {
-  background-color: #7a1a1a;
+  background-color: #c1121f;
+  color: #fdf0d5;
+  border-color: #c1121f;
 }
 .navbar .nav-link {
-  color: #f5e1d1;
+  color: #fdf0d5;
   transition: all 0.3s ease;
 }
 .navbar .nav-link:hover {
-  color: #f5e1d1;
-  background-color: #9b2222;
+  background-color: #c1121f;
   border-radius: 5px;
-}
-.navbar .nav-link.active {
-  text-decoration: underline;
-  color: #f5e1d1;
 }
 
 /* Menu Page */
@@ -168,13 +162,13 @@ p {
   margin: 2rem auto 1rem;
   width: 125px;
   height: 2px;
-  background-color: #8b0000;
+  background-color: #780000;
 }
 .menu-options li {
   margin: 15px auto 15px;
   font-size: 17px;
   cursor: pointer;
-  color: #8b0000;
+  color: #780000;
 }
 .menu-options li:hover {
   text-decoration: underline;
@@ -185,18 +179,22 @@ p {
 .card {
   border: none;
   text-align: left;
-  background-color: #f5e1d1;
+  background-color: #fdf0d5;
 }
 .card-img-top {
   max-height: 200px;
   object-fit: cover;
 }
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 16;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 /* Home page */
 /* Parallax Background Styling */
-.carousel-inner {
-  /* height: 550px; */
-}
 .parallax {
   background-attachment: fixed;
   background-position: center;
