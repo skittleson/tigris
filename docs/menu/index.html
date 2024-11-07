@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US"  data-bs-theme="auto">
+<html lang="en-US" data-bs-theme="auto">
 
 <head>
     <title>Tigris Mediterranean Grille</title>
@@ -34,7 +34,8 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../assets/dist/css/custom_css.css">
 
@@ -124,96 +125,96 @@
 <body>
 
 <script>
-const menuData = {
-    salads: {
-        header: "SALADS",
-        items: [
-            { name: "Avocado Salad", price: "$15.50", description: "Dive into crisp romaine and spring mix, topped with juicy tomatoes, cool cucumbers, and creamy avocado, balanced with red onions and feta", image:"" },
-            { name: "Tigris Salad", price: "$15.50", description: "A vibrant blend of spring greens, sweet cranberries, candied pecans, and bold blue cheese, drizzled with our irresistible raspberry vinaigrette", image:"" },
-            { name: "Greek Salad", price: "$15.50", description: "Crisp romaine meets ripe tomatoes, zesty onions, and briny olives, finished with feta and a fresh lemon vinaigrette for a classic taste of the Mediterranean", image:"" },
-            { name: "Mediterranean Salad", price: "$15.50", description: "Romaine, juicy tomatoes, red onions, and cucumber tossed in a light lemon vinaigrette to bring a refreshing crunch to every bite", image:"" },
-            { name: "Apple Walnut Salad", price: "$15.50", description: "Fresh spring mix with crisp apple slices, toasted walnuts, and red onions, balanced by a sweet balsamic vinaigrette", image:"" },
-            { name: "Fattoush Salad", price: "$15.50", description: "A delicious mix of romaine, ripe tomatoes, cool cucumbers, radish, and fresh mint with toasted pita chips, finished with a tangy herb-infused dressing", image:"" }
-        ]
-    },
-    flatbreads: {
-        header: "FLATBREADS",
-        items: [
-            { name: "Meat Flatbread", price: "$14", description: "A savory blend of ground beef with onions, parsley, and aromatic herbs, all baked to perfection on our warm, crispy flatbread", image:"" },
-            { name: "Cheese Flatbread", price: "$13", description: "Melted layers of mozzarella, provolone, romano, and parmesan create a gooey and satisfying flatbread", image:"" },
-            { name: "Chicken Shawerma Flatbread ", price: "$14", description: "Tender, marinated chicken atop a perfectly baked flatbread for a savory, flavorful bite", image:"" },
-            { name: "Zaatar Flatbread", price: "$13", description: "Bold zaatar spices and olive oil on a toasty flatbread bring Mediterranean warmth and depth with every slice", image:"" },
-            { name: "Vegetable Flatbread", price: "$14", description: "Fresh peppers, onions, and melty cheese come together on a delicious flatbread for a vegetable lover's delight", image:"" }
+    const menuData = {
+        salads: {
+            header: "SALADS",
+            items: [
+                { name: "Avocado Salad", price: "$15.50", description: "Dive into crisp romaine and spring mix, topped with juicy tomatoes, cool cucumbers, and creamy avocado, balanced with red onions and feta", image: "" },
+                { name: "Tigris Salad", price: "$15.50", description: "A vibrant blend of spring greens, sweet cranberries, candied pecans, and bold blue cheese, drizzled with our irresistible raspberry vinaigrette", image: "" },
+                { name: "Greek Salad", price: "$15.50", description: "Crisp romaine meets ripe tomatoes, zesty onions, and briny olives, finished with feta and a fresh lemon vinaigrette for a classic taste of the Mediterranean", image: "" },
+                { name: "Mediterranean Salad", price: "$15.50", description: "Romaine, juicy tomatoes, red onions, and cucumber tossed in a light lemon vinaigrette to bring a refreshing crunch to every bite", image: "" },
+                { name: "Apple Walnut Salad", price: "$15.50", description: "Fresh spring mix with crisp apple slices, toasted walnuts, and red onions, balanced by a sweet balsamic vinaigrette", image: "" },
+                { name: "Fattoush Salad", price: "$15.50", description: "A delicious mix of romaine, ripe tomatoes, cool cucumbers, radish, and fresh mint with toasted pita chips, finished with a tangy herb-infused dressing", image: "" }
+            ]
+        },
+        flatbreads: {
+            header: "FLATBREADS",
+            items: [
+                { name: "Meat Flatbread", price: "$14", description: "A savory blend of ground beef with onions, parsley, and aromatic herbs, all baked to perfection on our warm, crispy flatbread", image: "" },
+                { name: "Cheese Flatbread", price: "$13", description: "Melted layers of mozzarella, provolone, romano, and parmesan create a gooey and satisfying flatbread", image: "" },
+                { name: "Chicken Shawerma Flatbread ", price: "$14", description: "Tender, marinated chicken atop a perfectly baked flatbread for a savory, flavorful bite", image: "" },
+                { name: "Zaatar Flatbread", price: "$13", description: "Bold zaatar spices and olive oil on a toasty flatbread bring Mediterranean warmth and depth with every slice", image: "" },
+                { name: "Vegetable Flatbread", price: "$14", description: "Fresh peppers, onions, and melty cheese come together on a delicious flatbread for a vegetable lover's delight", image: "" }
 
-        ]
-    },
-    sandwiches: {
-        header: "SANDWICHES",
-        items: [
-            { name: "Chicken Shawerma Sandwich", price: "$13.50", description: "Layers of marinated chicken, sliced thin and seasoned to perfection, wrapped in our special pita bread", image:"" },
-            { name: "Chicken Tikka Sandwich", price: "$13.50", description: "Juicy, grilled chicken seasoned with aromatic spices, creating a flavor-packed handheld delight", image:"" },
-            { name: "Chicken Kabab Sandwich", price: "$13.50", description: "Grilled ground chicken, spiced and skewered, offering tender and flavorful bites", image:"" },
-            { name: "Beef Tikka Sandwich", price: "$13.50", description: "Grilled to perfection, our marinated beef chunks add bold flavor to this skewer-inspired sandwich", image:"" },
-            { name: "Beef Kabab Sandwich", price: "$13.50", description: "Freshly grilled ground beef with onion and parsley makes this a hearty and satisfying choice", image:"" },
-            { name: "Gyro Sandwich", price: "$13.50", description: "Roasted meat in soft pita bread, creating a comforting, classic Mediterranean street-food experience", image:"" },
-            { name: "Falafel Sandwich", price: "$13.50", description: "Golden, crispy falafel with our signature sauce—a vibrant, plant-based treat that satisfies", image:"" },
-            { name: "Salmon Tikka Sandwich", price: "$16", description: "Grilled salmon marinated with rich spices for a fresh, light, and elegant twist", image:"" }
-        ]
-    },
-    plates: {
-        header: "PLATES",
-        items: [
-            { name: "Tigris Fries Plate", price: "$17.99", description: "Loaded with your choice of chicken shawarma, chicken cream chop, or gyro meat, these fries bring a flavorful Mediterranean flair", image:"" },
-            { name: "Chicken Shawerma Plate", price: "$18.99", description: "Marinated chicken, thinly sliced for a classic, satisfying shawerma experience", image:"" },
-            { name: "Chicken Kabab Plate", price: "$18.99", description: "Ground, marinated chicken skewers grilled to juicy perfection and served fresh", image:"" },
-            { name: "Chicken Tikka Plate", price: "$19.50", description: "Succulent, grilled chicken chunks with bold spices in every skewer", image:"" },
-            { name: "Chicken Cream Chop Plate", price: "$19.50", description: "Breaded and golden-fried chicken breast slices make this a crunchy, delicious treat", image:"" },
-            { name: "Beef Kabob Plate", price: "$19.50", description: "Ground beef, onions, and parsley combine for a flavorful grilled skewer, fresh off the grill", image:"" },
-            { name: "Beef Tikka Plate", price: "$19.50", description: "Seasoned, juicy beef chunks grilled on skewers for a classic Mediterranean flavor", image:"" },
-            { name: "Gyro Plate", price: "$18.99", description: "Roasted, spiced meat creates the ideal comfort plate, a favorite of any gyro lover", image:"" },
-            { name: "Falafel Plate", price: "$18.99", description: "Crispy, golden falafel patties with our special sauce for a delightful plant-based option", image:"" },
-            { name: "Vegetable Plate", price: "$17.99", description: "A delicious blend of seasoned vegetables, sauteed for maximum flavor", image:"" },
-            { name: "Salmon Tikka Plate ", price: "$19.50", description: "Grilled salmon marinated with our special spice blend for a unique, mouth-watering experience", image:"" }
-        ]
-    },
-    sides: {
-        header: "SIDES",
-        items: [
-            { name: "Tabouleh Salad", price: "$8.99", description: "Fresh parsley, tomatoes, and onions finely chopped and dressed with lemon and olive oil for a refreshing, zesty taste", image:"" },
-            { name: "Beet Salad", price: "$8.99", description: "Red beets with parsley, cranberries, feta, and walnuts bring a sweet, earthy, and tangy mix", image:"" },
-            { name: "Rice", price: "$8.99", description: "A fluffy bowl of perfectly seasoned yellow rice to complete any dish", image:"" },
-            { name: "Hummus", price: "$8.99", description: "Smooth and creamy chickpea dip with lemon, garlic, and olive oil for a timeless Mediterranean side", image:"" },
-            { name: "Baba Ghanoug", price: "$8.99", description: "Smoky eggplant blended with garlic and olive oil creates a rich, irresistible dip", image:"" },
-            { name: "Grape Leaves", price: "$7.50", description: "Tender vine leaves filled with a seasoned rice blend—perfectly bite-sized and delicious", image:"" },
-            { name: "French Fries", price: "$7.50", description: "Crispy golden fries, ideal for a classic snack or side", image:"" }
-        ]
-    },
-    soup: {
-        header: "SOUP",
-        items: [
-            { name: "Lentil Soup", price: "$6.50", description: "Warm and comforting lentil and onion soup seasoned with exotic curry spices, salt, and pepper", image:"" }
-        ]
-    },
-    desserts: {
-        header: "DESSERTS",
-        items: [
-            { name: "Baklava", price: "$7.50", description: "Flaky layers of phyllo pastry with sweet honey and nuts, offering a rich and traditional Mediterranean sweetness", image:"" }
-        ]
-    },
-};
+            ]
+        },
+        sandwiches: {
+            header: "SANDWICHES",
+            items: [
+                { name: "Chicken Shawerma Sandwich", price: "$13.50", description: "Layers of marinated chicken, sliced thin and seasoned to perfection, wrapped in our special pita bread", image: "" },
+                { name: "Chicken Tikka Sandwich", price: "$13.50", description: "Juicy, grilled chicken seasoned with aromatic spices, creating a flavor-packed handheld delight", image: "" },
+                { name: "Chicken Kabab Sandwich", price: "$13.50", description: "Grilled ground chicken, spiced and skewered, offering tender and flavorful bites", image: "" },
+                { name: "Beef Tikka Sandwich", price: "$13.50", description: "Grilled to perfection, our marinated beef chunks add bold flavor to this skewer-inspired sandwich", image: "" },
+                { name: "Beef Kabab Sandwich", price: "$13.50", description: "Freshly grilled ground beef with onion and parsley makes this a hearty and satisfying choice", image: "" },
+                { name: "Gyro Sandwich", price: "$13.50", description: "Roasted meat in soft pita bread, creating a comforting, classic Mediterranean street-food experience", image: "" },
+                { name: "Falafel Sandwich", price: "$13.50", description: "Golden, crispy falafel with our signature sauce—a vibrant, plant-based treat that satisfies", image: "" },
+                { name: "Salmon Tikka Sandwich", price: "$16", description: "Grilled salmon marinated with rich spices for a fresh, light, and elegant twist", image: "" }
+            ]
+        },
+        plates: {
+            header: "PLATES",
+            items: [
+                { name: "Tigris Fries Plate", price: "$17.99", description: "Loaded with your choice of chicken shawarma, chicken cream chop, or gyro meat, these fries bring a flavorful Mediterranean flair", image: "" },
+                { name: "Chicken Shawerma Plate", price: "$18.99", description: "Marinated chicken, thinly sliced for a classic, satisfying shawerma experience", image: "" },
+                { name: "Chicken Kabab Plate", price: "$18.99", description: "Ground, marinated chicken skewers grilled to juicy perfection and served fresh", image: "" },
+                { name: "Chicken Tikka Plate", price: "$19.50", description: "Succulent, grilled chicken chunks with bold spices in every skewer", image: "" },
+                { name: "Chicken Cream Chop Plate", price: "$19.50", description: "Breaded and golden-fried chicken breast slices make this a crunchy, delicious treat", image: "" },
+                { name: "Beef Kabob Plate", price: "$19.50", description: "Ground beef, onions, and parsley combine for a flavorful grilled skewer, fresh off the grill", image: "" },
+                { name: "Beef Tikka Plate", price: "$19.50", description: "Seasoned, juicy beef chunks grilled on skewers for a classic Mediterranean flavor", image: "" },
+                { name: "Gyro Plate", price: "$18.99", description: "Roasted, spiced meat creates the ideal comfort plate, a favorite of any gyro lover", image: "" },
+                { name: "Falafel Plate", price: "$18.99", description: "Crispy, golden falafel patties with our special sauce for a delightful plant-based option", image: "" },
+                { name: "Vegetable Plate", price: "$17.99", description: "A delicious blend of seasoned vegetables, sauteed for maximum flavor", image: "" },
+                { name: "Salmon Tikka Plate ", price: "$19.50", description: "Grilled salmon marinated with our special spice blend for a unique, mouth-watering experience", image: "" }
+            ]
+        },
+        sides: {
+            header: "SIDES",
+            items: [
+                { name: "Tabouleh Salad", price: "$8.99", description: "Fresh parsley, tomatoes, and onions finely chopped and dressed with lemon and olive oil for a refreshing, zesty taste", image: "" },
+                { name: "Beet Salad", price: "$8.99", description: "Red beets with parsley, cranberries, feta, and walnuts bring a sweet, earthy, and tangy mix", image: "" },
+                { name: "Rice", price: "$8.99", description: "A fluffy bowl of perfectly seasoned yellow rice to complete any dish", image: "" },
+                { name: "Hummus", price: "$8.99", description: "Smooth and creamy chickpea dip with lemon, garlic, and olive oil for a timeless Mediterranean side", image: "" },
+                { name: "Baba Ghanoug", price: "$8.99", description: "Smoky eggplant blended with garlic and olive oil creates a rich, irresistible dip", image: "" },
+                { name: "Grape Leaves", price: "$7.50", description: "Tender vine leaves filled with a seasoned rice blend—perfectly bite-sized and delicious", image: "" },
+                { name: "French Fries", price: "$7.50", description: "Crispy golden fries, ideal for a classic snack or side", image: "" }
+            ]
+        },
+        soup: {
+            header: "SOUP",
+            items: [
+                { name: "Lentil Soup", price: "$6.50", description: "Warm and comforting lentil and onion soup seasoned with exotic curry spices, salt, and pepper", image: "" }
+            ]
+        },
+        desserts: {
+            header: "DESSERTS",
+            items: [
+                { name: "Baklava", price: "$7.50", description: "Flaky layers of phyllo pastry with sweet honey and nuts, offering a rich and traditional Mediterranean sweetness", image: "" }
+            ]
+        },
+    };
 
-function showItems(option) {
-    const displayHeader = document.getElementById("display-header");
-    const displayItems = document.getElementById("display-items");
+    function showItems(option) {
+        const displayHeader = document.getElementById("display-header");
+        const displayItems = document.getElementById("display-items");
 
-    displayHeader.textContent = menuData[option].header;
+        displayHeader.textContent = menuData[option].header;
 
-    // Clear old items and add new items
-    displayItems.innerHTML = "";
-    menuData[option].items.forEach(item => {
-        const div = document.createElement("div");
-        div.classList.add("col-md-6", "my-2");
-        div.innerHTML = `
+        // Clear old items and add new items
+        displayItems.innerHTML = "";
+        menuData[option].items.forEach(item => {
+            const div = document.createElement("div");
+            div.classList.add("col-md-6", "my-2");
+            div.innerHTML = `
             <div class="card h-100">
                 
                 <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="200"
@@ -225,13 +226,13 @@ function showItems(option) {
                 </div>
             </div>
         `;
-        displayItems.appendChild(div);
-    });
-}
+            displayItems.appendChild(div);
+        });
+    }
 
-document.addEventListener("DOMContentLoaded", () => {
-    showItems('salads');
-});
+    document.addEventListener("DOMContentLoaded", () => {
+        showItems('salads');
+    });
 </script>
 
 <header>
@@ -284,7 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <div class="container text-center my-5" style="max-width:90%">
     <h2 class="mb-4">NOW DELIVERING</h2>
-             <div class="row justify-content-center mb-2">
+    <div class="row justify-content-center mb-2">
         <div class="col-auto">
             <button type="button" class="btn btn-danger m-2 fs-5">Postmates</button>
         </div>
@@ -305,33 +306,34 @@ document.addEventListener("DOMContentLoaded", () => {
             </a>
         </div>
     </div>
-    <p class="pt-4">Please note: Ordering through food delivery apps instead of calling us directly may incur additional fees.</p>
+    <p class="pt-4">Please note: Ordering through food delivery apps instead of calling us directly may incur additional
+        fees.</p>
 </div>
 
 <div class="container my-5">
     <div class="row">
         <!-- Left Sidebar for Menu Options -->
         <div class="col-md-2 d-flex flex-column align-items-center text-center py-5">
-        <h1 class="menu-header">MENU</h1>
-        <ul class="menu-options list-unstyled">
-            <li onclick="showItems('salads')">SALADS</li>
-            <li onclick="showItems('flatbreads')">FLATBREADS</li>
-            <li onclick="showItems('sandwiches')">SANDWICHES</li>
-            <li onclick="showItems('plates')">PLATES</li>
-            <li onclick="showItems('sides')">SIDES</li>
-            <li onclick="showItems('soup')">SOUP</li>
-            <li onclick="showItems('desserts')">DESSERTS</li>
-        </ul>
+            <h1 class="menu-header">MENU</h1>
+            <ul class="menu-options list-unstyled">
+                <li onclick="showItems('salads')">SALADS</li>
+                <li onclick="showItems('flatbreads')">FLATBREADS</li>
+                <li onclick="showItems('sandwiches')">SANDWICHES</li>
+                <li onclick="showItems('plates')">PLATES</li>
+                <li onclick="showItems('sides')">SIDES</li>
+                <li onclick="showItems('soup')">SOUP</li>
+                <li onclick="showItems('desserts')">DESSERTS</li>
+            </ul>
         </div>
 
         <!-- Right Side for Displaying Menu Items -->
         <div class="col-md-10">
-        <div id="menu-display">
-            <h3 id="display-header"></h3>
-            <div id="display-items" class="row">
-            <!-- Items will display here based on selection -->
+            <div id="menu-display">
+                <h3 id="display-header"></h3>
+                <div id="display-items" class="row">
+                    <!-- Items will display here based on selection -->
+                </div>
             </div>
-        </div>
         </div>
     </div>
 </div>
@@ -343,10 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <!-- Order Button -->
         <div class="col-md-4 d-flex flex-column align-items-center mb-4 mb-md-0">
-            <button
-                onclick="window.location.href='https://www.clover.com/online-ordering/tigris-mediterranean-gri-san-diego'"
-                class="btn btn-danger fs-5"
-                >ORDER NOW
+            <button onclick="window.location.href='https://www.clover.com/online-ordering/tigris-mediterranean-gri-san-diego'" class="btn btn-danger fs-5">ORDER NOW
             </button>
         </div>
 
@@ -363,9 +362,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>
                 <a href="tel:(858) 576-9999">(858) 576-9999</a>
                 <br>
-                <a class="py-2" href="mailto:info@tigrisgrille.com" style="white-space: nowrap;text-transform:uppercase">info@tigrisgrille.com</a>
+                <a class="py-2" href="mailto:info@tigrisgrille.com"
+                    style="white-space: nowrap;text-transform:uppercase">info@tigrisgrille.com</a>
                 <br>
-                <a href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285 OVERLAND AVE #102, SAN DIEGO, CA 92123</a>
+                <a
+                    href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285
+                    OVERLAND AVE #102, SAN DIEGO, CA 92123</a>
             </p>
         </div>
 
@@ -373,9 +375,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="col-md-4 d-flex flex-column align-items-center mb-md-0">
             <p class="pt-3">
                 <!-- Terms & Privacy Policy -->
-                <a href="/privacy">PRIVACY</a> | 
+                <a href="/privacy">PRIVACY</a> |
                 <a href="/terms">TERMS</a>
-            <br>
+                <br>
                 <!-- Copyright -->
                 &copy; 2024 <a href="https://tigrisgrille.com">Tigris Mediterranean Grille.</a>
             </p>
@@ -384,7 +386,9 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     <!-- Back to top link -->
-    <div class="float-end mb-4"><a href="#" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to top</a></div>
+    <div class="float-end mb-4"><a href="#"
+            class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to top</a>
+    </div>
 </div>
 
 
