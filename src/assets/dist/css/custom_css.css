@@ -231,8 +231,21 @@ p {
   transition-delay: 0.3s;
 }
 
-/* Outer Carousel Controls */
-.carousel-control-next,
-.carousel-control-prev {
+/* homepage: Outer Carousel Controls */
+#reviewsCarousel .carousel-control-next,
+#reviewsCarousel .carousel-control-prev {
   position: relative !important;
+}
+
+/* footer */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+  color: #669bbcc9;
 }
