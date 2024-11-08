@@ -223,11 +223,16 @@ p {
   -webkit-transform: translateY(40px);
   transform: translateY(40px);
 }
-
 .scroll-animate.inview {
   opacity: 1;
   -webkit-transform: none;
   transform: none;
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
+}
+
+/* Outer Carousel Controls */
+.carousel-control-next,
+.carousel-control-prev {
+  position: relative !important;
 }

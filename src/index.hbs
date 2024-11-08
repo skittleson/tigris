@@ -288,7 +288,12 @@
 
   {{!-- Reviews --}}
   <h1 class="text-center scroll-animate" style="margin-top: 4rem">What Our Customers Are Saying</h1>
-  <div id="reviewsCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="7000">
+  <div id="reviewsCarousel" class="carousel slide carousel-dark d-flex align-items-center" data-bs-ride="carousel" data-bs-interval="7000">
+    <!-- Outer Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
     <div class="carousel-inner scroll-animate">
       <!-- Review Slide -->
       <div class="carousel-item active">
@@ -735,10 +740,6 @@
 
     </div>
     <!-- Outer Carousel Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
     <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
