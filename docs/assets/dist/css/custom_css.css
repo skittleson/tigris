@@ -214,3 +214,20 @@ p {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
+
+/* Fade In Animation */
+.scroll-animate {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+}
+
+.scroll-animate.inview {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
