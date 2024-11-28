@@ -114,30 +114,38 @@
 {{> navbar}}
 
 <div class="container text-center my-5" style="max-width:90%">
-    <h2 class="mb-4">NOW DELIVERING</h2>
-    <div class="row justify-content-center mb-2">
+    <h2 class="mb-4">ORDER ONLINE</h2>
+    <div class="row justify-content-center mb-2"> 
         <div class="col-auto">
-            <button type="button" class="btn btn-danger m-2 fs-5">Postmates</button>
+            <button type="button" target="_blank" onclick="window.open('https://postmates.com/store/tigris-mediterranean-grille/CLr6enSdQYq0Jzd8It7I-w', '_blank')" class="btn btn-danger m-2 fs-5">Postmates</button>
         </div>
         <div class="col-auto">
-            <button type="button" class="btn btn-danger m-2 fs-5">Uber Eats</button>
+            <button type="button" target="_blank" onclick="window.open('https://www.doordash.com/store/tigris-mediterranean-grille-san-diego-62609', '_blank')" class="btn btn-danger m-2 fs-5">DoorDash</button>
         </div>
         <div class="col-auto">
-            <button type="button" class="btn btn-danger m-2 fs-5">DoorDash</button>
+            <button type="button" target="_blank" onclick="window.open('https://www.grubhub.com/restaurant/tigris-mediterranean-grille-5285-overland-ave-102-san-diego/384747', '_blank')" class="btn btn-danger m-2 fs-5">Grubhub</button>
         </div>
         <div class="col-auto">
-            <button type="button" class="btn btn-danger m-2 fs-5">Grubhub</button>
+            <button type="button" target="_blank" onclick="window.open('https://www.ubereats.com/store/tigris-mediterranean-grille/CLr6enSdQYq0Jzd8It7I-w', '_blank')" class="btn btn-danger m-2 fs-5">Uber Eats</button>
         </div>
     </div>
+
     <div class="row justify-content-center">
         <div class="col-auto">
-            <a href="tel:{{phone}}">
-                <button type="button" class="btn btn-danger fs-5">Call Us</button>
-            </a>
+            <button type="button" onclick="window.location.href='tel:(858) 576-9999'" class="btn btn-danger m-2 fs-5">Call Us</button>
+        </div>
+        <div class="col-auto">
+            <button type="button" onclick="window.open('{{menu}}', '_blank')" class="btn btn-danger m-2 fs-5">Direct</button>
         </div>
     </div>
-    <p class="pt-4">Please note: Ordering through food delivery apps instead of calling us directly may incur additional
-        fees.</p>
+
+    <div class="pt-5 text-start mx-auto" style="width:50%">
+        <strong>Please note:</strong>
+        <ul class="ps-4">
+            <li><strong>Exciting news!</strong> We're now offering fast, convenient delivery directly from Tigris to your door—no middleman, just delicious food made fresh for you!</li>
+            <li>Ordering through third-party delivery apps may incur additional charges, so for the best experience, order directly from us!</li>
+        </ul>
+    </div>
 </div>
 
 <div class="container my-5">

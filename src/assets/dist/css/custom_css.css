@@ -103,7 +103,7 @@ a:hover {
 }
 body {
   background-color: #fdf0d5;
-  font-family: "Avenir LT Std", sans-serif;
+  font-family: "Lora", serif;
 }
 
 h1,
@@ -114,6 +114,7 @@ h5,
 h6 {
   color: #780000;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: "Playfair Display", serif;
 }
 p {
   color: #003049;
@@ -142,6 +143,7 @@ p {
 .navbar .nav-link {
   color: #fdf0d5;
   transition: all 0.3s ease;
+  font-size: 1.1rem;
 }
 .navbar .nav-link:hover {
   background-color: #c1121f;
