@@ -153,6 +153,33 @@
     showItems('salads');
   });
 </script>
+<script>
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault()
+
+    const formData = new FormData(this);
+    const formObject = {};
+    formData.forEach((value, key) => {
+      formObject[key] = value;
+    });
+
+    fetch('https://o3pe4aw2c8.execute-api.us-east-1.amazonaws.com/FormSubmissionHandler', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formObject)
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert('Your inquiry has been submitted successfully!');
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('There was an error submitting your inquiry. Please try again.');
+    });
+  });
+</script>
 
 {{> navbar}}
 
@@ -224,7 +251,7 @@
 
 </div>
 
-<!-- Modal --> {{!--TODO: handle submission --}}
+<!-- Modal -->
 <div class="modal fade" id="inquireModal" tabindex="-1" aria-labelledby="inquireModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -242,25 +269,25 @@
               <div class="mb-2 col-md-6 d-flex flex-column">
                 <label for="cater-firstname" class="form-label">First Name <span
                     class="required-indicator">*</span></label>
-                <input type="text" class="form-control custom-input" id="cater-firstname" required>
+                <input type="text" class="form-control custom-input" id="cater-firstname" name="cateringfirstname" required/>
               </div>
               <div class="mb-2 col-md-6 d-flex flex-column">
                 <label for="cater-lastname" class="form-label">Last Name <span
                     class="required-indicator">*</span></label>
-                <input type="text" class="form-control custom-input" id="cater-lastname" required>
+                <input type="text" class="form-control custom-input" id="cater-lastname" name="cateringlastname" required/>
               </div>
             </div>
             <div class="mb-2">
               <label for="cater-email" class="form-label">Email <span class="required-indicator">*</span></label>
-              <input type="email" class="form-control custom-input" id="cater-email" required>
+              <input type="email" class="form-control custom-input" id="cater-email" name="cateringemail" required/>
             </div>
             <div class="mb-2">
               <label for="cater-phone" class="form-label">Phone Number <span class="required-indicator">*</span></label>
-              <input type="tel" class="form-control custom-input" id="cater-phone" required>
+              <input type="tel" class="form-control custom-input" id="cater-phone" name="cateringphone" required/>
             </div>
             <div class="mb-2">
               <label for="cater-company" class="form-label">Company</label>
-              <input type="text" class="form-control custom-input" id="cater-company">
+              <input type="text" class="form-control custom-input" id="cater-company" name="cateringcompany"/>
             </div>
           </div>
 
@@ -271,36 +298,36 @@
             <div class="mb-3">
               <label for="cater-type" class="form-label">Nature of Event <span style="font-style:italic">(e.g., Business
                   Dinner or Birthday Party)</span></label>
-              <input type="text" class="form-control custom-input" id="cater-type"></input>
+              <input type="text" class="form-control custom-input" id="cater-type" name="cateringtype"/>
             </div>
 
             <div class="mb-3">
               <label for="cater-date" class="form-label">Event Date <span class="required-indicator">*</span></label>
-              <input type="date" class="form-control custom-input" id="cater-date" required>
+              <input type="date" class="form-control custom-input" id="cater-date" name="cateringdate" required/>
             </div>
 
             <div class="row mb-3">
               <div class="col-md-6 d-flex flex-column">
                 <label for="cater-start-time" class="form-label">Start Time</label>
-                <input type="time" class="form-control custom-input" id="cater-start-time">
+                <input type="time" class="form-control custom-input" id="cater-start-time" name="cateringstarttime"/>
               </div>
               <div class="col-md-6 d-flex flex-column">
                 <label for="cater-end-time" class="form-label">End Time </label>
-                <input type="time" class="form-control custom-input" id="cater-end-time">
+                <input type="time" class="form-control custom-input" id="cater-end-time" name="cateringendtime"/>
               </div>
             </div>
 
             <div class="mb-3">
               <label for="cater-num-people" class="form-label">Number of People</label>
-              <input type="number" class="form-control custom-input" id="cater-num-people">
+              <input type="number" class="form-control custom-input" id="cater-num-people" name="cateringsize"/>
             </div>
             <div class="mb-2">
               <label for="cater-moreinfo" class="form-label">Additional Information</span></label>
-              <textarea class="form-control custom-input" id="cater-moreinfo" rows="2"></textarea>
+              <textarea class="form-control custom-input" id="cater-moreinfo" rows="2" name="cateringinfo"/>
             </div>
             <div class="mb-3">
               <label for="cater-referral" class="form-label">How did you hear about us?</label>
-              <input type="text" class="form-control custom-input" id="cater-referral">
+              <input type="text" class="form-control custom-input" id="cater-referral" name="cateringreferral"/>
             </div>
           </div>
 
