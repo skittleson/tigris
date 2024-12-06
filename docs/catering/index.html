@@ -118,8 +118,6 @@
         }
     </style>
     <link href="../assets/carousel.css" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -277,6 +275,53 @@
     showItems('salads');
   });
 </script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Ld86ZEqAAAAAMwBvUsyfUQ3ISKsi2f9_RFAbzcs"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    event.preventDefault();
+    // grecaptcha
+    grecaptcha.ready(function() {
+      grecaptcha.execute('6Ld86ZEqAAAAAMwBvUsyfUQ3ISKsi2f9_RFAbzcs', {action: 'submit'}).then(function(token) {
+          document.getElementById('recaptcha-token').value = token;
+          submitForm();
+      });
+    });
+    function submitForm() {
+      const form = document.querySelector('form');
+      if (form) {
+          form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            
+            const formData = new FormData(form);
+            const data = {};
+
+            formData.forEach((value, key) => {
+                data[key] = value; 
+            });
+
+            console.log('Form Data:', data);
+
+            fetch('https://o3pe4aw2c8.execute-api.us-east-1.amazonaws.com/FormSubmissionHandler', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => console.log(response.json()))
+            .then(result => {
+                console.log('Success:', result);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+          });
+      } else {
+          console.error('Form not found');
+      }
+    }
+});
+</script>
 
 <header>
   <nav class="navbar navbar-expand-lg">
@@ -344,15 +389,16 @@
 
     <p class="lead mb-4"> Wherever You Are, We Bring the Feast to You</p>
 
-    <p class="lead mb-4"> Whether it’s a corporate gathering or a personal milestone, our dedicated team takes care of
+    <p class="lead mb-4"> Whether it'ss a corporate gathering or a personal milestone, our dedicated team takes care of
       every detail. Explore our menu below to discover signature dishes crafted with the freshest ingredients and
       authentic flavors.</p>
 
     <p class="lead mb-5"> Let us make your next event an extraordinary experience your guests will remember long after
       the last bite. </p>
 
-    <button type="button" class="btn btn-danger fs-5" data-bs-toggle="modal" data-bs-target="#inquireModal">Get in Touch
-      Today to Start Planning!</button>
+    <button type="button" class="btn btn-danger fs-5" data-bs-toggle="modal" data-bs-target="#inquireModal">
+      Get in Touch Today to Start Planning!
+    </button>
   </div>
 
   <hr class="featurette-divider" />
@@ -360,8 +406,8 @@
   <div class="container my-5">
     <div class="text-center fs-5 pb-4">
       <p>All entrées are served with their respective sauces.</p>
-      <p>Small trays serve 10–15 people.</p>
-      <p>Large trays serve 20–25 people.</p>
+      <p>Small trays serve 10-15 people.</p>
+      <p>Large trays serve 20-25 people.</p>
     </div>
 
     <div class="row">
@@ -392,16 +438,17 @@
 
 </div>
 
-<!-- Modal --> 
+<!-- Modal -->
 <div class="modal fade" id="inquireModal" tabindex="-1" aria-labelledby="inquireModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="inquireModalLabel">CONTACT US ABOUT YOUR PRIVATE EVENT</h5>
+        <h5 class="modal-title" id="inquireModalLabel">PRIVATE EVENT CATERING</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form>
+          <input type="hidden" name="recaptcha-token" id="recaptcha-token" />
           <h5 class="mt-1 mb-3">
             <center>YOUR CONTACT INFORMATION</center>
           </h5>
@@ -410,25 +457,25 @@
               <div class="mb-2 col-md-6 d-flex flex-column">
                 <label for="cater-firstname" class="form-label">First Name <span
                     class="required-indicator">*</span></label>
-                <input type="text" class="form-control custom-input" id="cater-firstname" required>
+                <input type="text" class="form-control custom-input" id="cater-firstname" name="cateringfirstname" required>
               </div>
               <div class="mb-2 col-md-6 d-flex flex-column">
                 <label for="cater-lastname" class="form-label">Last Name <span
                     class="required-indicator">*</span></label>
-                <input type="text" class="form-control custom-input" id="cater-lastname" required>
+                <input type="text" class="form-control custom-input" id="cater-lastname" name="cateringlastname" required>
               </div>
             </div>
             <div class="mb-2">
               <label for="cater-email" class="form-label">Email <span class="required-indicator">*</span></label>
-              <input type="email" class="form-control custom-input" id="cater-email" required>
+              <input type="email" class="form-control custom-input" id="cater-email" name="cateringemail" required>
             </div>
             <div class="mb-2">
               <label for="cater-phone" class="form-label">Phone Number <span class="required-indicator">*</span></label>
-              <input type="tel" class="form-control custom-input" id="cater-phone" required>
+              <input type="tel" class="form-control custom-input" id="cater-phone" name="cateringphone" required>
             </div>
             <div class="mb-2">
               <label for="cater-company" class="form-label">Company</label>
-              <input type="text" class="form-control custom-input" id="cater-company">
+              <input type="text" class="form-control custom-input" id="cater-company" name="cateringcompany">
             </div>
           </div>
 
@@ -439,36 +486,36 @@
             <div class="mb-3">
               <label for="cater-type" class="form-label">Nature of Event <span style="font-style:italic">(e.g., Business
                   Dinner or Birthday Party)</span></label>
-              <input type="text" class="form-control custom-input" id="cater-type"></input>
+              <input type="text" class="form-control custom-input" id="cater-type" name="cateringtype">
             </div>
 
             <div class="mb-3">
               <label for="cater-date" class="form-label">Event Date <span class="required-indicator">*</span></label>
-              <input type="date" class="form-control custom-input" id="cater-date" required>
+              <input type="date" class="form-control custom-input" id="cater-date" name="cateringdate" required>
             </div>
 
             <div class="row mb-3">
               <div class="col-md-6 d-flex flex-column">
                 <label for="cater-start-time" class="form-label">Start Time</label>
-                <input type="time" class="form-control custom-input" id="cater-start-time">
+                <input type="time" class="form-control custom-input" id="cater-start-time" name="cateringstarttime">
               </div>
               <div class="col-md-6 d-flex flex-column">
                 <label for="cater-end-time" class="form-label">End Time </label>
-                <input type="time" class="form-control custom-input" id="cater-end-time">
+                <input type="time" class="form-control custom-input" id="cater-end-time" name="cateringendtime">
               </div>
             </div>
 
             <div class="mb-3">
               <label for="cater-num-people" class="form-label">Number of People</label>
-              <input type="number" class="form-control custom-input" id="cater-num-people">
+              <input type="number" class="form-control custom-input" id="cater-num-people" name="cateringsize">
             </div>
             <div class="mb-2">
-              <label for="cater-moreinfo" class="form-label">Additional Information</span></label>
-              <textarea class="form-control custom-input" id="cater-moreinfo" rows="2"></textarea>
+              <label for="cater-moreinfo" class="form-label">Additional Information</label>
+              <textarea class="form-control custom-input" id="cater-moreinfo" rows="2" name="cateringinfo"></textarea>
             </div>
             <div class="mb-3">
               <label for="cater-referral" class="form-label">How did you hear about us?</label>
-              <input type="text" class="form-control custom-input" id="cater-referral">
+              <input type="text" class="form-control custom-input" id="cater-referral" name="cateringreferral">
             </div>
           </div>
 

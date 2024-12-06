@@ -246,7 +246,7 @@
         <blockquote class="text-muted fst-italic">
           "Every dish feels like it was made just for me." - A Happy Customer
         </blockquote>
-        <a href="/menu" class="btn btn-danger mt-3">Discover Our Dishes</a>
+        <a href="/menu" class="btn btn-danger my-3">Discover Our Dishes</a>
       </div>
       <div class="col-md-5">
         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
@@ -272,7 +272,7 @@
         <blockquote class="text-muted fst-italic">
           "The flavors are unforgettable, and the experience is unmatched." - Foodie Review
         </blockquote>
-        <a href="/catering" class="btn btn-danger mt-3">Explore Catering Options</a>
+        <a href="/catering" class="btn btn-danger my-3">Explore Catering Options</a>
       </div>
       <div class="col-md-5 order-md-1">
         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
@@ -297,7 +297,7 @@
         <blockquote class="text-muted fst-italic">
           "Tigris feels like home, but with the most amazing food!" - Local Regular
         </blockquote>
-        <a href="/about-us" class="btn btn-danger mt-3">Learn More About Us</a>
+        <a href="/about-us" class="btn btn-danger my-3">Learn More About Us</a>
       </div>
       <div class="col-md-5">
         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
@@ -312,7 +312,33 @@
     <!-- /END THE FEATURETTES -->
   </div>
 
-  <div class="parallax mt-5" style="background-image: url('/images/raw.jpg');"></div>
+  {{!-- <div class="parallax mt-5" style="background-image: url('/images/raw.jpg');"></div> --}}
+
+  {{!-- Horizontal Gallery --}}
+  <div class="container my-3" style="max-width: 100% !important; padding: 0 0">
+    <div class="row overflow-auto flex-nowrap gx-0">
+      <div class="col d-flex justify-content-center align-items-center" style="min-width: 200px;">
+        <h2>Scroll to<br> the right > </h2>
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/tikka.jpg" alt="Image 1" style="height: 750px;">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/tigrisfries.jpg" alt="Image 2" style="height: 750px;">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/kebob.jpg" alt="Image 3" style="height: 750px;">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/falafel.jpg"  alt="Image 4" style="height: 750px;">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/falafel_plate.jpg"  alt="Image 5" style="height: 750px;">
+      </div>
+    </div>
+  </div>
+
+
 
   {{!-- Reviews --}}
   <h1 class="text-center scroll-animate" style="margin-top: 4rem">What Our Customers Are Saying</h1>
@@ -783,7 +809,7 @@
     {{!-- Restaurant Info --}}
     <div class="row mt-5">
       <div class="col-md-6 d-flex flex-column align-items-center mb-5 mb-md-0">
-        <h5>INFORMATION</h5>
+        <h2>INFORMATION</h2>
         <div class="text-left">
           <p>
             <a
@@ -803,7 +829,7 @@
       </div>
 
       <div class="col-md-6 d-flex flex-column align-items-center">
-        <h5>HOURS OF OPERATION</h5>
+        <h2>HOURS OF OPERATION</h2>
         <div class="hours-list">
           <p><span class="day">Monday:</span> <span class="time ml-2">10 AM - 7 PM</span></p>
           <p><span class="day">Tuesday:</span> <span class="time ml-2">10 AM - 7 PM</span></p>
