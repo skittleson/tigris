@@ -7,7 +7,7 @@ html {
   scrollbar-color: rgba(0, 0, 0, 0.6) rgba(240, 240, 240, 0.8);
 }
 
-iframe {
+.google-map {
   border-radius: 10px;
   border: 3px solid #780000;
 }
@@ -270,4 +270,7 @@ blockquote {
 /* catering lead */
 .catering .lead {
   font-size: 1.4rem;
+}
+.grecaptcha-badge {
+  bottom: 1px !important;
 }
