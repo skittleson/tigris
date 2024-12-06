@@ -1,5 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   letter-spacing: 0.3px;
+  scrollbar-color: rgba(0, 0, 0, 0.6) rgba(240, 240, 240, 0.8);
 }
 
 iframe {
@@ -20,7 +25,7 @@ iframe {
 
 .btn {
   text-transform: uppercase;
-  min-width: 150px !important;
+  min-width: 250px !important;
   border: 2px solid black;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   cursor: pointer;
@@ -250,4 +255,19 @@ p {
   justify-content: center;
   transition: opacity 0.3s;
   color: #669bbcc9;
+}
+
+/* Slide */
+.carousel-item {
+  transition: transform 2s ease, opacity 0.5s ease-out;
+}
+
+/* Blockquote */
+blockquote {
+  font-size: large;
+}
+
+/* catering lead */
+.catering .lead {
+  font-size: 1.4rem;
 }
