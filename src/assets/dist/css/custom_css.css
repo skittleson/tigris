@@ -153,6 +153,7 @@ p {
 .navbar .nav-link:hover {
   background-color: #c1121f;
   border-radius: 5px;
+  min-width: 200px;
 }
 
 /* Menu Page */
