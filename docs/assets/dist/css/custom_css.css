@@ -4,7 +4,7 @@ html {
 
 * {
   letter-spacing: 0.3px;
-  scrollbar-color: rgba(0, 0, 0, 0.6) rgba(240, 240, 240, 0.8);
+  scrollbar-color: rgba(0, 0, 0, 0.6) rgba(245, 245, 245, 0.3);
 }
 
 .google-map {
@@ -272,6 +272,15 @@ blockquote {
 .catering .lead {
   font-size: 1.4rem;
 }
+
 .grecaptcha-badge {
   bottom: 1px !important;
+}
+
+.round-imgs {
+  width: 240px;
+  height: 240px;
+}
+.round-imgs:hover {
+  transform: scale(1.1);
 }
