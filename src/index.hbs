@@ -164,7 +164,7 @@
     </div><!-- /.row -->
   </div>
 
-  <div class="parallax my-5 d-flex align-items-center text-center justify-content-center" style="background-image: url('/images/flatbreads-dark-1000.png');">
+  <div role="img" aria-label="Three kinds of flatbreads" class="parallax my-5 d-flex align-items-center text-center justify-content-center" style="background-image: url('/images/flatbreads-dark-1000.png');">
     <h1 style="color: white; font-size: 2.5rem; text-shadow: 2px 2px 5px rgba(0, 0, 0,0.7);">TIGRIS MEDITERRANEAN GRILLE</h1>
   </div>
 
@@ -250,7 +250,7 @@
   </div>
 
   {{!-- Restaurant Picture --}}
-  <div class="parallax mt-5" style="background-image: url('/images/outside.jpeg'); height: 450px"></div>
+  <div role="img" aria-label="Tigris Medierranean Grille outdoors" class="parallax mt-5" style="background-image: url('/images/outside.jpeg'); height: 450px"></div>
 
   {{!-- carousel --}}
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -262,53 +262,31 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        {{!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-          <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-        </svg> --}}
-        {{!-- For the image: warm tones and vibrant ingredients with slight dark overlay to the images so the text and
-        buttons are easy to read --}}
-        <div class="parallax parallax-text" style="background-image: url('/images/mix.jpg');"></div>
+        <div role="img" aria-label="A beef tikka plate and a chicken shawarma plates" class="parallax parallax-text" style="background-image: url('/images/mix.jpg');"></div>
         {{!-- <img src="/images/mix.jpg"></img> --}}
         <div class="container">
           <div class="carousel-caption text-start">
             <h1 class="text-white">A Taste of Mesopotamia: Savor the Flavors of Ancient Traditions</h1>
-             <!-- <p class="opacity-75 text-white">Experience dishes inspired by centuries of culinary heritage, crafted with love and authenticity.</p> -->
-            <!-- <p><a class="btn btn-danger" href="{{menu}}">EXPLORE OUR MENU</a></p> -->
             <button class="btn btn-danger" onclick="window.open('{{menu}}', '_blank')">EXPLORE OUR MENU</button>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        {{!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-          <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-        </svg> --}}
-        {{!-- For the image: kabob plate (hummus + tabouleh) with a focus on color and variety --}}
-        <div class="parallax parallax-text" style="background-image: url('/images/tikka.jpg');"></div>
+        <div class="parallax parallax-text" role="img" aria-label="A chicken tikka plate" style="background-image: url('/images/tikka.jpg');"></div>
         {{!-- <img src="/images/tikka.jpg"></img> --}}
         <div class="container">
           <div class="carousel-caption">
             <h1 class="text-white">Journey Across the Mediterranean: Where East Meets West</h1>
-            <!-- <p class="text-white">Discover a fusion of vibrant Middle Eastern and Mediterranean flavors that delight the senses.</p> -->
-            {{!-- <p><a class="btn btn-danger" href="catering">CATER YOUR EVENT</a></p> --}}
             <button class="btn btn-danger" onclick="window.open('catering', '_blank')">CATER YOUR EVENT</button>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        {{!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-          <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-        </svg> --}}
-        {{!-- For the image: table with a mix of dishes --}}
-        <div class="parallax parallax-text" style="background-image: url('/images/tigrisfries.jpg');"></div>
+        <div class="parallax parallax-text" role="img" aria-label="A Tigris fries plate" style="background-image: url('/images/tigrisfries.jpg');"></div>
         {{!-- <img src="/images/tigrisfries.jpg"></img> --}}
         <div class="container">
           <div class="carousel-caption text-end">
             <h1 class="text-white">From Baghdad to San Diego: A Culinary Odyssey</h1>
-            <!-- <p class="text-white">Join us on a journey of taste, where every dish tells a story of culture, history, and passion.</p> -->
-            {{!-- <p><a class="btn btn-danger" href="our-story">DISCOVER OUR STORY</a></p> --}}
             <button class="btn btn-danger" onclick="window.open('our-story', '_blank')">DISCOVER OUR STORY</button>
           </div>
         </div>
@@ -331,19 +309,19 @@
         <h2>Scroll to<br> the right > </h2>
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/tikka.jpg" alt="Image 1" style="height: 700px;">
+        <img src="/images/tikka.jpg" alt="Image 1" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/tigrisfries.jpg" alt="Image 2" style="height: 700px;">
+        <img src="/images/tigrisfries.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/kebob.jpg" alt="Image 3" style="height: 700px;">
+        <img src="/images/kebob.jpg" alt="Image 3" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/falafel.jpg"  alt="Image 4" style="height: 700px;">
+        <img src="/images/falafel.jpg"  alt="Image 4" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/falafel_plate.jpg"  alt="Image 5" style="height: 700px;">
+        <img src="/images/falafel_plate.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
       </div>
     </div>
   </div>

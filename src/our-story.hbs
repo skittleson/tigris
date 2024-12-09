@@ -1,60 +1,156 @@
 {{> header}}
 {{> navbar}}
 <div class="container">
-  <center>
-    <h1 class="featurette-heading my-5">Our Vision</h1>
+  <!-- Vision Section -->
+  <div class="text-center my-5">
+    <h1 class="featurette-heading">Our Vision</h1>
     <p class="lead">
       To bring the rich heritage of the Middle East to life through authentic flavors and unforgettable dining
       experiences, connecting people across cultures with every meal.
     </p>
-  </center>
+  </div>
   <hr class="featurette-divider" />
-  <center>
-    <h2 class="featurette-heading my-4">Our Story</h2>
-  </center>
-  <div class="container marketing">
-    <div class="row featurette">
-      <div class="col-md-7">
-        <p class="lead">Welcome to Tigris Meditteranean Grille, where every dish
-          is a voyage through the rich tapestry of time, history, and culture.
-        </p>
-        <p>Our story begins in 2000, in the heart of Baghdad, Iraq<code>&#8212;</code>a city
-          where the Tigris River has flowed for millennia, nurturing
-          civilizations and shaping cultures. It was here, along the banks of
-          this ancient river, that we first opened our doors, inspired by the
-          rich culinary traditions of Mesopotamia and a deep love for the flavors
-          of our homeland.</p>
-        <p>
-          Our vision was clear: to bring the authentic tastes of the Middle East to life,
-          crafting each dish in an ambiance that exudes warmth, hospitality, and the depth of our culture.
-        </p>
-        <p>
-          In 2003, as Baghdad entered a new chapter in its storied history, so
-          did we. Amidst the challenges of a new era, we were honored to serve
-          those who came from afar, including the US army and embassy. It was a
-          time marked by both turmoil and hope, and through it all, our kitchen
-          became a sanctuary<code>&#8212;</code>a place where the universal language
-          of food transcended borders and brought people together. </p>
-        <p>But our journey was far from over. In 2005, Tigris Meditteranean Grille
-          expanded to Amman, Jordan. Nestled in the vibrant streets of Amman, we quickly
-          became a beacon for those seeking the true tastes of Iraq and the broader Middle
-          East, combined with a touch of modern elegance. Our commitment to innovation and
-          authenticity resonated with locals and visitors alike.
-          <p />
-        <p>In 2012, we took another bold step, crossing oceans to open in San
-          Diego, California. Here, we blended the rich flavors of our heritage
-          with the diverse culinary landscape of the United States. While the
-          Tigris River may be thousands of miles away, its spirit flows
-          through every dish we serve, connecting our guests to the deep
-          history and culture of Iraq.</p>
-        <p>At Tigris Meditteranean Grille, every meal is more than just food<code>&#8212;</code>it's
-          a story. A connection to a culture as rich and deep as the river that inspires us. We invite
-          you to join us and experience the flavors, stories, and traditions that have shaped our journey.</p>
+
+  <!-- Story Section -->
+  <div class="text-center mb-4">
+    <h2 class="featurette-heading">Our Story</h2>
+  </div>
+</div>
+
+<div class="parallax" role="img" aria-label="A scenic view of the Tigris River" style="background-image: url('/images/tigris-river-4.jpg'); height:400px"></div>
+
+<div class="container">
+  <!-- Timeline -->
+  <div class="container fs-5 py-5">
+    <div class="row mb-5 d-flex justify-content-center align-items-center text-center">
+      <div class="col-3">
+        <h4><i class="bi bi-calendar-event fs-1"></i> 2000</h4>
       </div>
-      <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto rounded" src="/images/catering-1.jpg" />
+      <div class="col-9">
+        <p><span style="color:#780000">Baghdad, Iraq</span> - Our journey begins with inspiration from the Tigris River...</p>
+      </div>
+    </div>
+    <div class="row mb-5 d-flex justify-content-center align-items-center text-center">
+      <div class="col-3">
+        <h4><i class="bi bi-calendar-event fs-1"></i> 2005</h4>
+      </div>
+      <div class="col-9">
+        <p><span style="color:#780000">Amman, Jordan</span> - Expanding to new horizons with innovation and authenticity...</p>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center align-items-center text-center">
+      <div class="col-3">
+        <h4><i class="bi bi-calendar-event fs-1"></i> 2012</h4>
+      </div>
+      <div class="col-9">
+        <p><span style="color:#780000">San Diego, USA</span> - Blending Middle Eastern flavors with American diversity...</p>
       </div>
     </div>
   </div>
 </div>
+
+{{!-- carousel --}}
+<div id="myCarousel" class="carousel slide mb-1" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+      aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="/images/tigris-river-1.jpg" style="height:500px" class="d-block w-100" alt="Baghdad" loading="lazy">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1 class="text-white" style="background-color: #7800009c;">Baghdad Beginnings</h1>
+          <h1 class="text-white" style="background-color: #7800009c;">A journey rooted in history...</h1>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+        <img src="/images/amman-jordan-1.jpg" style="height:500px" class="d-block w-100" alt="Amman" loading="lazy">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1 class="text-white" style="background-color: #7800009c;">Amman Expansion</h1>
+          <h1 class="text-white" style="background-color: #7800009c;">A chapter of innovation...</h1>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+        <img src="/images/tigris-river-1.jpg" style="height:500px" class="d-block w-100" alt="San Diego" loading="lazy">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1 class="text-white" style="background-color: #7800009c;">San Diego Frontier</h1>
+          <h1 class="text-white" style="background-color: #7800009c;">Blending heritage with modernity...</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container">
+  <!-- Quote -->
+  <figure>
+    <blockquote class="blockquote text-center mt-5">
+        "The Tigris River may be thousands of miles away, but its spirit flows through every dish we serve."
+    </blockquote>
+  </figure>
+  {{!-- Story --}}
+  <div class="row featurette my-5">
+    <div class="col-md-7 fs-5">
+      <p>Welcome to Tigris Mediterranean Grille, where every dish
+        is a voyage through the rich tapestry of time, history, and culture.
+      </p>
+      <p>Our story begins in 2000, in the heart of Baghdad, Iraq—a city
+        where the Tigris River has flowed for millennia, nurturing
+        civilizations and shaping cultures. It was here, along the banks of
+        this ancient river, that we first opened our doors, inspired by the
+        rich culinary traditions of Mesopotamia and a deep love for the flavors
+        of our homeland.</p>
+      <img src="/images/tigris-river-5.jpg" style="height:500px" class="d-block w-100 mb-3" alt="Baghdad" loading="lazy">
+      <p>
+        Our vision was clear: to bring the authentic tastes of the Middle East to life,
+        crafting each dish in an ambiance that exudes warmth, hospitality, and the depth of our culture.
+      </p>
+      <p>
+        In 2003, as Baghdad entered a new chapter in its storied history, so
+        did we. Amidst the challenges of a new era, we were honored to serve
+        those who came from afar, including the US army and embassy. It was a
+        time marked by both turmoil and hope, and through it all, our kitchen
+        became a sanctuary—a place where the universal language
+        of food transcended borders and brought people together. </p>
+      <img src="/images/amman-jordan-2.jpg" style="height:500px" class="d-block w-100 mb-3" alt="Amman" loading="lazy">
+      <p>But our journey was far from over. In 2005, Tigris Mediterranean Grille
+        expanded to Amman, Jordan. Nestled in the vibrant streets of Amman, we quickly
+        became a beacon for those seeking the true tastes of Iraq and the broader Middle
+        East, combined with a touch of modern elegance. Our commitment to innovation and
+        authenticity resonated with locals and visitors alike.
+        <p />
+      <p>In 2012, we took another bold step, crossing oceans to open in San
+        Diego, California. Here, we blended the rich flavors of our heritage
+        with the diverse culinary landscape of the United States. While the
+        Tigris River may be thousands of miles away, its spirit flows
+        through every dish we serve, connecting our guests to the deep
+        history and culture of Iraq.</p>
+      {{!-- TODO: Add interior wall logo --}}
+      <img src="/images/raw-colored-1.png" style="height:500px" class="d-block w-100 mb-3" alt="Tigris" loading="lazy">
+      <p>At Tigris Mediterranean Grille, every meal is more than just food—it's
+        a story. A connection to a culture as rich and deep as the river that inspires us. We invite
+        you to join us and experience the flavors, stories, and traditions that have shaped our journey.</p>
+    </div>
+    <div class="col-md-5">
+      <img class="featurette-image img-fluid mx-auto rounded" src="/images/catering-1.jpg" alt="Food" loading="lazy">
+    </div>
+  </div>
+
+</div>
+
 {{> footer}}

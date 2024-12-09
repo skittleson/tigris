@@ -134,7 +134,7 @@
 
       div.innerHTML = `
             <div class="card h-100">
-                {{!-- <img src="${item.image}" class="card-img-top img-fluid" alt="${item.name}" /> --}}
+                {{!-- <img src="${item.image}" class="card-img-top img-fluid" alt="${item.name}" loading="lazy"/> --}}
                 <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="200"
           height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 200x200"
           preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -204,7 +204,7 @@
 {{> navbar}}
 
 {{!-- img: Bunch of catering trays? --}}
-<div class="parallax" style="background-image: url('/images/raw.jpg'); height:400px"></div>
+<div class="parallax" role="img" aria-label="Catering trays" style="background-image: url('/images/raw.jpg'); height:400px"></div>
 
 <div class="container catering">
   <div class="text-center">
