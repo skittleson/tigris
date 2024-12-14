@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta itemprop="description" name="description" content="Authentic mediterranean cuisine" />
-    <meta name="keywords" content="mediterranean cuisine,Chicken Shawarma Plate,Greek Salad,Chicken Tikka Plate,Gyro Plate,Ground Beef Kebab Plate,san diego" />
+    <meta name="keywords" content="mediterranean cuisine,Chicken Shawarma Plate,Greek Salad,Chicken Tikka Plate,Gyro Plate,Beef Kebab Plate,san diego, nearby mediterranean" />
     <meta name="Distribution" content="Global" />
     <meta name="Rating" content="General" />
     <meta name="Robots" content="INDEX,FOLLOW" />
@@ -176,7 +176,7 @@
   },
   "areaServed": ["San Diego"],
   "availableLanguage": ["English", "Spanish"],
-  "menu": "https://www.clover.com/online-ordering/tigris-mediterranean-gri-san-diego",
+  "menu": "https://www.tigrisgrille.com/menu",
   "serviceOutput": "Event Catering",
   "serviceAudience": {
     "@type": "Audience",
@@ -449,7 +449,7 @@
       the last bite. </p>
 
     <button type="button" style="text-transform:none" class="btn btn-danger fs-5" data-bs-toggle="modal" data-bs-target="#inquireModal">
-      Get Your Catering Inquiry Started - Fill Out this Form
+      Plan Your Feast With Our Form &raquo;
     </button>
   </div>
 
@@ -500,7 +500,8 @@
       </div>
       <div class="modal-body fs-5">
         <form>
-          <input type="hidden" name="recaptcha-token" id="recaptcha-token" />
+          <input type="hidden" name="recaptcha-token" id="recaptcha-token"/>
+          <input type="hidden" name="formtype" value="catering"/>
           <h5 class="mt-1 mb-3">
             <center>YOUR CONTACT INFORMATION</center>
           </h5>
@@ -509,21 +510,21 @@
               <div class="mb-2 col-md-6 d-flex flex-column">
                 <label for="cater-firstname" class="form-label">First Name <span
                     class="required-indicator">*</span></label>
-                <input type="text" class="form-control custom-input" id="cater-firstname" name="cateringfirstname" required>
+                <input type="text" class="form-control custom-input" id="contact-firstname" name="contactfirstname" required>
               </div>
               <div class="mb-2 col-md-6 d-flex flex-column">
                 <label for="cater-lastname" class="form-label">Last Name <span
                     class="required-indicator">*</span></label>
-                <input type="text" class="form-control custom-input" id="cater-lastname" name="cateringlastname" required>
+                <input type="text" class="form-control custom-input" id="contact-lastname" name="contactlastname" required>
               </div>
             </div>
             <div class="mb-2">
               <label for="cater-email" class="form-label">Email <span class="required-indicator">*</span></label>
-              <input type="email" class="form-control custom-input" id="cater-email" name="cateringemail" required>
+              <input type="email" class="form-control custom-input" id="contact-email" name="contactemail" required>
             </div>
             <div class="mb-2">
               <label for="cater-phone" class="form-label">Phone Number <span class="required-indicator">*</span></label>
-              <input type="tel" class="form-control custom-input" id="cater-phone" name="cateringphone" required>
+              <input type="tel" class="form-control custom-input" id="contact-phone" name="contactphone" required>
             </div>
             <div class="mb-2">
               <label for="cater-company" class="form-label">Company</label>
@@ -563,7 +564,7 @@
             </div>
             <div class="mb-2">
               <label for="cater-moreinfo" class="form-label">Additional Information</label>
-              <textarea class="form-control custom-input" id="cater-moreinfo" rows="2" name="cateringinfo"></textarea>
+              <textarea class="form-control custom-input" id="contact-message" rows="2" name="contactmessage"></textarea>
             </div>
             <div class="mb-3">
               <label for="cater-referral" class="form-label">How did you hear about us?</label>
@@ -579,7 +580,7 @@
           <div class="spinner-border text-danger" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
-          <p class="mt-3">Submitting your inquiry...</p>
+          <p class="m-3">Submitting your inquiry...</p>
         </div>
       </div>
     </div>
@@ -625,7 +626,7 @@
 
         <div class="col-md-4 d-flex flex-column align-items-center mb-md-0">
             <!-- Order Button -->
-            <button onclick="window.open('https://www.clover.com/online-ordering/tigris-mediterranean-gri-san-diego', '_blank')" class="btn btn-danger fs-5">
+            <button onclick="window.open('https://www.tigrisgrille.com/menu', '_blank')" class="btn btn-danger fs-5">
                 ORDER NOW
             </button>
             <!-- Social Media Logos -->

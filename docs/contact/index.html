@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta itemprop="description" name="description" content="Authentic mediterranean cuisine" />
-    <meta name="keywords" content="mediterranean cuisine,Chicken Shawarma Plate,Greek Salad,Chicken Tikka Plate,Gyro Plate,Ground Beef Kebab Plate,san diego" />
+    <meta name="keywords" content="mediterranean cuisine,Chicken Shawarma Plate,Greek Salad,Chicken Tikka Plate,Gyro Plate,Beef Kebab Plate,san diego, nearby mediterranean" />
     <meta name="Distribution" content="Global" />
     <meta name="Rating" content="General" />
     <meta name="Robots" content="INDEX,FOLLOW" />
@@ -216,6 +216,67 @@
   }
 }
 </script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Ld86ZEqAAAAAMwBvUsyfUQ3ISKsi2f9_RFAbzcs"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    event.preventDefault();
+    // grecaptcha
+    grecaptcha.ready(function() {
+      grecaptcha.execute('6Ld86ZEqAAAAAMwBvUsyfUQ3ISKsi2f9_RFAbzcs', {action: 'submit'}).then(function(token) {
+          document.getElementById('recaptcha-token').value = token;
+          submitForm();
+      });
+    });
+    function showAlert(message) {
+      const alertMessage = document.getElementById('alert-message');
+      alertMessage.innerHTML = message;
+
+      const alertModal = new bootstrap.Modal(document.getElementById('custom-alert'));
+      alertModal.show();
+    }
+    function submitForm() {
+      const form = document.querySelector('form');
+      const loadingSpinner = document.getElementById('loading-spinner');
+      if (form) {
+          form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            loadingSpinner.style.display = 'block';
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value; 
+            });
+            fetch('https://o3pe4aw2c8.execute-api.us-east-1.amazonaws.com/FormSubmissionHandler', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then((response) => {
+              if (response.ok) {
+                console.log('Success submitting contact form.');
+                loadingSpinner.style.display = 'none';
+                form.reset();
+                showAlert('Thank you! Your inquiry has been successfully submitted, and we\'ll call you to confirm.');
+              } else {
+                console.error('Error in submission.', response.textContent);
+                loadingSpinner.style.display = 'none';
+                showAlert('Something went wrong. Please try again later.<br>Email: <a class="py-2" style="color:rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1))" href="mailto:info@tigrisgrille.com">info@tigrisgrille.com</a><br>Phone: <a style="color:rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1))" href="tel:(858) 576-9999">(858) 576-9999</a>');
+              }
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+              loadingSpinner.style.display = 'none';
+              showAlert('Submission failed. Please try again.<br>Email: <a class="py-2" style="color:rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1))" href="mailto:info@tigrisgrille.com">info@tigrisgrille.com</a><br>Phone: <a style="color:rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1))" href="tel:(858) 576-9999">(858) 576-9999</a>');
+            });
+          });
+      } else {
+          console.error('Form not found');
+      }
+    }
+});
+</script>
 
 <div class="text-center pt-5">
   <iframe class="google-map"
@@ -246,19 +307,16 @@
       <h3 class="mb-3">INFORMATION</h3>
       <p>Reach out – we're here to help!</p>
       <div class="text-center contact-info">
-        <i class="fs-4 bi bi-telephone-fill"></i>
         <p>
-          <a href="tel:(858) 576-9999">(858) 576-9999</a>
+          <a href="tel:(858) 576-9999"><i class="fs-4 bi bi-telephone-fill"></i><br>(858) 576-9999</a>
         </p>
-        <i class="fs-4 bi bi-envelope-fill"></i>
         <p>
-          <a href="mailto:info@tigrisgrille.com" style="white-space: nowrap;">info@tigrisgrille.com</a>
+          <a href="mailto:info@tigrisgrille.com" style="white-space: nowrap;"><i class="fs-4 bi bi-envelope-fill"></i><br>info@tigrisgrille.com</a>
         </p>
-        <i class="fs-4 bi bi-geo-alt-fill"></i>
         <p>
           <a
-            href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285
-            Overland Ave #102
+            href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06"><i class="fs-4 bi bi-geo-alt-fill"></i><br>
+            5285 Overland Ave #102
             <br>
             San Diego, California 92123
           </a>
@@ -270,24 +328,51 @@
     <div class="col-md-4 d-flex flex-column align-items-center mb-4 mb-md-0">
       <h3 class="mb-3">CONTACT</h3>
       <p>We'd love to hear from you!</p>
-      <form style="width:93%" id="contactForm" method="POST" action="/submit-form">
-        <input type="text" class="mb-3 form-control custom-input" id="contact-first-name" name="contact-first-name"
+      <form style="width:93%">
+        <input type="hidden" name="recaptcha-token" id="recaptcha-token"/>
+        <input type="hidden" name="formtype" value="contact-us"/>
+        <input type="text" class="mb-3 form-control custom-input" id="contact-firstname" name="contactfirstname"
           placeholder="First Name *" required>
-        <input type="text" class="mb-3 form-control custom-input" id="contact-last-name" name="contact-last-name"
+        <input type="text" class="mb-3 form-control custom-input" id="contact-lastname" name="contactlastname"
           placeholder="Last Name *" required>
-        <input type="email" class="mb-3 form-control custom-input" id="contact-email" name="contact-email"
+        <input type="email" class="mb-3 form-control custom-input" id="contact-email" name="contactemail"
           placeholder="Email Address *" required>
-        <input type="tel" class="mb-3 form-control custom-input" id="contact-number" name="contact-number"
+        <input type="tel" class="mb-3 form-control custom-input" id="contact-phone" name="contactphone"
           placeholder="Phone Number *" required>
-        <textarea class="mb-4 form-control custom-input" id="message" rows="3" name="message" placeholder="Message *"
+        <textarea class="mb-4 form-control custom-input" id="contact-message" rows="3" name="contactmessage" placeholder="Message *"
           required></textarea>
         <center><button type="submit" class="btn btn-danger fs-5">SUBMIT</button></center>
-      </form>
+        </form>
+
+        <!-- loading spinner -->
+        <div id="loading-spinner" class="text-center" style="display: none;">
+          <div class="spinner-border text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="m-3">Submitting your inquiry...</p>
+        </div>
     </div>
+    
 
   </div>
 </div>
 
+<div id="custom-alert" class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title text-white">Notification</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p class="mb-0" id="alert-message">Message here.</p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <hr class="featurette-divider m-4" />
 
@@ -310,7 +395,7 @@
 
         <div class="col-md-4 d-flex flex-column align-items-center mb-md-0">
             <!-- Order Button -->
-            <button onclick="window.open('https://www.clover.com/online-ordering/tigris-mediterranean-gri-san-diego', '_blank')" class="btn btn-danger fs-5">
+            <button onclick="window.open('https://www.tigrisgrille.com/menu', '_blank')" class="btn btn-danger fs-5">
                 ORDER NOW
             </button>
             <!-- Social Media Logos -->

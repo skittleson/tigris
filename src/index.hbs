@@ -110,16 +110,11 @@
 
 <main>
 
-   {{!-- Video --}}
+  {{!-- Video --}}
   <div></div>
 
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
+  {{!-- Round images --}}
   <div class="container marketing scroll-animate">
-
-    <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-4">
         <title>Stories of Delight</title>
@@ -229,7 +224,6 @@
 
   {{!-- Restaurant Picture --}}
   {{!-- <div role="img" aria-label="Tigris Medierranean Grille outdoors" class="parallax mt-5" style="background-image: url('/images/misc/outside.jpeg'); height: 450px"></div> --}}
-
   <div class="jarallax" role="img" aria-label="Tigris Medierranean Grille outdoors" style="background-image: url('/images/misc/outside.jpeg'); height:550px"></div>
 
   {{!-- carousel --}}
@@ -314,13 +308,11 @@
   {{!-- Reviews --}}
   <h1 class="text-center scroll-animate" style="margin-top: 4rem">What Our Customers Are Saying</h1>
   <div id="reviewsCarousel" class="carousel slide carousel-dark d-flex align-items-center" data-bs-ride="carousel" data-bs-interval="7000">
-    <!-- Outer Carousel Controls -->
     <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
     <div class="carousel-inner scroll-animate">
-      <!-- Review Slide -->
       <div class="carousel-item active">
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm d-flex justify-content-center align-items-center"
@@ -821,8 +813,8 @@
 {{> footer}}
 
 <script src="/assets/dist/js/animation.js"></script>
+{{!-- jarallax --}}
 <script>
-  // Ensure the DOM is loaded before initializing Jarallax
   document.addEventListener("DOMContentLoaded", function () {
     jarallax(document.querySelectorAll('.jarallax'), {
       speed: 0.2,
