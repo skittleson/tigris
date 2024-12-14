@@ -215,8 +215,8 @@ p {
   background-attachment: fixed;
   height: 550px;
 }
-/* Fallback for Mobile */
-@media (max-width: 768px) {
+/* Fallback */
+@media (max-width: 64.063em) {
   .parallax {
     background-attachment: scroll;
   }

@@ -106,14 +106,12 @@
   ]
 }
 </script>
-
 {{> navbar}}
 
 <main>
 
    {{!-- Video --}}
   <div></div>
-
 
   <!-- Marketing messaging and featurettes
   ================================================== -->
@@ -147,9 +145,9 @@
     </div>
   </div>
 
-  <div role="img" aria-label="Three kinds of flatbreads" class="parallax my-5 d-flex align-items-center text-center justify-content-center" style="background-image: url('/images/food/flatbreads-dark-1000.png');">
-    <h1 style="color: white; font-size: 2.5rem; text-shadow: 2px 2px 5px rgba(0, 0, 0,0.7);">TIGRIS MEDITERRANEAN GRILLE</h1>
-  </div>
+    <div class="jarallax d-flex align-items-center text-center justify-content-center mb-4" role="img" aria-label="3 Types of Flatbreads" style="background-image: url('/images/food/flatbreads-dark-1000.png'); height:550px">
+      <h1 style="color: white; font-size: 2.5rem; text-shadow: 2px 2px 5px rgba(0, 0, 0,0.7);">TIGRIS MEDITERRANEAN GRILLE</h1>
+    </div>
 
 
   <div class="container marketing">
@@ -230,7 +228,9 @@
   </div>
 
   {{!-- Restaurant Picture --}}
-  <div role="img" aria-label="Tigris Medierranean Grille outdoors" class="parallax mt-5" style="background-image: url('/images/misc/outside.jpeg'); height: 450px"></div>
+  {{!-- <div role="img" aria-label="Tigris Medierranean Grille outdoors" class="parallax mt-5" style="background-image: url('/images/misc/outside.jpeg'); height: 450px"></div> --}}
+
+  <div class="jarallax" role="img" aria-label="Tigris Medierranean Grille outdoors" style="background-image: url('/images/misc/outside.jpeg'); height:550px"></div>
 
   {{!-- carousel --}}
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -243,8 +243,8 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         {{!-- <div role="img" aria-label="A beef tikka plate and a chicken shawarma plates" class="parallax" style="background-image: url('/images/food/mix.jpg');background-attachment:scroll"></div> --}}
-        <img src="/images/food/kebab.jpg" class="d-block w-100" style="height:550px" loading="lazy"></img>
-
+        <img src="/images/food/kebab.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+        {{!-- <div class="jarallax" role="img" aria-label="beef kebab plate" style="background-image: url('/images/food/kebab.jpg'); height:550px"></div> --}}
         <div class="container">
           <div class="carousel-caption text-start">
             <h1 class="text-white">A Taste of Mesopotamia: Savor the Flavors of Ancient Traditions</h1>
@@ -254,7 +254,8 @@
       </div>
       <div class="carousel-item">
         {{!-- <div class="parallax" role="img" aria-label="A chicken tikka plate" style="background-image: url('/images/food/tikka.jpg');background-attachment:scroll"></div> --}}
-        <img src="/images/food/tikka.jpg" class="d-block w-100" style="height:550px" loading="lazy"></img>
+        <img src="/images/food/tikka.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+          {{!-- <div class="jarallax" role="img" aria-label="chicken tikka plate" style="background-image: url('/images/food/tikka.jpg'); height:550px"></div> --}}
         <div class="container">
           <div class="carousel-caption">
             <h1 class="text-white">Journey Across the Mediterranean: Where East Meets West</h1>
@@ -264,7 +265,8 @@
       </div>
       <div class="carousel-item">
         {{!-- <div class="parallax" role="img" aria-label="A Tigris fries plate" style="background-image: url('/images/food/tigrisfries.jpg');background-attachment:scroll"></div> --}}
-        <img src="/images/food/tigrisfries.jpg" class="d-block w-100" style="height:550px" loading="lazy"></img>
+        <img src="/images/food/tigrisfries.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+          {{!-- <div class="jarallax" role="img" aria-label="Tigris fries plate" style="background-image: url('/images/food/tigrisfries.jpg'); height:550px"></div> --}}
         <div class="container">
           <div class="carousel-caption text-end">
             <h1 class="text-white">From Baghdad to San Diego: A Culinary Odyssey</h1>
@@ -819,3 +821,11 @@
 {{> footer}}
 
 <script src="/assets/dist/js/animation.js"></script>
+<script>
+  // Ensure the DOM is loaded before initializing Jarallax
+  document.addEventListener("DOMContentLoaded", function () {
+    jarallax(document.querySelectorAll('.jarallax'), {
+      speed: 0.2,
+    });
+  });
+</script>
