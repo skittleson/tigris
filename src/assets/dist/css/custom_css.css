@@ -206,25 +206,20 @@ p {
 }
 
 /* Home page */
-/* Parallax Background Styling */
+/* Parallax Background Styling for Desktop */
 .parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 550px;
   position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 550px;
 }
-/* Shading for text */
-.parallax-text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
+/* Fallback for Mobile */
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+  }
 }
 
 /* Fade In Animation */
@@ -248,6 +243,10 @@ p {
 #reviewsCarousel .carousel-control-prev {
   position: relative !important;
 }
+/* Slide */
+.carousel-item {
+  transition: transform 2s ease, opacity 0.5s ease-out;
+}
 
 /* footer */
 .back-to-top {
@@ -260,11 +259,6 @@ p {
   justify-content: center;
   transition: opacity 0.3s;
   color: #669bbcc9;
-}
-
-/* Slide */
-.carousel-item {
-  transition: transform 2s ease, opacity 0.5s ease-out;
 }
 
 /* Blockquote */
@@ -323,4 +317,23 @@ blockquote {
 }
 .navbar-toggler:not(.collapsed) span:nth-child(3) {
   transform: translate(15%, 33%) rotate(-45deg);
+}
+
+/* spinner */
+#loading-spinner {
+  position: absolute; /* Position relative to the nearest positioned ancestor */
+  top: 0;
+  left: 0;
+  width: 100%; /* Take up the full width of the form */
+  height: 100%; /* Take up the full height of the form */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Optional: Semi-transparent background */
+  z-index: 9999; /* Ensure the spinner is above other elements */
 }
