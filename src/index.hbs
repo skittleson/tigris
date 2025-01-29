@@ -118,21 +118,21 @@
     <div class="row">
       <div class="col-lg-4">
         <title>Stories of Delight</title>
-        <img class="round-imgs" src="/images/food/chickentikka-3.png"/>
+        <img class="round-imgs" src="/images/food/round-chickentikka.png"/>
         <h2 class="fw-normal pt-3">Stories of Delight</h2>
         <p>Uncover the charm that keeps our guests coming back for more unforgettable visits.</p>
         <button class="btn btn-outline-danger" onclick="window.open('{{yelp}}','_blank')" >View Yelp Reviews &raquo;</button>
       </div>
       <div class="col-lg-4">
         <title>A Fusion of Flavors</title>
-        <img class="round-imgs" src="/images/food/meat-flatbread.png"/>
+        <img class="round-imgs" src="/images/food/round-meatflatbread.png"/>
         <h2 class="fw-normal pt-3">A Fusion of Flavors</h2>
         <p>Savor a delicious blend of vibrant flavors and timeless tradition in every bite.</p>
         <button class="btn btn-outline-danger" onclick="window.open('menu','_blank')">See Our Menu &raquo;</button>
       </div>
       <div class="col-lg-4">
         <title>An Atmosphere of Warmth and Hospitality</title>
-        <img class="round-imgs" src="/images/food/beefkabob-3.png"/>
+        <img class="round-imgs" src="/images/food/round-beefkabob.png"/>
         <h2 class="fw-normal pt-3">Warm Welcome</h2>
         <p>At Tigris Mediterranean Grille, every dish is crafted with care and served with love.</p>
         <button class="btn btn-outline-danger" onclick="window.open('tel:{{phone}}','_blank')">Call Us Now &raquo;</button>
@@ -140,11 +140,12 @@
     </div>
   </div>
 
-    <div class="jarallax d-flex align-items-center text-center justify-content-center mb-4" role="img" aria-label="3 Types of Flatbreads" style="background-image: url('/images/food/flatbreads-dark-1000.png'); height:550px">
-      <h1 style="color: white; font-size: 2.5rem; text-shadow: 2px 2px 5px rgba(0, 0, 0,0.7);">TIGRIS MEDITERRANEAN GRILLE</h1>
-    </div>
+  {{!-- Flatbreads --}}
+  <div class="jarallax d-flex align-items-center text-center justify-content-center mb-4" role="img" aria-label="3 Types of Flatbreads" style="background-image: url('/images/food/flatbreads-dark.png'); height:550px">
+    <h1 style="color: white; font-size: 2.5rem; text-shadow: 2px 2px 5px rgba(0, 0, 0,0.7);">TIGRIS MEDITERRANEAN GRILLE</h1>
+  </div>
 
-
+  {{!-- featurette section --}}
   <div class="container marketing">
     <div class="row featurette scroll-animate">
       <div class="col-md-7 text-center text-sm-start">
@@ -222,8 +223,7 @@
     </div>
   </div>
 
-  {{!-- Restaurant Picture --}}
-  {{!-- <div role="img" aria-label="Tigris Medierranean Grille outdoors" class="parallax mt-5" style="background-image: url('/images/misc/outside.jpeg'); height: 450px"></div> --}}
+  {{!-- Door Picture --}}
   <div class="jarallax" role="img" aria-label="Tigris Medierranean Grille outdoors" style="background-image: url('/images/misc/outside.jpeg'); height:550px"></div>
 
   {{!-- carousel --}}
@@ -236,9 +236,7 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        {{!-- <div role="img" aria-label="A beef tikka plate and a chicken shawarma plates" class="parallax" style="background-image: url('/images/food/mix.jpg');background-attachment:scroll"></div> --}}
-        <img src="/images/food/kebab.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
-        {{!-- <div class="jarallax" role="img" aria-label="beef kebab plate" style="background-image: url('/images/food/kebab.jpg'); height:550px"></div> --}}
+        <img src="/images/food/slide-kebob.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
         <div class="container">
           <div class="carousel-caption text-start">
             <h1 class="text-white">A Taste of Mesopotamia: Savor the Flavors of Ancient Traditions</h1>
@@ -247,9 +245,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        {{!-- <div class="parallax" role="img" aria-label="A chicken tikka plate" style="background-image: url('/images/food/tikka.jpg');background-attachment:scroll"></div> --}}
-        <img src="/images/food/tikka.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
-          {{!-- <div class="jarallax" role="img" aria-label="chicken tikka plate" style="background-image: url('/images/food/tikka.jpg'); height:550px"></div> --}}
+        <img src="/images/food/slide-tikka.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
         <div class="container">
           <div class="carousel-caption">
             <h1 class="text-white">Journey Across the Mediterranean: Where East Meets West</h1>
@@ -258,9 +254,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        {{!-- <div class="parallax" role="img" aria-label="A Tigris fries plate" style="background-image: url('/images/food/tigrisfries.jpg');background-attachment:scroll"></div> --}}
-        <img src="/images/food/tigrisfries.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
-          {{!-- <div class="jarallax" role="img" aria-label="Tigris fries plate" style="background-image: url('/images/food/tigrisfries.jpg'); height:550px"></div> --}}
+        <img src="/images/food/slide-tigrisfries.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
         <div class="container">
           <div class="carousel-caption text-end">
             <h1 class="text-white">From Baghdad to San Diego: A Culinary Odyssey</h1>
@@ -286,19 +280,19 @@
         <h2>Scroll to<br> the right > </h2>
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/tikka.jpg" alt="Image 1" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-tikka.jpg" alt="Image 1" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/tigrisfries.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-tigrisfries.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/kebob.jpg" alt="Image 3" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-kebob2.jpg" alt="Image 3" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/falafel.jpg"  alt="Image 4" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-falafel.jpg"  alt="Image 4" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/falafel_plate.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-falafelplate.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
       </div>
     </div>
   </div>
