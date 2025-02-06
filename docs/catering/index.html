@@ -379,7 +379,7 @@
 
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
+    <div class="container-fluid flex-lg-column">
       <a class="navbar-brand" href="/">
         <img
           src="/images/misc/raw.jpg"
@@ -401,8 +401,15 @@
         <span class="icon-bar middle-bar"></span>
         <span class="icon-bar bottom-bar"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ms-auto text-center d-flex align-items-center">
+      <div
+        class="collapse navbar-collapse my-2"
+        style="background-color: #fdf0d5;border-radius:8px; width:95%;"
+        id="navbarCollapse"
+      >
+        <ul
+          class="navbar-nav ms-auto d-flex align-items-center justify-content-center"
+          style="width: 100%;"
+        >
           <li class="nav-item px-3">
             <a class="nav-link" href="#">HOME</a>
           </li>
@@ -421,16 +428,38 @@
           <li class="nav-item px-3">
             <a class="nav-link" href="/contact">CONTACT</a>
           </li>
+          <li class="nav-item px-3 dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="socialDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Socials
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="socialDropdown">
+              <li class="d-flex justify-content-around"><a
+                  class="nav-socials fs-3 opacity-75"
+                  href="https://www.facebook.com/tigrisgrille/"
+                ><i class="bi bi-facebook"></i></a>
+                <a class="fs-3 opacity-75 nav-socials" href="https://www.instagram.com/tigrismedgrille/"><i
+                    class="bi bi-instagram"
+                  ></i></a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
 
-<div class="parallax" role="img" aria-label="Catering trays" style="background-image: url('/images/misc/raw.jpg'); height:400px"></div>
+<div class="parallax" role="img" aria-label="Catering trays" style="background-image: url('/images/food/catering-4.png'); height:450px"></div>
 
-<div class="sticky-top mt-5 text-center">
-  <button type="button" style="text-transform:none" class="btn btn-danger fs-5" data-bs-toggle="modal" data-bs-target="#inquireModal">
+<div class="sticky-top mt-4 text-center">
+  <button type="button" style="text-transform:none" class="btn btn-danger fs-5 mt-4" data-bs-toggle="modal" data-bs-target="#inquireModal">
     Unveil Your Perfect Feast &raquo;
   </button>
 </div>
@@ -463,10 +492,10 @@
   <hr class="featurette-divider" />
 
   <div class="container my-5">
-    <div class="text-center fs-5 pb-4">
-      <p>All entrées are served with their respective sauces.</p>
-      <p>Small trays serve 10-15 people.</p>
-      <p>Large trays serve 20-25 people.</p>
+    <div class="text-center pb-5">
+      <h3>All entrées are served with their respective sauces.</h3>
+      <h3>- Small catering trays serve 10-15 people.</h3>
+      <h3>- Large catering trays serve 20-25 people.</h3>
     </div>
 
     <div class="row">
@@ -644,17 +673,19 @@
         </div>
 
         <div class="col-md-4 d-flex flex-column align-items-center mb-md-0">
-            <!-- Order Button -->
-            <button onclick="window.open('https://www.tigrisgrille.com/menu', '_blank')" class="btn btn-danger fs-5">
-                ORDER NOW
-            </button>
+            
             <!-- Social Media Logos -->
-            <div class="py-3">
+            <div>
                 <a class="fs-3 opacity-75 me-3" href="https://www.facebook.com/tigrisgrille/"><i class="bi bi-facebook"></i></a>
                 <a class="fs-3 opacity-75 me-3" href="https://www.instagram.com/tigrismedgrille/"><i class="bi bi-instagram"></i></a>
                 <a class="fs-3 opacity-75 me-2" href="https://www.yelp.com/biz/tigris-mediterranean-grille-san-diego?sort_by=rating_desc&amp;rr=5"><i class="bi bi-yelp"></i></a>
                 <a class="fs-3 opacity-75" href="mailto:info@tigrisgrille.com"><i class="bi bi-envelope"></i></a>
             </div>
+
+            <!-- Order Button -->
+            <button onclick="window.open('https://www.tigrisgrille.com/menu', '_blank')" class="btn btn-danger fs-5 mb-3 mt-2">
+                ORDER NOW
+            </button>
         </div>
 
         <!-- Terms -->
@@ -671,11 +702,11 @@
 
     </div>
 
-    <a class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
         </svg>
-    </a>
+    </button>
 
 </div>
 

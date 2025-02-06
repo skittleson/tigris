@@ -264,7 +264,7 @@
 
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
+    <div class="container-fluid flex-lg-column">
       <a class="navbar-brand" href="/">
         <img
           src="/images/misc/raw.jpg"
@@ -286,8 +286,15 @@
         <span class="icon-bar middle-bar"></span>
         <span class="icon-bar bottom-bar"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ms-auto text-center d-flex align-items-center">
+      <div
+        class="collapse navbar-collapse my-2"
+        style="background-color: #fdf0d5;border-radius:8px; width:95%;"
+        id="navbarCollapse"
+      >
+        <ul
+          class="navbar-nav ms-auto d-flex align-items-center justify-content-center"
+          style="width: 100%;"
+        >
           <li class="nav-item px-3">
             <a class="nav-link" href="#">HOME</a>
           </li>
@@ -306,6 +313,28 @@
           <li class="nav-item px-3">
             <a class="nav-link" href="/contact">CONTACT</a>
           </li>
+          <li class="nav-item px-3 dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="socialDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Socials
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="socialDropdown">
+              <li class="d-flex justify-content-around"><a
+                  class="nav-socials fs-3 opacity-75"
+                  href="https://www.facebook.com/tigrisgrille/"
+                ><i class="bi bi-facebook"></i></a>
+                <a class="fs-3 opacity-75 nav-socials" href="https://www.instagram.com/tigrismedgrille/"><i
+                    class="bi bi-instagram"
+                  ></i></a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -314,6 +343,16 @@
 
 <div class="container text-center my-5" style="max-width:90%">
     <h2 class="mb-4">ORDER ONLINE</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <button type="button" onclick="window.location.href='tel:(858) 576-9999'" class="btn btn-danger m-2 fs-5">Call Us</button>
+        </div>
+        <div class="col-auto">
+            <button type="button" onclick="window.open('https://www.tigrisgrille.com/menu', '_blank')" class="btn btn-danger m-2 fs-5">Direct Order</button>
+        </div>
+    </div>
+
     <div class="row justify-content-center mb-2"> 
         <div class="col-auto">
             <button type="button" target="_blank" onclick="window.open('https://postmates.com/store/tigris-mediterranean-grille/CLr6enSdQYq0Jzd8It7I-w', '_blank')" class="btn btn-danger m-2 fs-5">Postmates</button>
@@ -329,20 +368,10 @@
         </div>
     </div>
 
-    <div class="row justify-content-center">
-        <div class="col-auto">
-            <button type="button" onclick="window.location.href='tel:(858) 576-9999'" class="btn btn-danger m-2 fs-5">Call Us</button>
-        </div>
-        <div class="col-auto">
-            <button type="button" onclick="window.open('https://www.tigrisgrille.com/menu', '_blank')" class="btn btn-danger m-2 fs-5">Direct</button>
-        </div>
-    </div>
-
-    <div class="pt-5 text-start mx-auto" style="width:60%; font-size:large">
-        <strong>Please note:</strong>
-        <ul class="ps-4">
-            <li><strong>Exciting news!</strong> We're now offering fast, convenient delivery directly from Tigris to your door—no middleman, just delicious food made fresh for you!</li>
-            <li>Ordering through third-party delivery apps may incur additional charges, so for the best experience, order directly from us!</li>
+    <div class="pt-5 text-start mx-auto fs-5">
+        <h1>Exciting News! Here's the Deal:</h1>
+        <ul>
+            <li>Order directly from us for fast, fresh delivery to your door—skip the middleman and save on extra fees!</li>
         </ul>
     </div>
 </div>
@@ -409,17 +438,19 @@
         </div>
 
         <div class="col-md-4 d-flex flex-column align-items-center mb-md-0">
-            <!-- Order Button -->
-            <button onclick="window.open('https://www.tigrisgrille.com/menu', '_blank')" class="btn btn-danger fs-5">
-                ORDER NOW
-            </button>
+            
             <!-- Social Media Logos -->
-            <div class="py-3">
+            <div>
                 <a class="fs-3 opacity-75 me-3" href="https://www.facebook.com/tigrisgrille/"><i class="bi bi-facebook"></i></a>
                 <a class="fs-3 opacity-75 me-3" href="https://www.instagram.com/tigrismedgrille/"><i class="bi bi-instagram"></i></a>
                 <a class="fs-3 opacity-75 me-2" href="https://www.yelp.com/biz/tigris-mediterranean-grille-san-diego?sort_by=rating_desc&amp;rr=5"><i class="bi bi-yelp"></i></a>
                 <a class="fs-3 opacity-75" href="mailto:info@tigrisgrille.com"><i class="bi bi-envelope"></i></a>
             </div>
+
+            <!-- Order Button -->
+            <button onclick="window.open('https://www.tigrisgrille.com/menu', '_blank')" class="btn btn-danger fs-5 mb-3 mt-2">
+                ORDER NOW
+            </button>
         </div>
 
         <!-- Terms -->
@@ -436,11 +467,11 @@
 
     </div>
 
-    <a class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
         </svg>
-    </a>
+    </button>
 
 </div>
 

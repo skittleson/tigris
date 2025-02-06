@@ -254,7 +254,7 @@
 </script>
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
+    <div class="container-fluid flex-lg-column">
       <a class="navbar-brand" href="/">
         <img
           src="/images/misc/raw.jpg"
@@ -276,8 +276,15 @@
         <span class="icon-bar middle-bar"></span>
         <span class="icon-bar bottom-bar"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ms-auto text-center d-flex align-items-center">
+      <div
+        class="collapse navbar-collapse my-2"
+        style="background-color: #fdf0d5;border-radius:8px; width:95%;"
+        id="navbarCollapse"
+      >
+        <ul
+          class="navbar-nav ms-auto d-flex align-items-center justify-content-center"
+          style="width: 100%;"
+        >
           <li class="nav-item px-3">
             <a class="nav-link" href="#">HOME</a>
           </li>
@@ -296,6 +303,28 @@
           <li class="nav-item px-3">
             <a class="nav-link" href="/contact">CONTACT</a>
           </li>
+          <li class="nav-item px-3 dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="socialDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Socials
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="socialDropdown">
+              <li class="d-flex justify-content-around"><a
+                  class="nav-socials fs-3 opacity-75"
+                  href="https://www.facebook.com/tigrisgrille/"
+                ><i class="bi bi-facebook"></i></a>
+                <a class="fs-3 opacity-75 nav-socials" href="https://www.instagram.com/tigrismedgrille/"><i
+                    class="bi bi-instagram"
+                  ></i></a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -313,21 +342,22 @@
         <img class="round-imgs" src="/images/food/round-chickentikka.png"/>
         <h2 class="fw-normal pt-3">Stories of Delight</h2>
         <p>Uncover the charm that keeps our guests coming back for more unforgettable visits.</p>
-        <button class="btn btn-outline-danger" onclick="window.open('https://www.yelp.com/biz/tigris-mediterranean-grille-san-diego?sort_by=rating_desc&amp;rr=5','_blank')" >View Yelp Reviews &raquo;</button>
+        <button class="btn btn-outline-danger" onclick="window.open('menu','_blank')">See Our Menu &raquo;</button>
       </div>
       <div class="col-lg-4">
         <title>A Fusion of Flavors</title>
         <img class="round-imgs" src="/images/food/round-meatflatbread.png"/>
         <h2 class="fw-normal pt-3">A Fusion of Flavors</h2>
         <p>Savor a delicious blend of vibrant flavors and timeless tradition in every bite.</p>
-        <button class="btn btn-outline-danger" onclick="window.open('menu','_blank')">See Our Menu &raquo;</button>
+        <button class="btn btn-outline-danger" onclick="window.open('catering','_blank')" >Catering Deals &raquo;</button>
       </div>
       <div class="col-lg-4">
         <title>An Atmosphere of Warmth and Hospitality</title>
-        <img class="round-imgs" src="/images/food/round-beefkabob.png"/>
+        <img class="round-imgs" src="/images/food/round-creamchop.png"/>
         <h2 class="fw-normal pt-3">Warm Welcome</h2>
         <p>At Tigris Mediterranean Grille, every dish is crafted with care and served with love.</p>
-        <button class="btn btn-outline-danger" onclick="window.open('tel:(858) 576-9999','_blank')">Call Us Now &raquo;</button>
+        
+        <button class="btn btn-outline-danger" onclick="window.open('https://www.yelp.com/biz/tigris-mediterranean-grille-san-diego?sort_by=rating_desc&amp;rr=5','_blank')" >View Yelp Reviews &raquo;</button>
       </div>
     </div>
   </div>
@@ -336,7 +366,7 @@
     <h1 style="color: white; font-size: 2.5rem; text-shadow: 2px 2px 5px rgba(0, 0, 0,0.7);">TIGRIS MEDITERRANEAN GRILLE</h1>
   </div>
 
-  <div class="container marketing">
+  <div class="container marketing my-5">
     <div class="row featurette scroll-animate">
       <div class="col-md-7 text-center text-sm-start">
         <h2 class="fw-bold lh-1 pb-2">
@@ -350,13 +380,9 @@
         </blockquote>
         <button onclick="window.open('menu','_blank')" class="btn btn-danger my-3">Discover Our Dishes</button>
       </div>
-      <div class="col-md-5 d-flex justify-content-center align-items-center">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice" focusable="false">
+      <div class="container col-md-5 d-flex justify-content-center align-items-center">
+          <div class="jarallax" role="img" aria-label="Tigris Medierranean Grille outdoors" style="background-image: url('/images/food/catering-3.png'); height:500px; width:500px"></div>
           <title>Craftsmanship in Every Dish</title>
-          <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
-            fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
         </svg>
       </div>
     </div>
@@ -376,13 +402,9 @@
         </blockquote>
         <button onclick="window.open('catering','_blank')" class="btn btn-danger my-3">Explore Catering Options</button>
       </div>
-      <div class="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice" focusable="false">
+      <div class="container col-md-5 order-md-1 d-flex justify-content-center align-items-center">
+          <div class="jarallax" role="img" aria-label="Tigris Medierranean Grille outdoors" style="background-image: url('/images/food/catering-2.png'); height:500px; width:500px"></div>
           <title>Authentic Flavors: A Culinary Experience Like No Other</title>
-          <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
-            fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
         </svg>
       </div>
     </div>
@@ -399,21 +421,15 @@
         <blockquote class="text-muted fst-italic">
           "Tigris feels like home, but with the most amazing food!" - Local Regular
         </blockquote>
-        <button onclick="window.open('our-story','_blank')" class="btn btn-danger my-3">Learn About Our Story</button>
+        <button onclick="window.open('our-story','_blank')" class="btn btn-danger my-3">Read About Our Story</button>
       </div>
-      <div class="col-md-5 d-flex justify-content-center align-items-center">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice" focusable="false">
+      <div class="container col-md-5 d-flex justify-content-center align-items-center">
+          <div class="jarallax" role="img" aria-label="Tigris Medierranean Grille outdoors" style="background-image: url('/images/misc/outside.jpeg'); height:500px; width:500px"></div>
           <title>Our Commitment: Quality, Hospitality, and Tradition</title>
-          <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
-            fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
         </svg>
       </div>
     </div>
   </div>
-
-  <div class="jarallax" role="img" aria-label="Tigris Medierranean Grille outdoors" style="background-image: url('/images/misc/outside.jpeg'); height:550px"></div>
 
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -943,11 +959,13 @@
     </button>
   </div>
 
-  <div class="container-fluid marketing scroll-animate">
+  <div class="container-fluid marketing scroll-animate d-flex justify-content-center">
     <iframe class="google-map"
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13410.210757627956!2d-117.1304295!3d32.8306151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x39c5d62b7baaf06!2sTigris%20Mediterranean%20Grille!5e0!3m2!1sen!2sus!4v1616021732440!5m2!1sen!2sus"
-      width="100%" height="450" allowfullscreen="" loading="lazy"></iframe>
+      width="75%" height="450" allowfullscreen="" loading="lazy"></iframe>
+  </div>
 
+  <div class="container-fluid marketing scroll-animate">
     <div class="row mt-5">
       <div class="col-md-6 d-flex flex-column align-items-center mb-5 mb-md-0">
         <h3>CONTACT INFORMATION</h3>
@@ -1008,17 +1026,19 @@
         </div>
 
         <div class="col-md-4 d-flex flex-column align-items-center mb-md-0">
-            <!-- Order Button -->
-            <button onclick="window.open('https://www.tigrisgrille.com/menu', '_blank')" class="btn btn-danger fs-5">
-                ORDER NOW
-            </button>
+            
             <!-- Social Media Logos -->
-            <div class="py-3">
+            <div>
                 <a class="fs-3 opacity-75 me-3" href="https://www.facebook.com/tigrisgrille/"><i class="bi bi-facebook"></i></a>
                 <a class="fs-3 opacity-75 me-3" href="https://www.instagram.com/tigrismedgrille/"><i class="bi bi-instagram"></i></a>
                 <a class="fs-3 opacity-75 me-2" href="https://www.yelp.com/biz/tigris-mediterranean-grille-san-diego?sort_by=rating_desc&amp;rr=5"><i class="bi bi-yelp"></i></a>
                 <a class="fs-3 opacity-75" href="mailto:info@tigrisgrille.com"><i class="bi bi-envelope"></i></a>
             </div>
+
+            <!-- Order Button -->
+            <button onclick="window.open('https://www.tigrisgrille.com/menu', '_blank')" class="btn btn-danger fs-5 mb-3 mt-2">
+                ORDER NOW
+            </button>
         </div>
 
         <!-- Terms -->
@@ -1035,11 +1055,11 @@
 
     </div>
 
-    <a class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
         </svg>
-    </a>
+    </button>
 
 </div>
 
