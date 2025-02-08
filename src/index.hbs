@@ -110,42 +110,39 @@
 
 <main>
 
-  {{!-- Video --}}
-  <div></div>
-
   {{!-- Round images --}}
-  <div class="container marketing scroll-animate">
+<div class="container marketing scroll-animate">
     <div class="row">
       <div class="col-lg-4">
         <title>Stories of Delight</title>
         <img class="round-imgs" src="/images/food/round-chickentikka.png"/>
-        <h2 class="fw-normal pt-3">Stories of Delight</h2>
-        <p>Uncover the charm that keeps our guests coming back for more unforgettable visits.</p>
-        <button class="btn btn-outline-danger" onclick="window.open('menu','_blank')">See Our Menu &raquo;</button>
+        <h2 class="fw-bold pt-3">Delight in Each Bite</h2>
+        <p>Satisfy your cravings, bite by bite. It's more than a meal; it's an experience.</p>
+        <button class="btn btn-danger" onclick="window.open('catering','_blank')" >Catering Specials &raquo;</button>
       </div>
       <div class="col-lg-4">
         <title>A Fusion of Flavors</title>
         <img class="round-imgs" src="/images/food/round-meatflatbread.png"/>
-        <h2 class="fw-normal pt-3">A Fusion of Flavors</h2>
-        <p>Savor a delicious blend of vibrant flavors and timeless tradition in every bite.</p>
-        <button class="btn btn-outline-danger" onclick="window.open('catering','_blank')" >Catering Deals &raquo;</button>
+        <h2 class="fw-bold pt-3">A Fusion of Flavors</h2>
+        <p>Every bite is a celebration of vibrant flavors and timeless traditions.</p>
+        <button class="btn btn-danger" onclick="window.open('menu','_blank')">Explore Menu &raquo;</button>
       </div>
       <div class="col-lg-4">
         <title>An Atmosphere of Warmth and Hospitality</title>
         <img class="round-imgs" src="/images/food/round-creamchop.png"/>
-        <h2 class="fw-normal pt-3">Warm Welcome</h2>
-        <p>At Tigris Mediterranean Grille, every dish is crafted with care and served with love.</p>
-        
-        <button class="btn btn-outline-danger" onclick="window.open('{{yelp}}','_blank')" >View Yelp Reviews &raquo;</button>
+        <h2 class="fw-bold pt-3">Made With Love</h2>
+        <p>With us, every dish is an act of love, and every guest is treated like family.</p>
+        <button class="btn btn-danger" onclick="window.open('{{yelp}}','_blank')" >Read Reviews &raquo;</button>
       </div>
     </div>
   </div>
 
-  {{!-- Flatbreads --}}
-  <div class="jarallax d-flex align-items-center text-center justify-content-center mb-4" role="img" aria-label="3 Types of Flatbreads" style="background-image: url('/images/food/flatbreads-dark.png'); height:550px">
-    <h1 style="color: white; font-size: 2.5rem; text-shadow: 2px 2px 5px rgba(0, 0, 0,0.7);">TIGRIS MEDITERRANEAN GRILLE</h1>
-  </div>
 
+  {{!-- Flatbreads --}}
+    <div class="jarallax d-flex align-items-center text-center justify-content-center mb-4" role="img" aria-label="3 Types of Flatbreads" style="background-image: url('/images/food/flatbreads.jpg'); height:550px">
+      <div class="carousel-overlay"></div>
+      <h1 class="text-white fs-1" style="z-index: 2;text-shadow: 2px 2px 5px rgba(0, 0, 0,0.7);">TIGRIS MEDITERRANEAN GRILLE</h1>
+    </div>
   {{!-- featurette section --}}
   <div class="container marketing my-5">
     <div class="row featurette scroll-animate">
@@ -222,29 +219,38 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/images/food/slide-kebob.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+        <div class="carousel-image-container">
+          <img src="/images/food/slide-salads.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+          <div class="carousel-overlay"></div>
+        </div>
         <div class="container">
-          <div class="carousel-caption text-start">
-            <h1 class="text-white">A Taste of Mesopotamia: Savor the Flavors of Ancient Traditions</h1>
-            <button class="btn btn-danger" onclick="window.open('{{menu}}', '_blank')">EXPLORE OUR MENU</button>
+          <div class="carousel-caption cc d-flex flex-column justify-content-around align-items-center">
+            <h1 class="text-white">A Taste of Mesopotamia:<br>Savor the Flavors of Ancient Traditions</h1>
+            <button class="btn btn-danger p-1 w-50" onclick="window.open('{{menu}}', '_blank')">EXPLORE OUR MENU</button>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/images/food/slide-tikka.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+        <div class="carousel-image-container">
+          <img src="/images/food/slide-tikka.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+          <div class="carousel-overlay"></div>
+        </div>
         <div class="container">
-          <div class="carousel-caption">
-            <h1 class="text-white">Journey Across the Mediterranean: Where East Meets West</h1>
-            <button class="btn btn-danger" onclick="window.open('catering', '_blank')">CATER YOUR EVENT</button>
-          </div>
+          <div class="carousel-caption cc d-flex flex-column justify-content-around align-items-center">
+            <h1 class="text-white">Journey Across the Mediterranean:<br>Where East Meets West</h1>
+            <button class="btn btn-danger p-1 w-50" onclick="window.open('catering', '_blank')">PRIVATE CATERING</button>
+          </div> 
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/images/food/slide-tigrisfries.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+        <div class="carousel-image-container">
+          <img src="/images/food/slide-sandwich-mix.jpeg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+          <div class="carousel-overlay"></div>
+        </div>
         <div class="container">
-          <div class="carousel-caption text-end">
-            <h1 class="text-white">From Baghdad to San Diego: A Culinary Odyssey</h1>
-            <button class="btn btn-danger" onclick="window.open('our-story', '_blank')">DISCOVER OUR STORY</button>
+          <div class="carousel-caption cc d-flex flex-column justify-content-around align-items-center">
+            <h1 class="text-white">From Baghdad to California:<br>A Culinary Odyssey Through History</h1>
+            <button class="btn btn-danger p-1 w-50" onclick="window.open('our-story', '_blank')">DISCOVER OUR STORY</button>
           </div>
         </div>
       </div>
@@ -266,20 +272,50 @@
         <h2>Scroll to<br> the right > </h2>
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/slide-tikka.jpg" alt="Image 1" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-platemix3.jpg" alt="Image 1" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/slide-tigrisfries.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-shawarmasandwich.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
+      </div>
+
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-salads2.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
+      </div>
+
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-platemix1.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/slide-kebob2.jpg" alt="Image 3" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-beeftikka.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/slide-falafel.jpg"  alt="Image 4" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-gyrosandwich.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/slide-falafelplate.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-sides.jpg" alt="Image 3" style="height: 700px;" loading="lazy">
       </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-veggieflatbread.jpg"  alt="Image 4" style="height: 700px;" loading="lazy">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-falafelsandwich.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-platemix2.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-salad.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-creamchop.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-tikkaplate.png"  alt="Image 5" style="height: 700px;" loading="lazy">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-shawarmaplate.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
+      </div>
+
     </div>
   </div>
 
