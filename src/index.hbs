@@ -110,42 +110,39 @@
 
 <main>
 
-  {{!-- Video --}}
-  <div></div>
-
   {{!-- Round images --}}
-  <div class="container marketing scroll-animate">
+<div class="container marketing scroll-animate">
     <div class="row">
       <div class="col-lg-4">
         <title>Stories of Delight</title>
-        <img class="round-imgs" src="/images/food/round-chickentikka.png"/>
-        <h2 class="fw-normal pt-3">Stories of Delight</h2>
-        <p>Uncover the charm that keeps our guests coming back for more unforgettable visits.</p>
-        <button class="btn btn-outline-danger" onclick="window.open('menu','_blank')">See Our Menu &raquo;</button>
+        <img alt="chicken cream chop" class="round-imgs" src="/images/food/round-creamchop.png"/>
+        <h2 class="fw-bold pt-3">Delight in Each Bite</h2>
+        <p>Satisfy your cravings, bite by bite. It's more than a meal; it's an experience.</p>
+        <button class="btn btn-danger" onclick="window.open('catering','_blank')" >Catering Specials &raquo;</button>
       </div>
       <div class="col-lg-4">
         <title>A Fusion of Flavors</title>
-        <img class="round-imgs" src="/images/food/round-meatflatbread.png"/>
-        <h2 class="fw-normal pt-3">A Fusion of Flavors</h2>
-        <p>Savor a delicious blend of vibrant flavors and timeless tradition in every bite.</p>
-        <button class="btn btn-outline-danger" onclick="window.open('catering','_blank')" >Catering Deals &raquo;</button>
+        <img alt="meat flabread" class="round-imgs" src="/images/food/round-meatflatbread.png"/>
+        <h2 class="fw-bold pt-3">A Fusion of Flavors</h2>
+        <p>Every bite is a celebration of vibrant flavors and timeless traditions.</p>
+        <button class="btn btn-danger" onclick="window.open('menu','_blank')">Explore Menu &raquo;</button>
       </div>
       <div class="col-lg-4">
         <title>An Atmosphere of Warmth and Hospitality</title>
-        <img class="round-imgs" src="/images/food/round-creamchop.png"/>
-        <h2 class="fw-normal pt-3">Warm Welcome</h2>
-        <p>At Tigris Mediterranean Grille, every dish is crafted with care and served with love.</p>
-        
-        <button class="btn btn-outline-danger" onclick="window.open('{{yelp}}','_blank')" >View Yelp Reviews &raquo;</button>
+        <img alt="chicken tikka plate" class="round-imgs" src="/images/food/round-chickentikka.png"/>
+        <h2 class="fw-bold pt-3">Made With Love</h2>
+        <p>With us, every dish is an act of love, and every guest is treated like family.</p>
+        <button class="btn btn-danger" onclick="window.open('{{yelp}}','_blank')" >Read Reviews &raquo;</button>
       </div>
     </div>
   </div>
 
-  {{!-- Flatbreads --}}
-  <div class="jarallax d-flex align-items-center text-center justify-content-center mb-4" role="img" aria-label="3 Types of Flatbreads" style="background-image: url('/images/food/flatbreads-dark.png'); height:550px">
-    <h1 style="color: white; font-size: 2.5rem; text-shadow: 2px 2px 5px rgba(0, 0, 0,0.7);">TIGRIS MEDITERRANEAN GRILLE</h1>
-  </div>
 
+  {{!-- Flatbreads --}}
+    <div class="jarallax d-flex align-items-center text-center justify-content-center mb-4" role="img" aria-label="3 Types of Flatbreads" style="background-image: url('/images/food/flatbreads.jpg'); height:550px">
+      <div class="carousel-overlay"></div>
+      <h1 class="text-white fs-1" style="z-index: 2;text-shadow: 2px 2px 5px rgba(0, 0, 0,0.7);">TIGRIS MEDITERRANEAN GRILLE</h1>
+    </div>
   {{!-- featurette section --}}
   <div class="container marketing my-5">
     <div class="row featurette scroll-animate">
@@ -222,29 +219,38 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/images/food/slide-kebob.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+        <div class="carousel-image-container">
+          <img src="/images/food/slide-salads.jpg" alt="salad" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+          <div class="carousel-overlay"></div>
+        </div>
         <div class="container">
-          <div class="carousel-caption text-start">
-            <h1 class="text-white">A Taste of Mesopotamia: Savor the Flavors of Ancient Traditions</h1>
-            <button class="btn btn-danger" onclick="window.open('{{menu}}', '_blank')">EXPLORE OUR MENU</button>
+          <div class="carousel-caption cc d-flex flex-column justify-content-around align-items-center">
+            <h1 class="text-white">A Taste of Mesopotamia:<br>Savor the Flavors of Ancient Traditions</h1>
+            <button class="btn btn-danger p-1 w-50" onclick="window.open('{{menu}}', '_blank')">EXPLORE OUR MENU</button>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/images/food/slide-tikka.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+        <div class="carousel-image-container">
+          <img src="/images/food/slide-tikka.jpg" alt="chicken tikka" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+          <div class="carousel-overlay"></div>
+        </div>
         <div class="container">
-          <div class="carousel-caption">
-            <h1 class="text-white">Journey Across the Mediterranean: Where East Meets West</h1>
-            <button class="btn btn-danger" onclick="window.open('catering', '_blank')">CATER YOUR EVENT</button>
-          </div>
+          <div class="carousel-caption cc d-flex flex-column justify-content-around align-items-center">
+            <h1 class="text-white">Journey Across the Mediterranean:<br>Where East Meets West</h1>
+            <button class="btn btn-danger p-1 w-50" onclick="window.open('catering', '_blank')">PRIVATE CATERING</button>
+          </div> 
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/images/food/slide-tigrisfries.jpg" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+        <div class="carousel-image-container">
+          <img src="/images/food/slide-sandwich-mix.jpeg" alt="sandwich mix" class="w-100" style="object-fit: cover; height: 550px;" loading="lazy"></img>
+          <div class="carousel-overlay"></div>
+        </div>
         <div class="container">
-          <div class="carousel-caption text-end">
-            <h1 class="text-white">From Baghdad to San Diego: A Culinary Odyssey</h1>
-            <button class="btn btn-danger" onclick="window.open('our-story', '_blank')">DISCOVER OUR STORY</button>
+          <div class="carousel-caption cc d-flex flex-column justify-content-around align-items-center">
+            <h1 class="text-white">From Baghdad to California:<br>A Culinary Odyssey Through History</h1>
+            <button class="btn btn-danger p-1 w-50" onclick="window.open('our-story', '_blank')">DISCOVER OUR STORY</button>
           </div>
         </div>
       </div>
@@ -266,20 +272,50 @@
         <h2>Scroll to<br> the right > </h2>
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/slide-tikka.jpg" alt="Image 1" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-platemix3.jpg" alt="Image 1" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/slide-tigrisfries.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-shawarmasandwich.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
+      </div>
+
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-salads2.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
+      </div>
+
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-platemix1.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/slide-kebob2.jpg" alt="Image 3" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-beeftikka.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/slide-falafel.jpg"  alt="Image 4" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-gyrosandwich.jpg" alt="Image 2" style="height: 700px;" loading="lazy">
       </div>
       <div class="col-auto" style="max-width: none">
-        <img src="/images/food/slide-falafelplate.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
+        <img src="/images/food/slide-sides.jpg" alt="Image 3" style="height: 700px;" loading="lazy">
       </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-veggieflatbread.jpg"  alt="Image 4" style="height: 700px;" loading="lazy">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-falafelsandwich.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-platemix2.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-salad.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-creamchop.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-tikkaplate.png"  alt="Image 5" style="height: 700px;" loading="lazy">
+      </div>
+      <div class="col-auto" style="max-width: none">
+        <img src="/images/food/slide-shawarmaplate.jpg"  alt="Image 5" style="height: 700px;" loading="lazy">
+      </div>
+
     </div>
   </div>
 
@@ -298,7 +334,7 @@
           <div class="card text-center mx-auto shadow-sm d-flex justify-content-center align-items-center"
             style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Leslie McDonald</h5>
+              <h2 class="card-title fs-4">Leslie McDonald</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">I love Tigris Grill and so did all of my guests! I had a party and served 60+ people
                 and everything was excellent! Best service and food. I give them a 5 star all around. Whether you go for
@@ -315,7 +351,7 @@
           <div class="card text-center mx-auto shadow-sm d-flex justify-content-center align-items-center"
             style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Sherry G.</h5>
+              <h2 class="card-title fs-4">Sherry G.</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">Was in the neighborhood, so stopped by to order lunch for my office. Ordered 3 Gyros
                 and Fries. The food was Fantastic! Fries seasoned just right! The Gyros were huge and delicious! We
@@ -332,7 +368,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Zabbie S.</h5>
+              <h2 class="card-title fs-4">Zabbie S.</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">If I could give 10 stars I would. Our family owns a large chain of restaurants all
                 throughout the nation. From time to time I like to eat at other Mediterranean restaurants to see what
@@ -361,7 +397,7 @@
           <div class="card text-center mx-auto shadow-sm d-flex justify-content-center align-items-center"
             style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Jasmin B.</h5>
+              <h2 class="card-title fs-4">Jasmin B.</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">Always great service when I come to Tigris. I forgot the guys name but he is always
                 extremely nice. The portions sizes are very generous and the flavor of the food itself is always on
@@ -381,7 +417,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Rose Allas</h5>
+              <h2 class="card-title fs-4">Rose Allas</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">Franky and his restaurant KILLED it! Tigris catered our AMD San Diego Spring Social
                 today, all but GREAT reviews! Everyone all the way up to the new Corporate VP/site lead were highly
@@ -401,7 +437,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Jeff Cooperhouse</h5>
+              <h2 class="card-title fs-4">Jeff Cooperhouse</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">Great Mediterranean cuisine at Tigris! Ordered the chicken shawarma and gyro plates
                 which both tasted great. Loved the pita and hummus. The service is very friendly and quick. Recommend!
@@ -417,7 +453,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Alexis S.</h5>
+              <h2 class="card-title fs-4">Alexis S.</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">Service A1. Any plate on the menu A1. Food and seasoning of ANY item A1. Give Tigris
                 your business and they will give you a happy tummy !</p>
@@ -433,7 +469,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Patrick Harris</h5>
+              <h2 class="card-title fs-4">Patrick Harris</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">Tigris Mediterranean Grill sets the bar at all levels, from customer service to taste
                 and portion sizes. The workers all greet you with a hello and a smile as you walk through the door
@@ -450,7 +486,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">E B (Lizzardbugs)</h5>
+              <h2 class="card-title fs-4">E B (Lizzardbugs)</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">The customer service was great...The food was amazing!!! It's a hole in a wall, gem.
                 Tons of food, reasonably priced.</p>
@@ -465,7 +501,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Courtney Hendo</h5>
+              <h2 class="card-title fs-4">Courtney Hendo</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">I highly recommend this place—their food is the best shawarma I've ever tasted. The
                 portions are generous, and their customer service is exceptional! I always feel at home when I visit.
@@ -481,7 +517,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Monica K.</h5>
+              <h2 class="card-title fs-4">Monica K.</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">My company hired this company for catering a while back and while I was in the area
                 today I figured I'd tried it out. The catering was great but the hot and fresh food was even better. I
@@ -500,7 +536,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Debbie Redelings</h5>
+              <h2 class="card-title fs-4">Debbie Redelings</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">Love this place! Whenever we share food from this place with our friends, they always
                 ask where we got it from because it’s sooo good! Great service and big portions too!</p>
@@ -515,7 +551,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Andrea B.</h5>
+              <h2 class="card-title fs-4">Andrea B.</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">This place puts other Mediterranean restaurants to shame. Food is so good and the
                 portions are extremely generous. We moved out of San Diego but whenever we're nearby, we always try to
@@ -532,7 +568,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">irakli utu</h5>
+              <h2 class="card-title fs-4">irakli utu</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">tastiest kebob i’ve ever ate in my life. hummus and tomato salad were
                 fresh.<br>friendly staff, ready to answer any questions from the menu.</p>
@@ -547,7 +583,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Rebecca R.</h5>
+              <h2 class="card-title fs-4">Rebecca R.</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">This salmon dish was more than I expected. It was awesome. Everything was perfectly
                 cooked and prepared. I can't wait to go back. Check it out. You will not be disappointed.</p>
@@ -563,7 +599,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">John Kay</h5>
+              <h2 class="card-title fs-4">John Kay</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">Incredibly tasty food and courteous staff.<br>Ate a beef plate with the salad, hummus
                 and garlic sauce.<br>It was incredible.</p>
@@ -578,7 +614,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Rosa Villagran</h5>
+              <h2 class="card-title fs-4">Rosa Villagran</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">Tigris is exceptionally delicious. The fusion of flavors is so warming to the
                 stomach. The atmosphere is warm with outstanding customer service. The prices are very great with
@@ -594,7 +630,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Sean M.</h5>
+              <h2 class="card-title fs-4">Sean M.</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">Great quality. Generous portions. Everything seems fresh from the moment I get there.
                 I always intend to eat only half and take the rest for a later meal. It's so good. I haven't been able
@@ -611,7 +647,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Hakim Aziz</h5>
+              <h2 class="card-title fs-4">Hakim Aziz</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">Highly recommended place to go! Probably one of the best Mediterranean food in San
                 Diego. Friendly service, generous portions and good vibes with great playlist of 80-90s music playing
@@ -627,7 +663,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">John M.</h5>
+              <h2 class="card-title fs-4">John M.</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">I came to Tigris Mediterranean Grille on a Friday afternoon and it was relatively
                 empty. After eating their food, I'm surprised they don't have more business! The restaurant had plenty
@@ -651,7 +687,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Jessie-Marie Wasson</h5>
+              <h2 class="card-title fs-4">Jessie-Marie Wasson</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">I love Gyros and I get them at every Mediterranean restaurant I go to, and I have to
                 say that this restaurant had the best Gyros I have ever had. The meat was so delicious and tender, and
@@ -667,7 +703,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Samstrex</h5>
+              <h2 class="card-title fs-4">Samstrex</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">Hands down the best Mediterranean restaurant in the area. Food was extremely fresh
                 and came in a very nice quantity. Hummus was delicious, and the meat was extremely juicy and flavorful.
@@ -684,7 +720,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Tori M.</h5>
+              <h2 class="card-title fs-4">Tori M.</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">I took my order to go but I stopped mid-meal to write this review. The food tastes
                 amazing, looks amazing, smells amazing, the service was also amazing. I got the Chicken Tikka Plate,
@@ -703,7 +739,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Zoe Freedman</h5>
+              <h2 class="card-title fs-4">Zoe Freedman</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">I found this place randomly a few years ago and have been coming back since, even
                 though it's not close to my house! The food is absolutely incredible. My favorite Mediterranean grill in
@@ -721,7 +757,7 @@
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
           <div class="card text-center mx-auto shadow-sm" style="max-width: 600px;">
             <div class="card-body">
-              <h5 class="card-title">Mark S.</h5>
+              <h2 class="card-title fs-4">Mark S.</h2>
               <p class="card-text"><small class="text-muted">Rating: ⭐⭐⭐⭐⭐</small></p>
               <p class="card-text">Clean restaurants, great food. My family and I are eating at the restaurant now the
                 food is very flavorful fast service. They are friendly. They came to offer us additional sauces and
@@ -745,7 +781,7 @@
 
   {{!-- Map --}}
   <div class="container-fluid marketing scroll-animate d-flex justify-content-center">
-    <iframe class="google-map"
+    <iframe title="map-directions" class="google-map"
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13410.210757627956!2d-117.1304295!3d32.8306151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x39c5d62b7baaf06!2sTigris%20Mediterranean%20Grille!5e0!3m2!1sen!2sus!4v1616021732440!5m2!1sen!2sus"
       width="75%" height="450" allowfullscreen="" loading="lazy"></iframe>
   </div>

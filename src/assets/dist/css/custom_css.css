@@ -141,13 +141,14 @@ p {
   color: white;
 }
 .btn-outline-danger {
+  background-color: white;
   color: #780000;
   border-color: #780000;
   padding: 1rem;
 }
 .btn-outline-danger:hover {
-  background-color: #c1121f;
-  color: #fdf0d5;
+  background-color: white;
+  color: #c1121f;
   border-color: #c1121f;
 }
 .navbar .nav-link {
@@ -364,4 +365,55 @@ blockquote {
 }
 .nav-socials:hover {
   color: red;
+}
+
+.cc {
+  border: 4px solid white;
+  border-radius: 4px;
+  text-shadow: 2px 2px 4px rgb(4, 4, 4);
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0 !important;
+}
+
+.carousel-image-container {
+  position: relative;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.navbar-message {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  background-color: #fdf0d5;
+  color: #780000;
+  border-radius: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .navbar-message {
+    position: relative;
+    top: 57px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.link-hover:hover {
+  text-decoration: underline;
+}
+
+a {
+  color: firebrick;
 }

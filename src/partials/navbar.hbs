@@ -1,5 +1,46 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="navbar-message">
+      <div class="px-3 py-1">
+        <div>
+          <div>
+            <a class="link-hover fs-5" href="/menu">
+              <i class="bi bi-cart-plus-fill"></i>
+              Online Orders
+            </a>
+          </div>
+          <div>
+            <a class="link-hover fs-5" href="tel:+18585769999">
+              <i class="bi bi-telephone-fill"></i>
+              {{phone}}
+            </a>
+          </div>
+          <!-- Social Media Logos -->
+          <div class="d-flex justify-content-around">
+            <a
+              aria-label="facebook"
+              class="link-hover fs-3 opacity-75 me-3"
+              href="{{facebook}}"
+            ><i class="bi bi-facebook"></i></a>
+            <a
+              aria-label="instagram"
+              class="link-hover fs-3 opacity-75 me-3"
+              href="{{instagram}}"
+            ><i class="bi bi-instagram"></i></a>
+            <a
+              aria-label="yelp"
+              class="link-hover fs-3 opacity-75 me-2"
+              href="{{yelp}}"
+            ><i class="bi bi-yelp"></i></a>
+            <a
+              aria-label="email"
+              class="link-hover fs-3 opacity-75"
+              href="mailto:{{email}}"
+            ><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container-fluid flex-lg-column">
       <a class="navbar-brand" href="/">
         <img
@@ -24,7 +65,7 @@
       </button>
       <div
         class="collapse navbar-collapse my-2"
-        style="background-color: #fdf0d5;border-radius:8px; width:95%;"
+        style="background-color: #fdf0d5;border-radius:8px; width:90%;"
         id="navbarCollapse"
       >
         <ul
@@ -35,16 +76,16 @@
             <a class="nav-link" href="#">HOME</a>
           </li>
           <li class="nav-item px-3">
-            <a class="nav-link btn-outline-success" href="/menu">MENU</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link btn-outline-success" href="/gallery">GALLERY</a>
+            <a class="nav-link" href="/our-story">OUR STORY</a>
           </li>
           <li class="nav-item px-3">
             <a class="nav-link" href="/catering">CATERING</a>
           </li>
           <li class="nav-item px-3">
-            <a class="nav-link" href="/our-story">OUR STORY</a>
+            <a class="nav-link btn-outline-success" href="/menu">MENU</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link btn-outline-success" href="/gallery">GALLERY</a>
           </li>
           <li class="nav-item px-3">
             <a class="nav-link" href="/contact">CONTACT</a>
@@ -58,7 +99,7 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Socials
+              SOCIALS
             </a>
             <ul class="dropdown-menu" aria-labelledby="socialDropdown">
               <li class="d-flex justify-content-around"><a

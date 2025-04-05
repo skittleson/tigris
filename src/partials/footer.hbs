@@ -1,35 +1,22 @@
 <hr class="featurette-divider m-4" />
 
 <div class="container text-center" style="max-width:100%">
-    <div class="row align-items-center">
+    <div class="row align-items-center mb-4">
 
         <!-- Restaurant Info -->
         <div class="col-md-4 d-flex flex-column align-items-center mb-md-0">
-            <p>
-                <a href="tel:{{phone}}">{{phone}}</a>
-                <br>
-                <a class="py-2" href="mailto:{{email}}"
-                    style="white-space: nowrap;text-transform:uppercase">{{email}}</a>
-                <br>
-                <a
-                    href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285
-                    OVERLAND AVE #102, SAN DIEGO, CA 92123</a>
-            </p>
+            <a href="tel:{{phone}}">{{phone}}</a>
+            <a class="py-1" href="mailto:{{email}}"
+                style="white-space: nowrap;">{{email}}</a>
+            <a
+                href="https://maps.google.com/maps/dir//Tigris+Mediterranean+Grille+5285+Overland+Ave+%23102+San+Diego,+CA+92123/@32.8306151,-117.1304295,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x80dbffb46eb566e1:0x39c5d62b7baaf06">5285
+                OVERLAND AVE #102, SAN DIEGO, CA 92123</a>
         </div>
 
         {{!-- Second Col --}}
-        <div class="col-md-4 d-flex flex-column align-items-center mb-md-0">
-            
-            <!-- Social Media Logos -->
-            <div>
-                <a class="fs-3 opacity-75 me-3" href="{{facebook}}"><i class="bi bi-facebook"></i></a>
-                <a class="fs-3 opacity-75 me-3" href="{{instagram}}"><i class="bi bi-instagram"></i></a>
-                <a class="fs-3 opacity-75 me-2" href="{{yelp}}"><i class="bi bi-yelp"></i></a>
-                <a class="fs-3 opacity-75" href="mailto:{{email}}"><i class="bi bi-envelope"></i></a>
-            </div>
-
+        <div class="col-md-4 d-flex flex-column mb-md-0 py-4">
             <!-- Order Button -->
-            <button onclick="window.open('{{menu}}', '_blank')" class="btn btn-danger fs-5 mb-3 mt-2">
+            <button onclick="window.open('{{menu}}', '_blank')" class="btn btn-danger fs-5" style="min-width: 225px;">
                 ORDER NOW
             </button>
         </div>
@@ -48,7 +35,7 @@
 
     </div>
 
-    <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <button aria-label="back to top" class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
         </svg>
