@@ -392,11 +392,7 @@ blockquote {
 
 .navbar-message {
   position: absolute;
-<<<<<<< HEAD
   top: 15px;
-=======
-  top: 40px;
->>>>>>> d66e3421f01ff110fa08437362d86b3c7561f379
   left: 40px;
   background-color: #fdf0d5;
   color: #780000;
@@ -404,7 +400,6 @@ blockquote {
   font-weight: bold;
   text-align: center;
 }
-<<<<<<< HEAD
 
 @media (max-width: 992px) {
   .navbar-message {
@@ -422,23 +417,3 @@ blockquote {
 a {
   color: firebrick;
 }
-=======
-.navbar-message:hover,
-.navbar-p:hover {
-  color: #c1121f;
-}
-.navbar-p {
-  color: #780000;
-}
-@media (max-width: 992px) {
-  .navbar-message {
-    position: relative; /* Use relative to prevent overlapping logo */
-    top: 0; /* Remove any offset so it appears right at the top */
-    left: 50%;
-    transform: translateX(-50%); /* Center the message horizontally */
-    width: auto; /* Ensure it adjusts nicely */
-    z-index: 10; /* Keep it above other elements */
-    text-align: center;
-  }
-}
->>>>>>> d66e3421f01ff110fa08437362d86b3c7561f379
