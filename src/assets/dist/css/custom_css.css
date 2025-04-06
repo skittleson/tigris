@@ -270,10 +270,6 @@ blockquote {
   bottom: 1px !important;
 }
 
-.round-imgs {
-  width: 240px;
-  height: 240px;
-}
 .round-imgs:hover {
   transform: scale(1.1);
 }
