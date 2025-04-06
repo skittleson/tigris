@@ -16,12 +16,6 @@ html {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
-/* Navbar Logo */
-@media (max-width: 992px) {
-  .navbar-brand img {
-    max-width: 140px !important;
-  }
-}
 .navbar-brand {
   margin-right: 0px !important;
 }
@@ -161,11 +155,6 @@ p {
   color: red;
   border-radius: 8px;
 }
-@media (max-width: 991px) {
-  .navbar .nav-link:hover {
-    min-width: 200px;
-  }
-}
 
 /* Menu Page */
 .menu-header {
@@ -221,12 +210,6 @@ p {
   background-position: center;
   background-attachment: fixed;
   height: 550px;
-}
-/* Fallback */
-@media (max-width: 64.063em) {
-  .parallax {
-    background-attachment: scroll;
-  }
 }
 
 /* Fade In Animation */
@@ -401,19 +384,62 @@ blockquote {
   text-align: center;
 }
 
-@media (max-width: 992px) {
-  .navbar-message {
-    position: relative;
-    top: 57px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
 .link-hover:hover {
   text-decoration: underline;
 }
 
 a {
   color: firebrick;
+  transition: color ease 0.3s;
+}
+
+.nav-fb-icon {
+  color: blue;
+}
+.nav-fb-icon:hover {
+  color: #780000;
+}
+
+.nav-ig-icon {
+  color: #780000;
+}
+
+.bi-yelp {
+  color: red;
+}
+.bi-yelp:hover {
+  color: #780000;
+}
+
+.bi-envelope {
+  color: #333;
+}
+.bi-envelope:hover {
+  color: #780000;
+}
+
+/* Navbar Logo */
+@media (max-width: 991px) {
+  .navbar-brand img {
+    max-width: 140px !important;
+  }
+}
+@media (max-width: 992px) {
+  .navbar .nav-link:hover {
+    min-width: 100px;
+  }
+}
+/* Fallback */
+@media (max-width: 64.063em) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-message {
+    position: relative;
+    top: 57px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
